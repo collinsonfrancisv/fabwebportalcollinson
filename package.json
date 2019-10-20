@@ -1,0 +1,11 @@
+{
+  "name": "fab-web-portal-collinson",
+  "version": "1.0.0",
+  "description": "Front-end interface for FAB Web Portal application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francis Lorenz Ventura",
+  "license": "ISC"
+}
