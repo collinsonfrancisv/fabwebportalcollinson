@@ -4,25 +4,31 @@
   "description": "Front-end interface for FAB Rewards Web Portal application",
   "main": "index.js",
   "scripts": {
-    "start": "gulp" 
+    "start": "gulp"
   },
   "author": "Francis Lorenz Ventura",
   "license": "",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/collinsonfrancisv/fabwebportalcollinson.git"
+    "type": "git",
+    "url": "https://github.com/collinsonfrancisv/fabwebportalcollinson.git"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.5",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
+    "gulp-inject": "^5.0.4",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^1.5.0",
-    "gulp.spritesmith": "^6.11.0"
+    "gulp.spritesmith": "^6.11.0",
+    "svg-sprite": "^1.5.0"
+  },
+  "dependencies": {
+    "handlebars": "^4.4.5",
+    "phantomjs-prebuilt": "^2.1.16"
   }
 }

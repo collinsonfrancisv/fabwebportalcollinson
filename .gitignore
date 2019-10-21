@@ -1,2 +1,6 @@
 # ignore design_docs
 design_documentation
+/app
+/node_mdules
+package.json
+package-lock.json
