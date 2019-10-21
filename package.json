@@ -1,11 +1,28 @@
 {
-  "name": "fab-web-portal-collinson",
-  "version": "1.0.0",
-  "description": "Front-end interface for FAB Web Portal application",
+  "name": "fab-rewards-web-portal-collinson",
+  "version": "0.0.1",
+  "description": "Front-end interface for FAB Rewards Web Portal application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp" 
   },
   "author": "Francis Lorenz Ventura",
-  "license": "ISC"
+  "license": "",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/collinsonfrancisv/fabwebportalcollinson.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.5",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp.spritesmith": "^6.11.0"
+  }
 }
