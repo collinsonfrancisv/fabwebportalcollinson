@@ -1,5 +1,7 @@
 # ignore design_docs
 design_documentation
+docs
+/docs
 /app
 /node_modules
 package.json
