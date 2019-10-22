@@ -1,5 +1,7 @@
 # ignore design_docs
 design_documentation
+.blank
+.blankfile
 docs
 /docs
 /app
