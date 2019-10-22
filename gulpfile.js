@@ -51,7 +51,7 @@ function style() {
     .pipe(lineec())    
 
     // 7. where do I save the compiled css?
-    .pipe(gulp.dest('./src/css'))
+    .pipe(gulp.dest('./src/css/'))
 
     // 4. stream changes to all browsers
     .pipe(browserSync.stream());

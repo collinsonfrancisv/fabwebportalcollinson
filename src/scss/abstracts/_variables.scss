@@ -1,12 +1,61 @@
-// FAB REWARDS COLOR SCHEME
-$color-blue-zodiac: #0C2340;
-$color-smalt: #003C95;
-$color-tundora: #4A4A4A;
-$color-gull-gray: #9FA9B8;
-$color-bright-turquoise: #07ECD7;
-$color-yellow: #FFF500;
-$color-radical-red: #FF2567;
-$color-dodger-blue: #247CFF;
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
 
 
 
+
+
+// Text colors
+/// @type color
+$color-blue-zodiac:         #0C2340;
+$color-smalt:               #003C95;
+$color-tundora:             #4A4A4A;
+$color-gull-gray:           #9FA9B8;
+$color-alabaster:           #FAFAFA;
+$color-bright-turquoise:    #07ECD7;
+$color-yellow:              #FFF500;
+$color-radical-red:         #FF2567;
+$color-dodger-blue:         #247CFF;
+
+
+
+
+
+// Regular font family
+/// @type List
+$font-stack-primary:        Graphik, sans-serif;
+$font-stack-secondary:      FSMatthew, sans-serif;
+
+// Monospace font family
+/// @type List
+$font-stack-monospace:      'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1086px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small':      375px,
+  'medium':     768px,
+  'large':      1024px,
+  'huge':       1440px,
+);
+
+
+/// Typography scale
+$rem-base:  10px;
+// $rem-percentage: ((#{$rem-base} / 16) * 100);
+
+$font-size-body: 1.4rem // 14px
