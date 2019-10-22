@@ -1,0 +1,38 @@
+
+/**
+ * ~ Media Query Breakpoint Mixin
+ * This is a mixin solution by Paul from https://paul.af/media-queries-and-breakpoints-in-scss
+ * All credit goes to him
+ */ 
+ @mixin respond-to ($expression) {
+   // A variable $direction is created and it stores the sliced $expression argument string from the 0 character index up until to the first character of the string
+   $direction: str-slice($expression, 0, 1);
+   // A variable $point is created and it stores the sliced $expression argument string from the 2nd character index up until the last character of the string
+   $point: str-slice($expression, 2);
+   
+   // An if statement will check if map-has-key will return true by checking if the $point exists in $breakpoints maps defined in _variables partial
+   @if map-has-key($breakpoints, $point) {
+     // if the condition is true the map value associated will be stored in $point
+     $point: map-get($breakpoints, $point);
+ 
+   }
+   
+   // An if-else statement that will provide the corresponding min-max prefix in the media query
+   @if $direction == ">" {
+       
+     $direction: min;
+ 
+   } @else if $direction == "<" {
+ 
+     $direction: max;
+ 
+   }  @else {
+ 
+       @error "Expected < or >, got: #{$direction}";
+
+   }
+ 
+   @media (#{$direction}-width: #{$point} ) {
+     @content;
+   }
+ }

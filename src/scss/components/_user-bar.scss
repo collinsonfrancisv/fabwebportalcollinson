@@ -1,0 +1,12 @@
+  /**
+   * SCSS file for the user-bar component which is one of the major sections in FAB Web Portal
+   */
+  .user-bar {
+    color: $color-white;
+    background: $color-fab-linear-gradient;
+    min-height: 15rem;
+
+    @include respond-to(">sm") {
+      background: red;
+    }
+  }

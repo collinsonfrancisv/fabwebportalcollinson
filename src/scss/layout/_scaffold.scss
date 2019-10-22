@@ -1,0 +1,8 @@
+/**
+ * The Scaffold is the element that ties the entire website and its major layout components together. 
+ * It's just another word for 'wrapper' or 'main wrapper'
+ */
+ .scaffold {
+    display: flex;
+    flex-direction: column;
+ }

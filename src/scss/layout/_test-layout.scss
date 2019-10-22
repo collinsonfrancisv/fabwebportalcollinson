@@ -1,13 +1,10 @@
-// TEST
+/**
+ * Helper rules to facilitate layout brainstorming
+ */
+ body > .scaffold {
+    border: 1px dotted green;
+ }
 
-.flex-grid {
-    display: flex;
-}
-
-.section1 {
-    background-color: $color-smalt;
-}
-
-.section2 {
-    background-color: $color-gull-gray;
-}
+ body > .scaffold > * {
+    border: 1px dotted red;
+ }

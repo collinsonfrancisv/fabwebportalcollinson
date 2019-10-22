@@ -5,8 +5,14 @@
 
 
 
+/// Production languages
+$en: 'en';
+$ar: 'ar';
 
-// Text colors
+
+
+
+/// Text colors
 /// @type color
 $color-blue-zodiac:         #0C2340;
 $color-smalt:               #003C95;
@@ -17,12 +23,16 @@ $color-bright-turquoise:    #07ECD7;
 $color-yellow:              #FFF500;
 $color-radical-red:         #FF2567;
 $color-dodger-blue:         #247CFF;
+$color-white:               #fff;
+$color-fab-gradient-stp1:   #005FBC;
+$color-fab-gradient-stp2:   #003187;
+$color-fab-linear-gradient:   linear-gradient(164deg, $color-fab-gradient-stp1 7%, $color-fab-gradient-stp2 82%);
 
 
 
 
 
-// Regular font family
+/// Regular font family
 /// @type List
 $font-stack-primary:        Graphik, sans-serif;
 $font-stack-secondary:      FSMatthew, sans-serif;
@@ -37,7 +47,7 @@ $font-stack-monospace:      'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera S
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1086px !default;
+// $max-width: px !default;
 
 
 
@@ -47,15 +57,15 @@ $max-width: 1086px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small':      375px,
-  'medium':     768px,
-  'large':      1024px,
-  'huge':       1440px,
+  'xs':     33rem,
+  'sm':     37.5rem,
+  'md':     120rem,
+  'lg':     144rem,
 );
+
+
+
 
 
 /// Typography scale
 $rem-base:  10px;
-// $rem-percentage: ((#{$rem-base} / 16) * 100);
-
-$font-size-body: 1.4rem // 14px
