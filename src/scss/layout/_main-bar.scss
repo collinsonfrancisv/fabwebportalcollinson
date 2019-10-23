@@ -2,6 +2,55 @@
  * The Main Bar layout section holds the user bar where in turn holds the FAB Rewards navigation
  * 
  */
-//  .main-bar {
+ .main-bar {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 16rem;
+    background: $color-fab-linear-gradient-horizontal;
+    color: $color-white;
+    // border: 3px dotted green;
+   
+    @include respond-to(">90rem") {
+      background: $color-fab-linear-gradient-vertical; 
+      width: 100%; 
+      max-width: 25.3rem;      
+      
+    }
 
-//  }
+    &__points {
+      border: 1px solid red;
+      display: flex;
+      align-items: center;
+      flex: 1 1 70%;
+
+      &-inner-wrap {
+        text-align: center;
+        margin: 0 auto;
+        border: 2px solid yellow;
+      }
+    }
+
+    &__points-value {
+      font-size: 1.8rem;
+    }
+
+    &__menu-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex: 0 0 30%;
+      background: rgba($color-blue-zodiac, .25);
+      @include padding($content-padding, null, $content-padding, null);
+      border-top: 1px solid rgba($color-blue-zodiac, .5);
+    }
+
+    &__title {
+      opacity: .75; 
+      text-align: center;
+      
+      a:link, a:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+ }

@@ -5,6 +5,7 @@
 
 
 
+
 /// Production languages
 $en: 'en';
 $ar: 'ar';
@@ -18,6 +19,7 @@ $color-blue-zodiac:         #0C2340;
 $color-smalt:               #003C95;
 $color-tundora:             #4A4A4A;
 $color-gull-gray:           #9FA9B8;
+$color-border-color:        #F0F0F0;
 $color-alabaster:           #FAFAFA;
 $color-bright-turquoise:    #07ECD7;
 $color-yellow:              #FFF500;
@@ -26,8 +28,8 @@ $color-dodger-blue:         #247CFF;
 $color-white:               #fff;
 $color-fab-gradient-stp1:   #005FBC;
 $color-fab-gradient-stp2:   #003187;
-$color-fab-linear-gradient:   linear-gradient(164deg, $color-fab-gradient-stp1 7%, $color-fab-gradient-stp2 82%);
-
+$color-fab-linear-gradient-horizontal:   linear-gradient(124deg, $color-fab-gradient-stp1 7%, $color-fab-gradient-stp2 50%);
+$color-fab-linear-gradient-vertical:     linear-gradient(30deg, $color-fab-gradient-stp1 0%, $color-fab-gradient-stp2 82%);
 
 
 
@@ -45,9 +47,9 @@ $font-stack-monospace:      'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera S
 
 
 
-/// Container's maximum width
+/// Global Layout Padding
 /// @type Length
-// $max-width: px !default;
+$content-padding: 1.2rem;
 
 
 
@@ -69,3 +71,42 @@ $breakpoints: (
 
 /// Typography scale
 $rem-base:  10px;
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Visual compositions
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Shadows
+/// Shadow color values 
+$shadow-colors: (
+  'shadow-color-1': rgba(159,169,184,.13),
+  'shadow-color-2': rgba(0,0,0,.05),
+);
+
+/// Shadow orientation values 
+$shadow-orientations: (
+  'shadow-orientation-1':  0 2px 4px 0,
+  'shadow-orientation-2':  0 3px 6px 0,
+  'shadow-orientation-3':  0 -4px 14px 0,
+  'shadow-orientation-4':  0 1px 8px 0,
+);
+
+
+
+
+
+/// Border Radius
+$border-radii: (
+  'border-radius-1': 4px,
+  'border-radius-2': 6px,
+  'border-radius-3': 8px,
+  'border-radius-4': 21px,
+);

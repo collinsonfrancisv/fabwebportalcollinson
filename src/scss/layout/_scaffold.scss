@@ -3,6 +3,12 @@
  * It's just another word for 'wrapper' or 'main wrapper'
  */
  .scaffold {
+    height: 100%;
+    background-color: $color-alabaster;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    
+    @include respond-to(">800px") {
+      flex-flow: row nowrap;
+    }
  }

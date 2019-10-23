@@ -7,11 +7,10 @@
 @import 'base/typography';
 @import 'base/helpers';
 
-@import 'components/user-bar';
-
+@import 'layout/root';
 @import 'layout/scaffold';
+@import 'layout/sub-bar';
 @import 'layout/main-bar';
 @import 'layout/main-content';
-@import 'layout/test-layout';
 
 @import 'vendors/sass-flexbox-grid/sass-flexbox-grid'

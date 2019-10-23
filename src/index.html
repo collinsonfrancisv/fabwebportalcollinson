@@ -9,49 +9,71 @@
 </head>
 <body>
 
+  <div class="sub-bar" data-ui-component="sub-bar">
+      SUB-BAR
+  </div>
+
   <div class="scaffold">
+    
+    <div class="main-bar" data-ui-component="main-bar">
 
-    <div class="main-bar">
+      <div class="main-bar__points">
+        <div class="main-bar__points-inner-wrap">
+          <h2 class="main-bar__points-title">FAB Rewards Points</h2>
 
-      <div class="user-bar" data-ui-component="user-bar">
+          <span class="main-bar__points-value">120,000 <svg class="svg-c-blue__arrow-down-dims" style="width: 30px; height: 30px;"><use xlink:href="../dist/svg/sprite.svg#c-blue__arrow-down"></use></svg></span>
+          
+          <a class="main-bar__points-toggler" href="#"></a>
+        </div>
+      </div>
+      
+      <div class="main-bar__menu-wrapper">
 
-        <div class="points-box">
+        <div class="main-bar__menu">
 
-            <h2 class="points-box__title">FAB Rewards</h2>
+            <h2 class="main-bar__title"><a href="#">Rewards</a></h2>
 
-            <span class="points-value">120,000</span>
+            <!-- <ul class="main-bar__list">
+
+              <li class="main-bar__list-item">Shop</li>
+
+              <li class="main-bar__list-item">Travel</li>
+
+              <li class="main-bar__list-item">Vouchers</li>
+
+            </ul> -->
 
         </div>
+
+        <div class="main-bar__menu">
+
+          <h2 class="main-bar__title"><a href="#">Manage Points</a></h2>
+
+
+        </div>
+
+        <div class="main-bar__menu">
+
+          <h2 class="main-bar__title"><a href="#">Redeem Rewards</a></h2>
+
+
+        </div>
+
+        <div class="main-bar__menu">
+
+          <h2 class="main-bar__title"><a href="#">Activity</a></h2>
+
+        </div>
+
+      </div><!-- .menu-wrapper END -->
         
-        <div class="menu-wrapper">
+    </div><!-- .main-bar END -->
 
-          <div class="menu menu-redeem-rewards">
-
-              <h2 class="menu__title">Redeem Rewards</h2>
-
-              <ul class="menu__list">
-
-                <li class="menu__item">Shop</li>
-
-                <li class="menu__item">Travel</li>
-
-                <li class="menu__item">Vouchers</li>
-
-              </ul>
-
-          </div>
-
-       </div>
-        
-      </div>
-
-    </div>
-
-    <main class="main-content">
+    <main class="main-content" data-ui-component="main-content-container">
         MAIN CONTENT
-    </main>
+    </main><!-- .main-content END -->
 
-  </div>
+  </div><!-- .scaffold END -->
     
 </body>
 </html>
