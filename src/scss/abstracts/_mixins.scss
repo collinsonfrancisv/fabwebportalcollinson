@@ -1,9 +1,6 @@
 
-/**
- * ~ Media Query Breakpoint Mixin
- * This is a mixin solution by Paul from https://paul.af/media-queries-and-breakpoints-in-scss
- * All credit goes to him
- */ 
+/// Media Query Breakpoint Mixin
+/// This is a mixin solution by Paul from https://paul.af/media-queries-and-breakpoints-in-scss
  @mixin respond-to ($expression) {
    /// A variable $direction is created and it stores the sliced $expression argument string from the 0 character index up until to the first character of the string
    $direction: str-slice($expression, 0, 1);
@@ -37,21 +34,46 @@
    }
  }
 
+/**
+ * ~ Breakpoints mixin
+ */ 
 
-
-
+@mixin for-phone-only {
+  @media (max-width: 49.9rem) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 60rem) { @content; }
+}
+@mixin for-tablet-portait-only {
+  @media (min-width: 60rem) and (max-width: 79.9rem) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 80rem) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 800px) and (max-width: 119.9rem) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 120rem) { @content; }
+}
+@mixin for-desktop-only {
+  @media (min-width: 120rem) and (max-width: 179.9rem) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 180rem) { @content; }
+}
 /**
  * ~ Visual Composition Mixins
  */ 
 
-//Padding mixin
+// Padding mixin
 @mixin padding($left, $top, $right, $bottom) {
   padding-left: $left;
   padding-top: $top;
   padding-right: $right;
   padding-bottom: $bottom;
 }
-//Margin mixin
+// Margin mixin
 @mixin margin($left, $top, $right, $bottom) {
   margin-left: $left;
   margin-top: $top;
@@ -106,3 +128,53 @@
 }
 
 
+
+ /// Flexbox declaration 
+ @mixin flexbox($flex-direction: row, $flex-wrap: nowrap, $justify: center) {   
+   display: flex;
+   @if $flex-direction == row {
+
+     flex-direction: row;
+
+   } @else if $flex-direction == row-reverse {
+
+     flex-direction: row-reverse;
+
+   } @else if $flex-direction == column {
+
+     flex-direction: column;
+
+   } @else if $flex-direction == column-reverse {
+
+     flex-direction: column-reverse;
+
+   }
+
+   @if $justify == flex-start {
+
+     justify-content: flex-start;
+
+   } @else if $justify == flex-end {
+ 
+     justify-content: flex-end;
+
+   } @else if $justify == center {
+
+     justify-content: center;
+
+   } @else if $justify == space-between {
+
+     justify-content: space-between;
+
+   } @else if $justify == space-around {
+
+     justify-content: space-around;
+
+   } @else if $justify == space-evenly {
+
+     justify-content: space-evenly;
+
+   }
+   
+
+ }

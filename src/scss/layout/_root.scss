@@ -5,3 +5,8 @@ html {
 body {
   height: 100%;
 }
+
+.l-root-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
