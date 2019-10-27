@@ -3,3 +3,9 @@
   color: #fff;
   background: linear-gradient(124deg, $color-fab-gradient-stp1 7%, $color-fab-gradient-stp2 50%);
 }
+
+.p-main-bar__menu-block {
+  background: rgba($color-blue-zodiac, .25);
+  border-top: 1px solid rgba($color-blue-zodiac, .5);
+}
+

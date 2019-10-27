@@ -1,6 +1,25 @@
 
-
 .l-aside {
-  @include flexbox(column nowrap, center);
+  @include display-flex;
+  @include flex-flow(column, nowrap);
   height: rem(153px);
+}
+
+.l-menu-block {
+  height: rem(48px);
+  @include display-flex;
+  @include flex-flow(row, wrap);
+  @include justify-content(space-around);
+}
+
+
+.l-aside__item {
+  @include display-flex;
+  @include flex-flow(column, nowrap);
+  @include justify-content(center);
+}
+
+.l-menu {
+  @include flex-flow(column, nowrap);
+  @include justify-content(center);
 }

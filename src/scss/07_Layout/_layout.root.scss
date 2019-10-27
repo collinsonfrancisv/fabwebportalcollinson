@@ -13,15 +13,15 @@ body {
  */
  .l-scaffold {
   height: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  
-  @include respond-to(">800px") {
-    flex-flow: row nowrap;
+  @include display-flex;
+  @include flex-flow(column, nowrap);  
+
+  @include mq(min, rem(800px)) {
+    @include flex-flow(row, nowrap);  
   }
 }
 
-.l-aside,
-.l-main {
-  border: 3px dotted blue;
-}
+// .l-aside,
+// .l-main {
+//   border: 3px dotted blue;
+// }

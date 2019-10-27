@@ -1,0 +1,15 @@
+.c-menu {
+  // background: linear-gradient(124deg, $color-fab-gradient-stp1 7%, $color-fab-gradient-stp2 50%);
+
+  // @include mq(min, rem(800px)) {
+  //   background: linear-gradient(30deg, $color-fab-gradient-stp1 0%, $color-fab-gradient-stp2 82%);
+  // }
+
+  &__title {
+    opacity: .75;
+  }
+  
+  &__item {
+    display: none;
+  }
+}
