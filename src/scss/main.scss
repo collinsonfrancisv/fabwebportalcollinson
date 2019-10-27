@@ -1,19 +1,10 @@
-@import 'abstracts/variables';
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
+@charset "UTF-8";
 
-@import 'base/reset';
-@import 'base/base';
-@import 'base/typography';
-@import 'base/helpers';
-
-@import 'components/main-bar';
-
-@import 'layout/root';
-@import 'layout/test-layout';
-// @import 'layout/sub-bar';
-// @import 'layout/main-bar';
-// @import 'layout/main-content';
-
-
-@import 'vendors/sass-flexbox-grid/sass-flexbox-grid'
+@import '01_Abstracts/index.scss';
+@import '02_Base/index.scss';
+@import '03_Vendors/index.scss';
+@import '04_Objects/index.scss';
+@import '05_Components/index.scss';
+@import '06_Patterns/index.scss';
+@import '07_Layout/index.scss';
+@import '08_Utilities/index.scss';

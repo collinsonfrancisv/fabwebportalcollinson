@@ -3,7 +3,6 @@
    */
   html {
     box-sizing: border-box;
-    font-size: 10px;
   }
 
   *,
@@ -12,4 +11,8 @@
     box-sizing: inherit;
   }
   
+  :root,
+  html {
+    font-size: 10px;
+  }
  
