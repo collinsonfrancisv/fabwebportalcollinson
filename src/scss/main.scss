@@ -1,10 +1,55 @@
 @charset "UTF-8";
 
-@import '01_Abstracts/index.scss';
-@import '02_Base/index.scss';
-@import '03_Vendors/index.scss';
-@import '04_Objects/index.scss';
-@import '05_Components/index.scss';
-@import '06_Patterns/index.scss';
-@import '07_Layout/index.scss';
-@import '08_Utilities/index.scss';
+/// 01 ABSTRACTS PARTIALS
+@import '01_Abstracts/abstracts.variables';
+@import '01_Abstracts/abstracts.mixins';
+@import '01_Abstracts/abstracts.functions';
+
+
+
+
+
+/// 02 BASE PARTIALS
+@import '02_Base/base.reset';
+@import '02_Base/base.base';
+@import '02_Base/base.typography';
+@import '02_Base/base.helpers';
+
+
+
+
+
+/// 03 VENDORS PARTIALS
+
+
+
+
+
+/// 04 OBJECTS PARTIALS
+
+
+
+
+/// 05 COMPONENTS PARTIALS
+@import '05_Components/components.buttons';
+
+
+
+
+
+/// 06 PATTERNS PARTIALS
+@import '06_Patterns/patterns.main-bar';
+
+
+
+
+
+/// 06 LAYOUT PARTIALS
+@import '07_Layout/layout.root';
+@import '07_Layout/layout.aside';
+
+
+
+
+/// 06 UTILITIES PARTIALS
+

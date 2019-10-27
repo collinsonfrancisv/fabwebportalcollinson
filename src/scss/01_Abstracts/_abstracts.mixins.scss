@@ -1,6 +1,7 @@
-
-/// Media Query Breakpoint Mixin
-/// This is a mixin solution by Paul from https://paul.af/media-queries-and-breakpoints-in-scss
+/**
+ * ~ Media Query Breakpoint Mixin
+ * This is a mixin solution by Paul from https://paul.af/media-queries-and-breakpoints-in-scss
+ */ 
  @mixin respond-to ($expression) {
    /// A variable $direction is created and it stores the sliced $expression argument string from the 0 character index up until to the first character of the string
    $direction: str-slice($expression, 0, 1);
@@ -37,31 +38,37 @@
 /**
  * ~ Breakpoints mixin
  */ 
+ @import "../../../node_modules/mq-scss/mq";
 
-@mixin for-phone-only {
-  @media (max-width: 49.9rem) { @content; }
-}
-@mixin for-tablet-portrait-up {
-  @media (min-width: 60rem) { @content; }
-}
-@mixin for-tablet-portait-only {
-  @media (min-width: 60rem) and (max-width: 79.9rem) { @content; }
-}
-@mixin for-tablet-landscape-up {
-  @media (min-width: 80rem) { @content; }
-}
-@mixin for-tablet-landscape-only {
-  @media (min-width: 800px) and (max-width: 119.9rem) { @content; }
-}
-@mixin for-desktop-up {
-  @media (min-width: 120rem) { @content; }
-}
-@mixin for-desktop-only {
-  @media (min-width: 120rem) and (max-width: 179.9rem) { @content; }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: 180rem) { @content; }
-}
+
+// @mixin for-phone-only {
+//   @media (max-width: 49.9rem) { @content; }
+// }
+// @mixin for-tablet-portrait-up {
+//   @media (min-width: 60rem) { @content; }
+// }
+// @mixin for-tablet-portait-only {
+//   @media (min-width: 60rem) and (max-width: 79.9rem) { @content; }
+// }
+// @mixin for-tablet-landscape-up {
+//   @media (min-width: 80rem) { @content; }
+// }
+// @mixin for-tablet-landscape-only {
+//   @media (min-width: 800px) and (max-width: 119.9rem) { @content; }
+// }
+// @mixin for-desktop-up {
+//   @media (min-width: 120rem) { @content; }
+// }
+// @mixin for-desktop-only {
+//   @media (min-width: 120rem) and (max-width: 179.9rem) { @content; }
+// }
+// @mixin for-big-desktop-up {
+//   @media (min-width: 180rem) { @content; }
+// }
+
+
+
+
 /**
  * ~ Visual Composition Mixins
  */ 

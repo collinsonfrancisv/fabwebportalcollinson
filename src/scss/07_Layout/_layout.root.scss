@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+
+/**
+ * The Scaffold is the element that ties the entire website and its major layout components together. 
+ * It's just another word for 'wrapper' or 'main wrapper'
+ */
+ .l-scaffold {
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  
+  @include respond-to(">800px") {
+    flex-flow: row nowrap;
+  }
+}
+
+.l-aside,
+.l-main {
+  border: 3px dotted blue;
+}

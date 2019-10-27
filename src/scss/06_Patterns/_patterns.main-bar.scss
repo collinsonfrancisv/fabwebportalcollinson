@@ -1,0 +1,5 @@
+.p-main-bar {
+  @include flexbox(column, nowrap, space-between);
+  color: #fff;
+  background: linear-gradient(124deg, $color-fab-gradient-stp1 7%, $color-fab-gradient-stp2 50%);
+}

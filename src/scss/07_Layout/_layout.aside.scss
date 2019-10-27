@@ -1,0 +1,6 @@
+
+
+.l-aside {
+  @include flexbox(column nowrap, center);
+  height: rem(153px);
+}
