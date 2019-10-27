@@ -54,22 +54,16 @@ $content-padding: 1.2rem;
 
 
 
-
-/// Typography scale
-$rem-baseline: 10px;
-
-
-
-
-
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'xs':     330px,
-  'sm':     375px,
-  'md':     1200px,
-  'lg':     1440px,
+  'palm': 320px,
+  'hands': 600px,
+  'hands-wide': 800px,
+  'lap': 1200px,
+  'desk': 1600px,
+  'wall': 2500px
 );
 
 

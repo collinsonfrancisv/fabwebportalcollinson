@@ -1,0 +1,5 @@
+.p-mast {
+  @include mq(max, rem(map-get($breakpoints, 'hands-wide') - 1 )) {
+    display: none;
+  }
+}

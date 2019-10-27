@@ -3,6 +3,9 @@
   @include display-flex;
   @include flex-flow(column, nowrap);
   height: rem(153px);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    height: 100vh;
+  }
 }
 
 .l-menu-block {
@@ -10,6 +13,8 @@
   @include display-flex;
   @include flex-flow(row, wrap);
   @include justify-content(space-around);
+  @include align-items-stretch;
+  
 }
 
 
@@ -17,6 +22,9 @@
   @include display-flex;
   @include flex-flow(column, nowrap);
   @include justify-content(center);
+  @include flex-basis(1);
+  @include flex(1,1,auto);
+  // border: 1px solid red;
 }
 
 .l-menu {
