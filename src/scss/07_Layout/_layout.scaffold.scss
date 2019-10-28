@@ -1,0 +1,9 @@
+.l-scaffold {
+  height: 100%;
+  @include display-flex;
+  @include flex-flow(column, nowrap);  
+
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    @include flex-flow(row, nowrap);  
+  }
+}

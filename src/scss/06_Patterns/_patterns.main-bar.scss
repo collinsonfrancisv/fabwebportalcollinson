@@ -1,5 +1,4 @@
 .p-main-bar {
-  @include flexbox(column, nowrap, space-between);
   color: #fff;
   background: $color-fab-linear-gradient-horizontal;
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
@@ -10,34 +9,11 @@
     background: rgba($color-blue-zodiac, .25);
     border-top: 1px solid rgba($color-blue-zodiac, .5);
   }
-
 }
 
-.p-rewards-points {
-  border: 1px solid yellow;
-  height: 100%;
-  display: table-cell;
-  vertical-align: bottom;
-  
-  &__wrapper {
-    border: 1px solid red;
-    width: 40%;
-    margin: 0 auto;
-    
-  }
-  
-  &__label,
-  &__value {
-    display: block;
-    text-align: center;
-  }
-
-  &__label {
-    text-transform: capitalize;
-    font-size: 75%;
-  }
-
-  &__value {
-    font-size: 150%;
+.p-main-bar__nav\@hands-wide {
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    background: transparent;
+    border-top: 0;
   }
 }

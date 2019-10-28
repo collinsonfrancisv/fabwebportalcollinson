@@ -42,7 +42,7 @@ function style() {
     }).on('error', sass.logError))
 
     // 4. pass the resulting css files into autoprefixer 
-    .pipe(autoprefixer('last 4 versions'))
+    .pipe(autoprefixer('last 5 versions'))
 
     // 5. create sourcemaps
     .pipe(sourcemaps.write())
