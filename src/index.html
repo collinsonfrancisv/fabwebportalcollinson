@@ -7,6 +7,10 @@
     <title>FAB</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel='icon' href='favicon.ico' />
+    <script src="node_modules/svg4everybody/dist/svg4everybody.js"></script>
+    <script>
+      svg4everybody();
+    </script>
 </head>
 <body>
 
@@ -72,7 +76,10 @@
                     
                     <a href="#" class="c-menu__item l-menu__item">
 
-                      <span class="c-menu__icon o-inline-icon"></span>
+                      <svg class="c-menu__icon o-inline-icon">
+                          <use xlink:href="svg/sprite.svg#c-white__vouchers"></use>
+                      </svg>
+
                       <span class="c-menu__label o-inline-label">item</span>
 
                     </a><!-- / c-menu__item l-menu__item -->  
