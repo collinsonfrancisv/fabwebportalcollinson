@@ -1,17 +1,18 @@
 .c-menu {
   color: #fff;
   font-size: rem(12px);
-  border: 1px solid yellow;
   
   &__header {
     text-align: center;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      text-align: left;
+    }
   }
 
   &__title {
     opacity: .75;
     color: #fff;
     text-decoration: none;
-    border: 1px solid yellow;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       text-transform: uppercase;
       opacity: 1;
@@ -29,5 +30,23 @@
     color: #fff;
     text-decoration: none;
     text-transform: capitalize;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      opacity: .50;
+    }
+  }
+
+  &__item:hover {
+    opacity: 1;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 2em;
+  }
+
+  &__label {
+    vertical-align: middle;
+    line-height: rem(30px);
   }
 }

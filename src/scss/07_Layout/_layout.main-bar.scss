@@ -12,17 +12,17 @@
 
 .l-rewards-points {
   &__container {
-    border: 1px solid red;
-    width: 40%;
+    width: 100%;
     margin: 0 auto;
   }
 }
 
 .l-menu-list {
   min-height: rem(48px);
+  overflow: hidden  ;
   @include display-flex;
-  @include flex-flow(row, wrap);
-  @include justify-content(space-around);
+  @include flex-flow(row, nowrap);
+  @include justify-content(flex-start);
   @include align-items-stretch;
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     @include flex-flow(column, nowrap);
@@ -33,29 +33,43 @@
     @include display-flex;
     @include flex-flow(column, nowrap);
     @include justify-content(center);
-    @include flex-basis(1);
-    @include flex(1,1,auto);
+    @include flex(1,0,rem(130px));
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       @include flex-flow(column, nowrap);
+      @include flex(1,1,auto);
       @include justify-content(flex-start);
-      @include align-items(flex-start);
+      @include align-items(center);
+      margin-bottom: 3em;
     }
   }
 }
 
 .l-menu {
+  width: 100%;
   @include flex-flow(column, nowrap);
-  @include justify-content(flex-start);
-  
-  border: 1px solid red;
-  &__header {
-    border: 1px dotted green;
+  @include align-items(center);
+  border: 1px solid red;  
+
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    @include justify-content(flex-start);
   }
-  
+
   &__item {
-
+    width: 100%;
+    border: 2px dotted yellow;
+    padding: .5em 0;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-
+      @include display-flex;
+      @include flex-flow(row, nowrap);
     }
+  }
+}
+
+
+
+.l-sub-menu-list {
+  display: none;
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    display: block;
   }
 }

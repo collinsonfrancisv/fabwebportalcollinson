@@ -7,3 +7,8 @@
     @include flex-flow(row, nowrap);  
   }
 }
+
+.l-container-padding {
+  padding-left: rem(30px);
+  padding-right: rem(30px);
+}

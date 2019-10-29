@@ -7,7 +7,8 @@
     <title>FAB</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel='icon' href='favicon.ico' />
-    <script src="node_modules/svg4everybody/dist/svg4everybody.js"></script>
+    <script src="js/vendors/svg4everybody.min.js"></script>
+
     <script>
       svg4everybody();
     </script>
@@ -16,9 +17,9 @@
 
     <div class="l-device-width">
 
-      <div class="p-mast">
+      <div class="p-mast l-container-padding">
 
-        <a class="o-logo" href="#"><img src="svg/fab-logo.svg" alt="FAB" class="o-logo__image"></a>
+        <a class="o-logo" href="#"><img src="svg/fab-logo.svg" alt="FAB logo" class="o-logo__image"></a>
 
       </div><!-- / p-mast -->
 
@@ -41,28 +42,7 @@
 
             </div><!-- / p-rewards-points l-rewards-points --> 
 
-            <ul class="p-main-bar__nav p-main-bar__nav@hands-wide l-menu-list">
-
-              <li class="l-menu-list__item">
-
-                  <div class="c-menu l-menu">
-
-                    <div class="c-menu__header l-menu__header" >
-
-                      <a class="c-menu__title" href="#">My Rewards</a>
-
-                    </div><!-- / c-menu__header l-menu__header -->  
-                    
-                    <a href="#" class="c-menu__item l-menu__item">
-
-                      <span class="c-menu__icon o-inline-icon"></span>
-                      <span class="c-menu__label o-inline-label">item</span>
-
-                    </a><!-- / c-menu__item l-menu__item -->  
-      
-                  </div><!-- / c-menu .l-menu --> 
-
-              </li><!-- / l-menu-list__item -->
+            <ul class="p-main-bar__nav p-main-bar__nav@hands-wide l-menu-list l-container-padding">
 
               <li class="l-menu-list__item">
 
@@ -74,15 +54,24 @@
 
                     </div><!-- / c-menu__header l-menu__header -->  
                     
-                    <a href="#" class="c-menu__item l-menu__item">
+                    <ul class="l-sub-menu-list">
 
-                      <svg class="c-menu__icon o-inline-icon">
-                          <use xlink:href="svg/sprite.svg#c-white__vouchers"></use>
-                      </svg>
+                      <li class="l-sub-menu-list__item">
 
-                      <span class="c-menu__label o-inline-label">item</span>
+                        <a href="#" class="c-menu__item l-menu__item">
 
-                    </a><!-- / c-menu__item l-menu__item -->  
+                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                              <use xlink:href="svg/sprite.svg#c-white__vouchers" />
+                            </svg>
+      
+                            <span class="c-menu__label l-menu__label">Vouchers</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->                      
+
+                    </ul><!-- / l-sub-menu-list -->
+                    
       
                   </div><!-- / c-menu .l-menu --> 
 
@@ -98,12 +87,37 @@
 
                     </div><!-- / c-menu__header l-menu__header -->  
                     
-                    <a href="#" class="c-menu__item l-menu__item">
+                    <ul class="l-sub-menu-list">
 
-                      <span class="c-menu__icon o-inline-icon"></span>
-                      <span class="c-menu__label o-inline-label">item</span>
+                      <li class="l-sub-menu-list__item">
 
-                    </a><!-- / c-menu__item l-menu__item -->  
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                          <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                            <use xlink:href="svg/sprite.svg#c-white__convert" />
+                          </svg>
+    
+                          <span class="c-menu__label l-menu__label">Rewards to Miles</span>
+      
+                          </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->
+                      
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                          <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                            <use xlink:href="svg/sprite.svg#c-white__payments" />
+                          </svg>
+    
+                          <span class="c-menu__label l-menu__label">Cashback</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->
+  
+                    </ul><!-- / l-sub-menu-list -->  
       
                   </div><!-- / c-menu .l-menu --> 
 
@@ -119,12 +133,87 @@
 
                     </div><!-- / c-menu__header l-menu__header -->  
                     
-                    <a href="#" class="c-menu__item l-menu__item">
+                    <ul class="l-sub-menu-list">
 
-                      <span class="c-menu__icon o-inline-icon"></span>
-                      <span class="c-menu__label o-inline-label">item</span>
+                      <li class="l-sub-menu-list__item">
 
-                    </a><!-- / c-menu__item l-menu__item -->  
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                              <use xlink:href="svg/sprite.svg#c-white__services" />
+                            </svg>
+      
+                            <span class="c-menu__label l-menu__label">My Activity</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->                      
+
+                    </ul><!-- / l-sub-menu-list -->  
+      
+                  </div><!-- / c-menu .l-menu --> 
+
+              </li><!-- / l-menu-list__item -->
+
+              <li class="l-menu-list__item">
+
+                  <div class="c-menu l-menu">
+
+                    <div class="c-menu__header l-menu__header" >
+
+                      <a class="c-menu__title" href="#">Activity</a>
+
+                    </div><!-- / c-menu__header l-menu__header -->  
+                    
+                    <ul class="l-sub-menu-list">
+
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                              <use xlink:href="svg/sprite.svg#c-white__services" />
+                            </svg>
+      
+                            <span class="c-menu__label l-menu__label">My Activity</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->                      
+
+                    </ul><!-- / l-sub-menu-list -->  
+      
+                  </div><!-- / c-menu .l-menu --> 
+
+              </li><!-- / l-menu-list__item -->
+
+              <li class="l-menu-list__item">
+
+                  <div class="c-menu l-menu">
+
+                    <div class="c-menu__header l-menu__header" >
+
+                      <a class="c-menu__title" href="#">Activity</a>
+
+                    </div><!-- / c-menu__header l-menu__header -->  
+                    
+                    <ul class="l-sub-menu-list">
+
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                              <use xlink:href="svg/sprite.svg#c-white__services" />
+                            </svg>
+      
+                            <span class="c-menu__label l-menu__label">My Activity</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->                      
+
+                    </ul><!-- / l-sub-menu-list -->  
       
                   </div><!-- / c-menu .l-menu --> 
 
