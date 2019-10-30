@@ -1,10 +1,22 @@
 .p-mast {
   background: #fff; 
-  padding-top: .5em;
-  padding-bottom: .5em;
+
   z-index: 1;
   box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15);
   @include mq(max, rem(map-get($breakpoints, 'hands-wide') - 1 )) {
     display: none;
   }
+
+  &__nav-item {
+    text-align: center;
+  }
+
+  &__nav-link {
+    text-align: center;   
+  }
+
+  &__nav-link:hover {
+    box-shadow: inset 0 -3px 0 rgba($color-blue-zodiac, 1);
+  }
 }
+

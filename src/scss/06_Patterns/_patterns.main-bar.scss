@@ -9,6 +9,11 @@
     background: rgba($color-blue-zodiac, .25);
     border-top: 1px solid rgba($color-blue-zodiac, .5);
   }
+
+  &__return {
+    background: rgba($color-blue-zodiac, .30);
+    border-top: 1px solid rgba($color-dodger-blue, .5);
+  }
 }
 
 .p-main-bar__nav\@hands-wide {
@@ -17,3 +22,24 @@
     border-top: 0;
   }
 }
+
+.p-rewards-points {
+  &__label, &__value {
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+  }
+
+  &__label {
+    font-size: .75rem;
+    margin-bottom: .5em;
+  }
+
+  &__value {
+    font-size: 1.4rem;
+  }
+  
+  
+}
+
+

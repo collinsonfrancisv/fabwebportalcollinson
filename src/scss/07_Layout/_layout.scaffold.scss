@@ -1,5 +1,4 @@
 .l-scaffold {
-  height: 100%;
   @include display-flex;
   @include flex-flow(column, nowrap);  
 
