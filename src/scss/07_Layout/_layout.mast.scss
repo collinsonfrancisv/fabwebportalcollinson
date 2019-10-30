@@ -4,7 +4,7 @@
     @include display-flex;
     @include flex-flow(row, nowrap);  
     @include justify-content(space-between);
-    @include align-items(stretch);
+    @include align-items(center);
   }
 
   &__logo {
