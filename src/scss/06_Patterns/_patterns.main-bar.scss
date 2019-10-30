@@ -24,10 +24,17 @@
 }
 
 .p-rewards-points {
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    background: rgba($color-blue-zodiac, .25);
+    border-bottom: 1px solid rgba($color-blue-zodiac, .5);
+  }
   &__label, &__value {
     text-transform: uppercase;
     display: block;
     text-align: center;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      text-align: left;
+    }
   }
 
   &__label {

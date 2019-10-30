@@ -1,6 +1,9 @@
 .l-main-content {
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     max-height: calc(100vh - 63px);
-    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    @include flex(1, 1, 100%);
   }
 }

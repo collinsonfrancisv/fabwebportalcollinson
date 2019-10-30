@@ -4,36 +4,37 @@
     @include display-flex;
     @include flex-flow(row, nowrap);  
     @include justify-content(space-between);
+    @include align-items(stretch);
   }
 
-  border: 4px dotted green;
-
   &__logo {
-    height: 100%;
-    border: 4px dotted green;
     @include display-flex;
     @include flex-flow(row, nowrap);  
     @include justify-content(center);
   }
 
   &__nav {    
-    height: 100%;
-    // border: 4px dotted green;
     @include display-flex;
     @include flex-flow(row, nowrap);  
     @include justify-content(space-between);
+    // @include flex(1);
     @include align-items(stretch);
   }
 
   &__nav-item {
-    height: 100%;
     @include display-flex;
-    @include flex-flow(column, nowrap);  
-    @include justify-content(center);
+    @include flex-flow(row, nowrap);  
+    // @include justify-content(center);
   }
 
   &__nav-link {
-    height: 100%;
     vertical-align: middle;
+    @include display-flex;
+    @include flex-flow(column, nowrap); 
+    @include justify-content(center); 
   }
+}
+
+.l-mast__nav-link > span {
+  display: block;
 }

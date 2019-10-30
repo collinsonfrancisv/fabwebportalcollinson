@@ -7,11 +7,12 @@
     <title>FAB</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel='icon' href='favicon.ico' />
+    <script src="js/jquery-3.4.1.js"></script>
     <script src="js/vendors/svg4everybody.min.js"></script>
+    <script src="js/vendors/fakescroll.min.js"></script>
+    <script src="js/main.js"></script>
 
-    <script>
-      svg4everybody();
-    </script>
+    
 </head>
 <body>
 
@@ -21,10 +22,25 @@
 
         <a class="p-mast__logo l-mast__logo o-logo" href="#"><img src="svg/fab-logo.svg" alt="FAB logo" class="o-logo__image"></a>
 
-        <ul class="p-mast__nav l-mast__nav" style="border: 1px solid red;">
-          <li class="p-mast__nav-item l-mast__nav-item" style="border: 1px solid  yellow;"><a class="p-mast__nav-link l-mast__nav-link" href="#" style="border: 1px dotted  green;"><span>Rewards</span></a></li>
-          <li class="p-mast__nav-item l-mast__nav-item" style="border: 1px solid  yellow;"><a class="p-mast__nav-link l-mast__nav-link" href="#" style="border: 1px dotted  green;"><span>FAB Al Futtaim Rewards</span></a></li>
-          <li class="p-mast__nav-item l-mast__nav-item" style="border: 1px solid  yellow;"><a class="p-mast__nav-link l-mast__nav-link" href="#" style="border: 1px dotted  green;"><span>FAB Etihad Guest Miles</span></a></li>
+        <ul class="p-mast__nav l-mast__nav">
+          <li class="p-mast__nav-item l-mast__nav-item">
+            <a class="p-mast__nav-link l-mast__nav-link" href="#">
+              <span>FAB Rewards</span>
+            </a>
+          </li>
+
+          <li class="p-mast__nav-item l-mast__nav-item">
+            <a class="p-mast__nav-link l-mast__nav-link" href="#">
+              <span>FAB Al Futtaim Rewards</span>
+            </a>
+          </li>
+
+          <li class="p-mast__nav-item l-mast__nav-item">
+            <a class="p-mast__nav-link l-mast__nav-link" href="#">
+              <span>FAB Etihad Guest Miles</span>
+            </a>
+          </li>
+
         </ul><!-- / p-mast__nav l-mast__nav --> 
 
 
@@ -36,7 +52,7 @@
                   
         <div class="p-main-bar l-main-bar">
 
-            <div class="p-rewards-points l-rewards-points">
+            <div class="p-rewards-points l-rewards-points l-container-padding">
               
               <div class="p-rewards-points__ container l-rewards-points__container">
 
@@ -233,9 +249,17 @@
             </ul><!-- / l-menu-list --> 
 
             <a href="#" class="p-main-bar__return l-main-bar__return">
-              <div class="l-container-padding">
-                  RETURN
-              </div>
+                <div>
+                    
+  
+                        <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                          <use xlink:href="svg/sprite.svg#c-white__logout" />
+                        </svg>
+  
+                        <span class="c-menu__label l-menu__label">My Activity</span>
+  
+      
+                  </div><!-- / c-menu .l-menu -->
             </a>
 
         </div><!-- / p-main-bar l-main-bar -->
@@ -345,6 +369,13 @@
         </main><!-- / l-main -->
 
     </div><!-- / l-scaffold -->
+
+    <script>
+      svg4everybody();
+      // document.querySelector('.l-menu-list').fakeScroll();
+      // document.querySelector('.l-main-content').fakeScroll();
+      console.log(rem());
+    </script>
 
 </body>
 </html>
