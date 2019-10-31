@@ -9,6 +9,7 @@
     @include flex(1, 1, 100%);
   }
   &__inner {
+    overflow-x: visible;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       padding: rem(52px) rem(46px) 0 rem(46px);
     }
