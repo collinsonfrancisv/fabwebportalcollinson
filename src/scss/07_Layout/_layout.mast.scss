@@ -4,7 +4,7 @@
     @include display-flex;
     @include flex-flow(row, nowrap);  
     @include justify-content(space-between);
-    @include align-items(center);
+    @include align-items(stretch);
   }
 
   &__logo {
@@ -32,6 +32,7 @@
     @include display-flex;
     @include flex-flow(column, nowrap); 
     @include justify-content(center); 
+    padding: 0 5em;
   }
 }
 

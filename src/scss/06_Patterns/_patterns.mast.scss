@@ -1,6 +1,7 @@
 .p-mast {
+  font-size: rem(11px);
+  color: $color-blue-zodiac;
   background: #fff; 
-
   z-index: 1;
   box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15);
   @include mq(max, rem(map-get($breakpoints, 'hands-wide') - 1 )) {
@@ -13,6 +14,9 @@
 
   &__nav-link {
     text-align: center;   
+    text-decoration: none;
+    color: $color-blue-zodiac;
+    font-weight: 600;
   }
 
   &__nav-link:hover {

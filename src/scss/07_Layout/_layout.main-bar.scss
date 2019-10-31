@@ -1,9 +1,13 @@
 .l-main-bar {
+  position: fixed;
+  width: 100%;
+  height: rem(153px);
   @include display-flex;
   @include flex-flow(column, nowrap);
-  @include justify-content(space-between);
-  height: rem(153px);
+  @include justify-content(space-between);  
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    width: auto;
+    position: static;
     height: calc(100vh - 63px);
     min-width: rem(263px);
     @include justify-content(flex-start);
@@ -33,6 +37,8 @@
   &__container {
     min-width: 20%;
     max-width: 20em;
+    position: relative;
+    padding: 1em;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       min-width: inherit;
       max-width: inherit;
@@ -54,9 +60,10 @@
 
     svg {
       position: absolute;
-      right: -20%;
-      bottom: 20%;
+      right: -5%;
+      bottom: 30%;
     }
+    
   }  
 }
 
@@ -64,16 +71,25 @@
 
 .l-menu-list {
   min-height: rem(48px);
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
   @include display-flex;
   @include flex-flow(row, nowrap);
   @include justify-content(flex-start);
   @include align-items-stretch;
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     @include flex-flow(column, nowrap);
+    overflow-x: hidden;
+    padding-top: 2em;
   }
   
+  &::-webkit-scrollbar  {
+    width: 0;
+    height: 0;
+  }
+
   &__item {
     @include display-flex;
     @include flex-flow(column, nowrap);

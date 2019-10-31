@@ -1,12 +1,3 @@
-// jQuery(document).ready(function($) {
-//   var alterFakeScrollClass = function() {
-//     var ww = document.body.clientWidth;
-//     if(ww < 400) {
-//       $('.p-main-bar__nav').fakeScroll();
-//     };
-//   };
-// });
-
 // This Function will always return the initial font-size of the html element 
 var rem = function rem() {
   var html = document.getElementsByTagName('html')[0];
@@ -16,8 +7,24 @@ var rem = function rem() {
   }
 }();
 
-
 // This function will convert pixel to rem
 function toRem(length) {
   return (parseInt(length) / rem());
 }
+
+jQuery(document).ready(function($) {
+  var fakeScrollClass = function() {
+    var ww = document.body.clientWidth;
+    if (ww < 400 ) {
+      $('.is-fake-scroll').fakeScroll();
+    } else if (ww >= 401) {
+      $('.l-menu-list').removeClass('is-fake-scroll');
+    };
+  };
+  $(window).resize(function(){
+    fakeScrollClass();
+  });
+  //Fire it when the page first loads:
+  fakeScrollClass();
+});
+

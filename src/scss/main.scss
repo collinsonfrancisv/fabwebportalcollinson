@@ -9,6 +9,7 @@
 
 
 
+
 /// 02 BASE PARTIALS
 @import '02_Base/base.reset';
 @import '02_Base/base.base';
@@ -20,6 +21,7 @@
 
 
 /// 03 VENDORS PARTIALS
+@import '03_Vendors/sass-flexbox/scss/vendors.sass-flexbox';
 
 
 
@@ -28,6 +30,8 @@
 /// 04 OBJECTS PARTIALS
 @import '04_Objects/objects.logo';
 @import '04_Objects/objects.icons';
+
+
 
 
 
@@ -42,6 +46,7 @@
 /// 06 PATTERNS PARTIALS
 @import '06_Patterns/patterns.main-bar';
 @import '06_Patterns/patterns.mast';
+
 
 
 
