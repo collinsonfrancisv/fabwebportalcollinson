@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAB</title>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel='icon' href='src/favicon.ico' />
+    <script src="src/js/jquery-3.4.1.js"></script>    
+    
+    <style>
+      .overflow-test {
+        display: none;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+
+      .overflow-test li {
+        margin-right: 1em;    
+        width: 200px;
+        height: 100px;
+        background: orange;
+        border: 1px solid green;
+      }
+    </style>
+    
+</head>
+<body>
+
+    <div class="l-device-width">
+
+      <div class="p-mast l-mast l-container-padding">
+
+        <a class="p-mast__logo l-mast__logo o-logo" href="#"><img src="src/svg/fab-logo.svg" width="66" alt="FAB logo" class="o-logo__image"></a>
+
+        <ul class="p-mast__nav l-mast__nav">
+          <li class="p-mast__nav-item l-mast__nav-item">
+            <a class="p-mast__nav-link l-mast__nav-link" href="#">
+              <span>FAB Rewards</span>
+            </a>
+          </li>
+
+          <li class="p-mast__nav-item l-mast__nav-item">
+            <a class="p-mast__nav-link l-mast__nav-link" href="#">
+              <span>FAB Al Futtaim Rewards</span>
+            </a>
+          </li>
+
+          <li class="p-mast__nav-item l-mast__nav-item">
+            <a class="p-mast__nav-link l-mast__nav-link" href="#">
+              <span>FAB Etihad Guest Miles</span>
+            </a>
+          </li>
+
+        </ul><!-- / p-mast__nav l-mast__nav --> 
+
+
+      </div><!-- / p-mast -->
+
+    </div><!-- / l-device-width -->
+
+    <div class="l-scaffold">
+                  
+        <div class="p-main-bar l-main-bar">
+
+            <div class="p-rewards-points l-rewards-points l-container-padding">
+              
+              <div class="p-rewards-points__container l-rewards-points__container">
+
+                <h1 class="p-rewards-points__label l-rewards-points__label">FAB Rewards</h1>
+                <span class="p-rewards-points__value l-rewards-points__value">
+                  10,000,000         
+                </span>
+
+                <a class="l-rewards-points__drop-down p-rewards-points__drop-down o-drop-down-wrapper" href="#">
+                  <svg  class="o-drop-down" role="presentation" width="15px" height="15px" viewBox="0 0 15 15">
+                      <use xlink:href="svg/sprite.svg#c-blue__arrow-down" />
+                  </svg>
+                </a>
+                
+              </div>
+
+            </div><!-- / p-rewards-points l-rewards-points --> 
+
+            <ul class="p-main-bar__nav p-main-bar__nav@hands-wide l-menu-list l-container-padding is-fake-scroll">
+
+              <li class="l-menu-list__item">
+
+                  <div class="c-menu l-menu">
+
+                    <div class="c-menu__header l-menu__header" >
+
+                      <a class="c-menu__title" href="#">Redeem Rewards</a>
+
+                    </div><!-- / c-menu__header l-menu__header -->  
+                    
+                    <ul class="l-sub-menu-list">
+
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                              <use xlink:href="svg/sprite.svg#c-white__vouchers" />
+                            </svg>
+      
+                            <span class="c-menu__label l-menu__label">Vouchers</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->                      
+
+                    </ul><!-- / l-sub-menu-list -->
+                    
+      
+                  </div><!-- / c-menu .l-menu --> 
+
+              </li><!-- / l-menu-list__item -->
+
+              <li class="l-menu-list__item">
+
+                  <div class="c-menu l-menu">
+
+                    <div class="c-menu__header l-menu__header" >
+
+                      <a class="c-menu__title" href="#">Manage Rewards</a>
+
+                    </div><!-- / c-menu__header l-menu__header -->  
+                    
+                    <ul class="l-sub-menu-list">
+
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                          <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                            <use xlink:href="svg/sprite.svg#c-white__convert" />
+                          </svg>
+    
+                          <span class="c-menu__label l-menu__label">Rewards to Miles</span>
+      
+                          </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->
+                      
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                          <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                            <use xlink:href="svg/sprite.svg#c-white__payments" />
+                          </svg>
+    
+                          <span class="c-menu__label l-menu__label">Cashback</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->
+  
+                    </ul><!-- / l-sub-menu-list -->  
+      
+                  </div><!-- / c-menu .l-menu --> 
+
+              </li><!-- / l-menu-list__item -->
+
+              <li class="l-menu-list__item">
+
+                  <div class="c-menu l-menu">
+
+                    <div class="c-menu__header l-menu__header" >
+
+                      <a class="c-menu__title" href="#">Activity</a>
+
+                    </div><!-- / c-menu__header l-menu__header -->  
+                    
+                    <ul class="l-sub-menu-list">
+
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                              <use xlink:href="svg/sprite.svg#c-white__services" />
+                            </svg>
+      
+                            <span class="c-menu__label l-menu__label">My Activity</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->                      
+
+                    </ul><!-- / l-sub-menu-list -->  
+      
+                  </div><!-- / c-menu .l-menu --> 
+
+              </li><!-- / l-menu-list__item -->
+
+              <li class="l-menu-list__item">
+
+                  <div class="c-menu l-menu">
+
+                    <div class="c-menu__header l-menu__header" >
+
+                      <a class="c-menu__title" href="#">Activity</a>
+
+                    </div><!-- / c-menu__header l-menu__header -->  
+                    
+                    <ul class="l-sub-menu-list">
+
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                              <use xlink:href="svg/sprite.svg#c-white__services" />
+                            </svg>
+      
+                            <span class="c-menu__label l-menu__label">My Activity</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->                      
+
+                    </ul><!-- / l-sub-menu-list -->  
+      
+                  </div><!-- / c-menu .l-menu --> 
+
+              </li><!-- / l-menu-list__item -->
+
+              <li class="l-menu-list__item">
+
+                  <div class="c-menu l-menu">
+
+                    <div class="c-menu__header l-menu__header" >
+
+                      <a class="c-menu__title" href="#">Activity</a>
+
+                    </div><!-- / c-menu__header l-menu__header -->  
+                    
+                    <ul class="l-sub-menu-list">
+
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                              <use xlink:href="svg/sprite.svg#c-white__services" />
+                            </svg>
+      
+                            <span class="c-menu__label l-menu__label">My Activity</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->                      
+
+                    </ul><!-- / l-sub-menu-list -->  
+      
+                  </div><!-- / c-menu .l-menu --> 
+
+              </li><!-- / l-menu-list__item -->
+
+            </ul><!-- / l-menu-list --> 
+
+            <a href="#" class="p-main-bar__return l-main-bar__return">
+                <div>
+                    
+  
+                        <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                          <use xlink:href="svg/sprite.svg#c-white__logout" />
+                        </svg>
+  
+                        <span class="c-menu__label l-menu__label">Return to Internet Banking</span>
+  
+      
+                  </div><!-- / c-menu .l-menu -->
+            </a>
+
+        </div><!-- / p-main-bar l-main-bar -->
+
+
+        <main class="p-main-content l-main-content">
+
+
+          <div class="l-main-content__inner row">
+
+            <div class="col-xs-12" style="background-color: grey;">
+              CONTENT
+            </div>
+
+            <ul class="overflow-test">
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+              <li>OVERFLOW</li>
+            </ul>
+
+          </div>
+
+          
+
+        </main><!-- / l-main -->
+
+    </div><!-- / l-scaffold -->
+
+    <script src="src/js/vendors/svg4everybody.min.js"></script>
+    <script src="src/js/vendors/fakescroll.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script>
+      svg4everybody();
+      
+      document.querySelector('.l-main-content').fakeScroll();
+    </script>
+
+
+</body>
+</html>
