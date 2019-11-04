@@ -11,14 +11,15 @@
     
     <style>
       .overflow-test {
-        display: flex;
+        display: none;
         flex-flow: row nowrap;
         justify-content: space-between;
       }
 
       .overflow-test li {
-        /* margin-right: 1em;     */
-        /* width: 200px; */
+        max-width: 200px;
+        min-width: 200px;
+        flex: 0 0 200px;
         height: 100px;
         background: orange;
         border: 1px solid green;
