@@ -11,3 +11,20 @@
   padding-left: rem(30px);
   padding-right: rem(30px);
 }
+
+.l-padding-left {
+  padding-left: rem(30px);
+}
+
+.l-padding-right {
+  padding-right: rem(30px);
+}
+
+
+.l-wrapper {
+  @include display-flex;
+  @include flex-flow(column, nowrap);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    @include flex-flow(row, nowrap);  
+  }
+}

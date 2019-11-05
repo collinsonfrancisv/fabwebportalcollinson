@@ -1,4 +1,5 @@
 .l-main-bar {
+  overflow-y: visible;
   position: fixed;
   width: 100%;
   height: rem(153px);
@@ -13,14 +14,7 @@
     @include justify-content(flex-start);
   }
 
-  &__return {
-    display: none;
-    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-      display: block;
-      padding: 1.4em 0;
-      margin-top: auto;
-    }
-  }
+  
 }
 
 .l-rewards-points {
@@ -67,8 +61,6 @@
   }  
 }
 
-
-
 .l-menu-list {
   min-height: rem(48px);
   overflow-x: scroll;
@@ -77,8 +69,7 @@
   -ms-overflow-style: none;  /* IE 10+ */
   @include display-flex;
   @include flex-flow(row, nowrap);
-  @include justify-content(flex-start);
-  @include align-items-stretch;
+  @include justify-content(space-between);
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     @include flex-flow(column, nowrap);
     overflow-x: hidden;
@@ -94,7 +85,9 @@
     @include display-flex;
     @include flex-flow(column, nowrap);
     @include justify-content(center);
-    @include flex(1,0,rem(130px));
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: auto;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       @include justify-content(flex-start);
       @include flex(1,0,auto);
@@ -123,8 +116,6 @@
   }
 }
 
-
-
 .l-sub-menu-list {
   display: none;
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
@@ -132,4 +123,7 @@
   }
 }
 
+.l-mobile-sub-menu-list {
+  @include display-flex;
 
+}

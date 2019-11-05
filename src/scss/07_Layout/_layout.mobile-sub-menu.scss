@@ -1,0 +1,23 @@
+.l-mobile-sub-menu {
+  margin-top: rem(153px);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.l-mobile-sub-menu-list {
+  @include display-flex;
+  @include flex-flow(row, nowrap);
+  @include justify-content(flex-start);
+  overflow-x: hidden;
+  &__item {
+    margin-right: 1em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 140px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+}

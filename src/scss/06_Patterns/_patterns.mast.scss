@@ -4,7 +4,7 @@
   background: #fff; 
   z-index: 1;
   box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15);
-  @include mq(max, rem(map-get($breakpoints, 'hands-wide') - 1 )) {
+  @include mq(max, rem(map-get($breakpoints, 'hands-wide'))) {
     display: none;
   }
 

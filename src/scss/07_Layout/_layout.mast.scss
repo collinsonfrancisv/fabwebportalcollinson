@@ -32,7 +32,13 @@
     @include display-flex;
     @include flex-flow(column, nowrap); 
     @include justify-content(center); 
-    padding: 0 5em;
+    // padding: 0 3em;  
+    width: auto;  
+    padding: 0 2em;
+
+    @include mq(min, rem(755px)) {
+      width: 20em;  
+    }
   }
 }
 

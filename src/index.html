@@ -11,7 +11,7 @@
     
     <style>
       .overflow-test {
-        display: none;
+        display: none ;
         flex-flow: row nowrap;
         justify-content: space-between;
       }
@@ -31,7 +31,7 @@
 
     <div class="l-device-width">
 
-      <div class="p-mast l-mast l-container-padding">
+      <div class="p-mast l-mast l-padding-left">
 
         <a class="p-mast__logo l-mast__logo o-logo" href="#"><img src="svg/fab-logo.svg" width="66" alt="FAB logo" class="o-logo__image"></a>
 
@@ -62,8 +62,10 @@
     </div><!-- / l-device-width -->
 
     <div class="l-scaffold">
-                  
-        <div class="p-main-bar l-main-bar">
+
+        <div class="l-wrapper ">
+
+          <div class="p-main-bar l-main-bar">
 
             <div class="p-rewards-points l-rewards-points l-container-padding">
               
@@ -100,13 +102,13 @@
 
                       <li class="l-sub-menu-list__item">
 
-                        <a href="#" class="c-menu__item l-menu__item">
+                       <a href="#" class="c-menu__item l-menu__item">
 
                             <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
                               <use xlink:href="svg/sprite.svg#c-white__vouchers" />
                             </svg>
       
-                            <span class="c-menu__label l-menu__label">Vouchers</span>
+                            <span class="c-menu__label l-menu __label">Vouchers</span>
       
                         </a><!-- / c-menu__item l-menu__item --> 
 
@@ -196,94 +198,51 @@
                   </div><!-- / c-menu .l-menu --> 
 
               </li><!-- / l-menu-list__item -->
-
-              <li class="l-menu-list__item">
-
-                  <div class="c-menu l-menu">
-
-                    <div class="c-menu__header l-menu__header" >
-
-                      <a class="c-menu__title" href="#">Activity</a>
-
-                    </div><!-- / c-menu__header l-menu__header -->  
-                    
-                    <ul class="l-sub-menu-list">
-
-                      <li class="l-sub-menu-list__item">
-
-                        <a href="#" class="c-menu__item l-menu__item">
-
-                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
-                              <use xlink:href="svg/sprite.svg#c-white__services" />
-                            </svg>
-      
-                            <span class="c-menu__label l-menu__label">My Activity</span>
-      
-                        </a><!-- / c-menu__item l-menu__item --> 
-
-                      </li><!-- / l-sub-menu-list__item -->                      
-
-                    </ul><!-- / l-sub-menu-list -->  
-      
-                  </div><!-- / c-menu .l-menu --> 
-
-              </li><!-- / l-menu-list__item -->
-
-              <li class="l-menu-list__item">
-
-                  <div class="c-menu l-menu">
-
-                    <div class="c-menu__header l-menu__header" >
-
-                      <a class="c-menu__title" href="#">Activity</a>
-
-                    </div><!-- / c-menu__header l-menu__header -->  
-                    
-                    <ul class="l-sub-menu-list">
-
-                      <li class="l-sub-menu-list__item">
-
-                        <a href="#" class="c-menu__item l-menu__item">
-
-                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
-                              <use xlink:href="svg/sprite.svg#c-white__services" />
-                            </svg>
-      
-                            <span class="c-menu__label l-menu__label">My Activity</span>
-      
-                        </a><!-- / c-menu__item l-menu__item --> 
-
-                      </li><!-- / l-sub-menu-list__item -->                      
-
-                    </ul><!-- / l-sub-menu-list -->  
-      
-                  </div><!-- / c-menu .l-menu --> 
-
-              </li><!-- / l-menu-list__item -->
-
+             
             </ul><!-- / l-menu-list --> 
 
-            <a href="#" class="p-main-bar__return l-main-bar__return">
-                <div>
-                    
-  
-                        <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
-                          <use xlink:href="svg/sprite.svg#c-white__logout" />
-                        </svg>
-  
-                        <span class="c-menu__label l-menu__label">Return to Internet Banking</span>
-  
-      
-                  </div><!-- / c-menu .l-menu -->
-            </a>
+            <div class="p-return c-menu l-padding-left">
 
-        </div><!-- / p-main-bar l-main-bar -->
+              <a href="#" class="p-return__link c-menu__item l-menu__item">  
+                <svg class="p-return__icon c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                  <use xlink:href="svg/sprite.svg#c-white__logout" />
+                </svg>
 
+                <span class="p-return__label c-menu__label l-menu__label">Return to Internet Banking</span>
+        
+              </a>
+              
+            </div>           
+
+          </div><!-- / p-main-bar l-main-bar -->
+
+          <div class="p-mobile-sub-menu l-mobile-sub-menu" style="border: 1px dotted red;">
+
+            <ul class="l-mobile-sub-menu-list l-container-padding">
+  
+              <li class="l-mobile-sub-menu-list__item" style="border: 1px solid red; ">
+                <a href="#" class="o-button o-button--hollow">Shop</a>
+              </li><!-- / l-mobile-sub-menu-list__item -->
+  
+              <li class="l-mobile-sub-menu-list__item" style="border: 1px solid red">
+                  <a href="#" class="o-button">Travel</a>
+              </li><!-- / l-mobile-sub-menu-list__item -->
+  
+              <li class="l-mobile-sub-menu-list__item" style="border: 1px solid red">
+                  <a href="#" class="o-button">Vouchers</a>
+              </li><!-- / l-mobile-sub-menu-list__item -->
+  
+            </ul><!-- / l-mobile-sub-menu-list__item -->
+    
+          </div><!-- / p-mobile-sub-menu l-mobile-sub-menu -->
+
+        </div>
+        
 
         <main class="p-main-content l-main-content">
 
 
-          <div class="l-main-content__inner" style="border: 4px solid red;">
+          <div class="l-main-content__inner">
 
 
             <ul class="overflow-test row">

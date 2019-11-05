@@ -1,0 +1,13 @@
+.p-return {
+    display: none;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      height: rem(68px);
+      margin-top: auto;
+      background: rgba($color-blue-zodiac, .30);
+      border-top: 1px solid rgba($color-dodger-blue, .5);
+      @include display-flex;
+      @include flex-flow(column, nowrap);
+      @include justify-content(center);
+
+    }
+  }
