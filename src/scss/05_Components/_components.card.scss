@@ -3,16 +3,31 @@
   background: #fff; 
   color: $color-blue-zodiac;
   overflow: hidden;
-  
+
   &__image {
     color: $color-gull-gray;
     display: block;
+  }
+
+  &__label, 
+  &__title, 
+  &__detail {
+    margin-bottom: .2em;
   }
 
   &__label {
     color: $color-gull-gray;
     font-size: rem(9px);
   }
+
+  &__label--new::after {
+    content: 'New';
+    color: $color-label-positive;
+    text-transform: uppercase;
+    padding-left: 1.2em;
+    display: inline-block;
+  }
+
 
   &__label-modifier::before {
     content: '';
@@ -26,16 +41,18 @@
   &__title {
     color: $color-blue-zodiac;
     font-size: rem(13px);
+    white-space: nowrap;
   }
 
   &__detail {
     color: $color-gull-gray;
     font-size: rem(9px);
+    white-space: nowrap;
   }
 
-  &__value {
-      font-weight: 600;
-  }
+//   &__value {
+//     //   font-weight: 600;
+//   }
 
   &__value::after {
     content: ' - ';
