@@ -1,3 +1,7 @@
+svg4everybody();
+document.querySelector('.l-main-content').fakeScroll();
+
+
 // This Function will always return the initial font-size of the html element 
 var rem = function rem() {
   var html = document.getElementsByTagName('html')[0];
@@ -18,7 +22,7 @@ jQuery(document).ready(function($) {
     if (ww < 400 ) {
       $('.is-fake-scroll').fakeScroll();
     } else if (ww >= 401) {
-      $('.l-menu-list').removeClass('is-fake-scroll');
+      $('.is-fake-scroll').removeClass('is-fake-scroll');
     };
   };
   $(window).resize(function(){

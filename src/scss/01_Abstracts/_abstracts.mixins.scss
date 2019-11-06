@@ -123,3 +123,25 @@
    
 
  }
+
+ /// Overflow-y Scroll
+ @mixin scroll-x {
+  overflow-x: scroll;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+
+
+
+/// Card Styles
+@mixin card-style-1 {
+  border: 1px solid rgba(159,169,184,0.19);
+  box-shadow: 0 2px 4px 0 rgba(159,169,184,0.13);
+  border-radius: 4px;
+}

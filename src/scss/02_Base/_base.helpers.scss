@@ -35,3 +35,12 @@
     width: 1px;
   }
   
+  
+  .is-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 1px;    
+  }
+
+  .is-capitalize {
+    text-transform: capitalize;
+  }

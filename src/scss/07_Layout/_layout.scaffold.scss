@@ -28,3 +28,8 @@
     @include flex-flow(row, nowrap);  
   }
 }
+
+.l-link-block {
+  display: block;
+  text-decoration: none;
+}

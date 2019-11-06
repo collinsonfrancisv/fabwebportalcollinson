@@ -9,8 +9,8 @@
 .l-mobile-sub-menu-list {
   @include display-flex;
   @include flex-flow(row, nowrap);
-  @include justify-content(flex-start);
-  overflow-x: hidden;
+  @include justify-content(space-between);
+  @include scroll-x;
   &__item {
     margin-right: 1em;
     flex-grow: 0;

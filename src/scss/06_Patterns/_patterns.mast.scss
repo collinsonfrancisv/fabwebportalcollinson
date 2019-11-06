@@ -15,12 +15,12 @@
   &__nav-link {
     text-align: center;   
     text-decoration: none;
-    color: $color-blue-zodiac;
+    color: $color-smalt;
     font-weight: 600;
   }
 
   &__nav-link:hover {
-    box-shadow: inset 0 -3px 0 rgba($color-blue-zodiac, 1);
+    box-shadow: inset 0 -3px 0 rgba($color-smalt, 1);
   }
 }
 
