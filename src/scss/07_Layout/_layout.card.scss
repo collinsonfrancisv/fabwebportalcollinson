@@ -5,7 +5,7 @@
   @include scroll-x;
 
   &__item {
-      margin-right: 1em;
+      margin-right: 1rem;
   }
 }
 
@@ -18,9 +18,7 @@
   min-width: 305px;
   max-width: 355px;
 
-  &:hover {
-      border: 1px solid $color-smalt;
-  }
+  
 
   &__image {
     flex-grow: 0;
