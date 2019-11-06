@@ -5,7 +5,7 @@
   @include scroll-x;
 
   &__item {
-      margin-right: 2%;
+      margin-right: 1em;
   }
 }
 
@@ -26,6 +26,9 @@
     flex-grow: 0;
     flex-shrink: 0;
     width: rem(82px);
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      width: rem(111px);
+    }
   } 
 
   &__content {
@@ -39,13 +42,32 @@
     
   }
 
-
-
   &__arrow {
     flex-grow: 0;
     flex-shrink: 0;
     margin-left: auto;
     width: 20px;
     height: 20px;
+  }
+
+}
+
+.l-card--large {
+  display: block;
+  min-width: 277px;
+  max-width: 445px;
+  &__image {
+    display: block;
+    width: rem(277px);
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      width: rem(445px);
+    }
+  }
+
+  &__content {
+    display: block;
+    @include display-flex;
+    @include flex-flow(column, nowrap);
+    @include justify-content(space-around);
   }
 }

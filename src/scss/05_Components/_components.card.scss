@@ -1,18 +1,17 @@
-.c-card {
-  @include card-style-1;
-  background: #fff; 
+.c-card { 
   color: $color-blue-zodiac;
   overflow: hidden;
 
   &__image {
     color: $color-gull-gray;
     display: block;
+    border-radius: 0 4px 4px 0;
   }
 
   &__label, 
   &__title, 
   &__detail {
-    margin-bottom: .2em;
+    line-height: 1.7;
   }
 
   &__label {
@@ -28,16 +27,6 @@
     display: inline-block;
   }
 
-
-  &__label-modifier::before {
-    content: '';
-    padding-right: 1em;
-  }
-
-  &__label-modifier--positive {
-    color: $color-label-positive;
-  }
-
   &__title {
     color: $color-blue-zodiac;
     font-size: rem(13px);
@@ -50,9 +39,9 @@
     white-space: nowrap;
   }
 
-//   &__value {
-//     //   font-weight: 600;
-//   }
+  &__value {
+    font-weight: 600;
+  }
 
   &__value::after {
     content: ' - ';
@@ -61,3 +50,27 @@
   }
 
 }
+
+.c-card--large {
+  &__label, 
+  &__title, 
+  &__detail {
+    line-height: 1.9;
+  }
+
+  &__title {
+    font-size: rem(16px);
+  }
+}
+
+.c-card--style-1 {
+  background: #fff;
+  box-shadow: map-get($shadow-orientations, 'shadow-orientation-1') map-get($shadow-colors, 'shadow-color-1');
+  border-radius: map-get($border-radii, 'border-radius-1');
+  border: map-get($border-widths, 'border-width-1');  
+}
+
+.c-card--style-2 {
+  background: transparent;
+}
+

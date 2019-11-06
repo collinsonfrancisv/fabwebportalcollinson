@@ -88,7 +88,7 @@ $breakpoints: (
 /// Shadows
 /// Shadow color values 
 $shadow-colors: (
-  'shadow-color-1': rgba(159,169,184,.13),
+  'shadow-color-1': rgba($color-gull-gray,.13),
   'shadow-color-2': rgba(0,0,0,.05),
 );
 
@@ -103,11 +103,15 @@ $shadow-orientations: (
 
 
 
-
+/// Borders
 /// Border Radius
 $border-radii: (
   'border-radius-1': 4px,
   'border-radius-2': 6px,
   'border-radius-3': 8px,
   'border-radius-4': 21px,
+);
+
+$border-widths: (
+  'border-width-1':  1px solid rgba($color-gull-gray,0.19),
 );

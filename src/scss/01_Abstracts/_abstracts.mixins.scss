@@ -135,13 +135,3 @@
     height: 0;
   }
 }
-
-
-
-
-/// Card Styles
-@mixin card-style-1 {
-  border: 1px solid rgba(159,169,184,0.19);
-  box-shadow: 0 2px 4px 0 rgba(159,169,184,0.13);
-  border-radius: 4px;
-}
