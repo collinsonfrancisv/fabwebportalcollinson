@@ -11,6 +11,7 @@
     color: $color-gull-gray;
     display: block;
     border-radius: 0 4px 4px 0;
+    box-shadow: map-get($shadow-orientations, 'shadow-orientation-1') map-get($shadow-colors, 'shadow-color-1');
   }
 
   &__label, 
@@ -57,6 +58,10 @@
 }
 
 .c-card--large {
+  &:hover {
+    border-color: transparent;
+  }
+  
   &__label, 
   &__title, 
   &__detail {

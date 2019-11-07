@@ -24,8 +24,10 @@
     flex-grow: 0;
     flex-shrink: 0;
     width: rem(82px);
+    height: rem(66px);
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       width: rem(111px);
+      height: rem(90px);
     }
   } 
 
