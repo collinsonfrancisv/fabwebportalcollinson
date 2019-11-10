@@ -1,7 +1,10 @@
 .c-menu {
   color: #fff;
-  font-size: rem(12px);
-  
+  font-size: rem(10px);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    font-size: rem(12px);
+  }
+
   &__header {
     text-align: center;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {

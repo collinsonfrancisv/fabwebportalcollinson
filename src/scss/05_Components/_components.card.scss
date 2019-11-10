@@ -17,7 +17,7 @@
   &__label, 
   &__title, 
   &__detail {
-    line-height: 1.7;
+    line-height: 1.5;
   }
 
   &__label {
@@ -27,6 +27,14 @@
 
   &__label--new::after {
     content: 'New';
+    color: $color-label-positive;
+    text-transform: uppercase;
+    padding-left: 1.2em;
+    display: inline-block;
+  }
+
+  &__label--confirmed::after {
+    content: 'Confirmed';
     color: $color-label-positive;
     text-transform: uppercase;
     padding-left: 1.2em;

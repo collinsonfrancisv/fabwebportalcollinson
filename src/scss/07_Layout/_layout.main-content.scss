@@ -1,5 +1,5 @@
 .l-main-content {
-  margin-top: rem(153px);
+  margin-top: rem(240px);
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     margin-top: 0;
     max-height: calc(100vh - 63px);

@@ -1,0 +1,6 @@
+.p-mobile-sub-menu {
+  font-size: rem(10px);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    font-size: rem(12px);  
+  }
+}

@@ -216,20 +216,20 @@
 
           </div><!-- / p-main-bar l-main-bar -->
 
-          <div class="p-mobile-sub-menu l-mobile-sub-menu" style="border: 1px dotted red;">
+          <div class="p-mobile-sub-menu l-mobile-sub-menu c-menu" style="border: 1px dotted red;">
 
             <ul class="l-mobile-sub-menu-list l-container-padding is-fake-scroll">
   
               <li class="l-mobile-sub-menu-list__item" style="border: 1px solid red; ">
-                <a href="#" class="o-button o-button--hollow">Shop</a>
+                <a href="#" class="o-button o-button--hollow o-button--text-small">Shop</a>
               </li><!-- / l-mobile-sub-menu-list__item -->
   
               <li class="l-mobile-sub-menu-list__item" style="border: 1px solid red">
-                  <a href="#" class="o-button">Travel</a>
+                  <a href="#" class="o-button o-button--text-small">Travel</a>
               </li><!-- / l-mobile-sub-menu-list__item -->
   
               <li class="l-mobile-sub-menu-list__item" style="border: 1px solid red">
-                  <a href="#" class="o-button">Vouchers</a>
+                  <a href="#" class="o-button o-button--text-small">Vouchers</a>
               </li><!-- / l-mobile-sub-menu-list__item -->
   
             </ul><!-- / l-mobile-sub-menu-list__item -->
@@ -245,8 +245,12 @@
           <div class="l-main-content__inner">
 
             <div class="l-section l-featured">
-
-              <h1 class="o-section-header">Featured</h1>
+              
+              <header>
+                <h1 class="o-section-header">Featured</h1>
+                <a href="#">View All</a>
+              </header>
+              
 
               <ul class="l-card-grid is-fake-scroll">
 
@@ -317,7 +321,7 @@
             <!-- Vouchers -->
             <div class="l-section l-vouchers">
 
-              <h1 class="o-section-header">Vouchers</h1>
+              <h1 class="o-section-header">My Vouchers</h1>
 
               <ul class="l-card-grid is-fake-scroll">
 
@@ -406,7 +410,7 @@
             <!-- Tickets -->
             <div class="l-section l-tickets">
 
-              <h1 class="o-section-header">Vouchers</h1>
+              <h1 class="o-section-header">Tickets</h1>
 
               <ul class="l-card-grid is-fake-scroll">
 
@@ -418,7 +422,7 @@
 
                     <div class="l-card__content">
 
-                        <p class="c-card__label c-card__label--new is-uppercase">Retail</p>
+                        <p class="c-card__label c-card__label--confirmed is-uppercase">Retail</p>
 
                         <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150</span>2x Rewards - Online Shopping</h2>
    
@@ -436,61 +440,47 @@
 
                 </li><!-- / l-card-grid__item -->
 
-                <li class="l-card-grid__item">
-
-                    <a href="#" class="l-link-block c-card c-card--style-1 l-card l-card-xs">
-                      
-                      <img src="images/images-source/vouchers/virgin-megastore.png" alt="" class="c-card__image l-card__image">
-  
-                      <div class="l-card__content">
-  
-                          <p class="c-card__label is-uppercase">Retail</p>
-  
-                          <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150</span>2x Rewards - Online Shopping</h2>
-     
-                          <p class="c-card__detail c-card__detail--large l-card__detail">Valid until 28th August 2019</p>
-  
-                      </div><!-- / l-card__content -->
-                       
-                      <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
-                          <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                              <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
-                          </svg>
-                          
-                     </div>
-                    </a><!-- / l-link-block c-card -->
-  
-                </li><!-- / l-card-grid__item -->
-
-                <li class="l-card-grid__item">
-
-                    <a href="#" class="l-link-block c-card c-card--style-1 l-card l-card-xs">
-                      
-                      <img src="images/images-source/vouchers/virgin-megastore.pngs" alt="" class="c-card__image l-card__image">
-  
-                      <div class="l-card__content">
-  
-                          <p class="c-card__label is-uppercase">Retail</p>
-  
-                          <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150</span>2x Rewards - Online Shopping</h2>
-     
-                          <p class="c-card__detail c-card__detail--large l-card__detail">Valid until 28th August 2019</p>
-  
-                      </div><!-- / l-card__content -->
-                       
-                      <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
-                          <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                              <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
-                          </svg>
-                          
-                     </div>
-                    </a><!-- / l-link-block c-card -->
-  
-                </li><!-- / l-card-grid__item -->
-
               </ul><!-- / l-card-grid -->
               
             </div><!-- / l-section -->
+
+            <!-- Orders -->
+            <div class="l-section l-orders">
+
+                <h1 class="o-section-header">My Orders</h1>
+  
+                <ul class="l-card-grid is-fake-scroll">
+  
+                  <li class="l-card-grid__item">
+  
+                    <a href="#" class="l-link-block c-card c-card--style-1 l-card">
+                      
+                     <div>
+                       
+                     </div>
+  
+                      <div class="l-card__content" style="border: 1px solid red;">
+  
+                          <p class="c-card__label c-card__label--confirmed is-uppercase" style="border: 1px solid red;">Retail</p>
+  
+                          <h2 class="c-card__title is-capitalize l-card__title" style="border: 1px solid red;"><span class="c-card__value">AED 150</span>2x Rewards - Online Shopping</h2>
+     
+                        
+                      </div><!-- / l-card__content -->
+                       
+                      <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
+                          <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
+                              <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
+                          </svg>
+                          
+                     </div>
+                    </a><!-- / l-link-block c-card -->
+  
+                  </li><!-- / l-card-grid__item -->
+  
+                </ul><!-- / l-card-grid -->
+                
+              </div><!-- / l-section -->
 
           </div><!-- / l-main-content__inner -->
 
