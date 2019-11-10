@@ -216,7 +216,7 @@
 
           </div><!-- / p-main-bar l-main-bar -->
 
-          <div class="p-mobile-sub-menu l-mobile-sub-menu c-menu" style="border: 1px dotted red;">
+          <div class="p-mobile-sub-menu l-mobile-sub-menu c-menu" >
 
             <ul class="l-mobile-sub-menu-list l-container-padding disable-scrollbars">
   
@@ -252,7 +252,7 @@
               </header>
               
 
-              <ul class="l-card-grid" style="border: 2px solid yellow;">
+              <ul class="l-card-grid horizontal-scroll">
 
                   <li class="l-card-grid__item">
 
@@ -323,7 +323,7 @@
 
               <h1 class="o-section-header">My Vouchers</h1>
 
-              <ul class="l-card-grid disable-scrollbars">
+              <ul class="l-card-grid l-card-grid--nowrap disable-scrollbars">
 
                 <li class="l-card-grid__item">
 
@@ -412,7 +412,7 @@
 
               <h1 class="o-section-header">Tickets</h1>
 
-              <ul class="l-card-grid disable-scrollbars">
+              <ul class="l-card-grid l-card-grid--nowrap disable-scrollbars">
 
                 <li class="l-card-grid__item">
 
@@ -449,7 +449,7 @@
 
                 <h1 class="o-section-header">My Orders</h1>
   
-                <ul class="l-card-grid disable-scrollbars">
+                <ul class="l-card-grid l-card-grid-nowrap disable-scrollbars">
   
                   <li class="l-card-grid__item">
   
@@ -554,11 +554,37 @@
                          </div>
                         </a><!-- / l-link-block c-card -->
       
-                      </li><!-- / l-card-grid__item -->
+                    </li><!-- / l-card-grid__item -->
   
-                </ul><!-- / l-card-grid -->
+                  </ul><!-- / l-card-grid -->
                 
               </div><!-- / l-section -->
+
+              <!-- My Bonus Rewards -->
+              <div class="l-section l-orders">
+                
+                <h1 class="o-section-header">My Bonus Rewards</h1>
+
+                <ul class="l-card-grid l-card-grid-wrap">
+
+                    <li class="l-card-grid__item">
+  
+                      <label class="c-toggle">
+
+                        <input class="c-toggle-checkbox o-toggle-checkbox" type="checkbox">
+
+                        <div class="c-toggle-switch o-toggle-switch"></div>
+
+                      </label><!-- / c-toggle -->
+      
+                    </li><!-- / l-card-grid__item -->
+
+                    
+
+                </ul>
+
+              </div>
+
 
           </div><!-- / l-main-content__inner -->
 
@@ -572,10 +598,30 @@
     <script src="js/vendors/fakescroll.min.js"></script>
     <script src="js/main.js"></script>
     <script> 
-      
       document.querySelector('.l-main-content').fakeScroll();
     </script>
 
+    <script>
+      (function() {
+          function scrollHorizontally(e) {
+              e = window.event || e;
+              var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+              document.getElementById('horizontal-scroll').scrollLeft -= (delta*40); // Multiplied by 40
+              e.preventDefault();
+          }
+
+          if (document.getElementById('horizontal-scroll').addEventListener) {
+              // IE9, Chrome, Safari, Opera
+              document.getElementById('horizontal-scroll').addEventListener("mousewheel", scrollHorizontally, false);
+              // Firefox
+              document.getElementById('horizontal-scroll').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+          } else {
+              // IE 6/7/8
+              document.getElementById('horizontal-scroll').attachEvent("onmousewheel", scrollHorizontally);
+          }
+
+      })();
+    </script>
 
 </body>
 </html>

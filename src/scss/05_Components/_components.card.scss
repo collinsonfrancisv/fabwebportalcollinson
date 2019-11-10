@@ -100,3 +100,12 @@
   background: transparent;
 }
 
+.c-card--style-3 {
+  background: #fff;
+  box-shadow: map-get($shadow-orientations, 'shadow-orientation-2') map-get($shadow-colors, 'shadow-color-1');
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) { 
+    box-shadow: map-get($shadow-orientations, 'shadow-orientation-1') map-get($shadow-colors, 'shadow-color-1');
+  }
+  border-radius: map-get($border-radii, 'border-radius-1');
+  border: map-get($border-widths, 'border-width-1');  
+}

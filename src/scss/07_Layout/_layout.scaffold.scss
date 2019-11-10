@@ -1,3 +1,6 @@
+body {
+  overflow-y: hidden;
+}
 .l-scaffold {
   @include display-flex;
   @include flex-flow(column, nowrap);  
