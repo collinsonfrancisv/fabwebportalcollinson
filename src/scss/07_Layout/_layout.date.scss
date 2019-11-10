@@ -1,0 +1,6 @@
+.l-date {
+  @include display-flex;
+  @include flex-flow(column, nowrap); 
+  @include justify-content(center); 
+  @include align-items(center); 
+}

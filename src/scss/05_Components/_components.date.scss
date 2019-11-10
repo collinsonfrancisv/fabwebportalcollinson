@@ -1,0 +1,10 @@
+.c-date {
+  color: $color-gull-gray;
+  font-size: rem(9px);
+  height: 100%;
+
+  &__day, &__month {
+    line-height: 2;
+    font-size: rem(9px);
+  }
+}

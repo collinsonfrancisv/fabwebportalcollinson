@@ -14,10 +14,18 @@
     box-shadow: map-get($shadow-orientations, 'shadow-orientation-1') map-get($shadow-colors, 'shadow-color-1');
   }
 
+  &__sub-content {
+    color: $color-gull-gray;
+    display: block;
+    border-right: 1px solid rgba($color-gull-gray, .20);
+  }
+
+
+
   &__label, 
   &__title, 
   &__detail {
-    line-height: 1.5;
+    line-height: 1.8;
   }
 
   &__label {
@@ -57,11 +65,11 @@
     font-weight: 600;
   }
 
-  &__value::after {
-    content: ' - ';
-    padding-left: .2em;
-    padding-right: .2em;
-  }
+  // &__value::after {
+  //   content: ' - ';
+  //   padding-left: .2em;
+  //   padding-right: .2em;
+  // }
 
 }
 

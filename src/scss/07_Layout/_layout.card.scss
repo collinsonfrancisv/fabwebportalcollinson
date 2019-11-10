@@ -5,6 +5,7 @@
   @include scroll-x;
 
   &__item {
+      flex: 0 0 auto;
       margin-right: 1rem;
   }
 }
@@ -34,14 +35,30 @@
     }
   } 
 
+  &__sub-content {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: rem(82px);
+    height: 50%;
+    
+    @include display-flex;
+    @include flex-flow(column, nowrap); 
+    @include justify-content(center); 
+    @include align-items(center);
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      width: rem(90px);
+    }
+  }
+
+  
   &__content {
     flex: 1 1 70%;
     margin: 0 4%;
-    height: 70%;
+    height: 100%;
     overflow: hidden;
     @include display-flex;
     @include flex-flow(column, nowrap);
-    @include justify-content(space-around);
+    @include justify-content(center);
     
   }
 
@@ -80,3 +97,7 @@
     @include justify-content(space-around);
   }
 }
+
+// .l-card--period {
+
+// }
