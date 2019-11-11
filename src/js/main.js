@@ -32,3 +32,29 @@ jQuery(document).ready(function($) {
   fakeScrollClass();
 });
 
+
+// Card Switch Toggle
+$(document).ready(function(){
+  
+  $(".c-toggle__checkbox").click(function(){
+    var $toggleParent = $(this).parent();
+
+    if($(this).is(":checked")){
+      $toggleParent.removeClass("is-not-toggled");
+      $toggleParent.addClass("is-toggled");
+
+      if ($toggleParent.hasClass("is-toggled")) {
+        $toggleParent.find(".c-toggle__icon").css("fill", "#92E842");
+      }
+    }
+    
+    else if($(this).is(":not(:checked)")){
+      $toggleParent.removeClass("is-toggled");
+      $toggleParent.addClass("is-not-toggled");
+
+      if ($toggleParent.hasClass("is-not-toggled")) {
+        $toggleParent.find(".c-toggle__icon").css("fill", "#9FA9B8");
+      }
+    }
+  });
+});
