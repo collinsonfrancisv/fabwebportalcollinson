@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FAB</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel='icon' href='favicon.ico' />
-    <script src="js/jquery-3.4.1.js"></script>    
-    
+    <link rel='icon' href='favicon.ico' />         
     <style>
       .overflow-test {
         display: none ;
@@ -99,6 +97,34 @@
                     </div><!-- / c-menu__header l-menu__header -->  
                     
                     <ul class="l-sub-menu-list">
+
+                      <li class="l-sub-menu-list__item">
+
+                        <a href="#" class="c-menu__item l-menu__item">
+
+                            <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                              <use xlink:href="svg/sprite.svg#c-white__shopping" />
+                            </svg>
+      
+                            <span class="c-menu__label l-menu __label">Shop</span>
+      
+                        </a><!-- / c-menu__item l-menu__item --> 
+
+                      </li><!-- / l-sub-menu-list__item -->
+
+                      <li class="l-sub-menu-list__item">
+
+                          <a href="#" class="c-menu__item l-menu__item">
+  
+                              <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
+                                <use xlink:href="svg/sprite.svg#c-white__fab-icon" />
+                              </svg>
+        
+                              <span class="c-menu__label l-menu __label">Travel</span>
+        
+                          </a><!-- / c-menu__item l-menu__item --> 
+  
+                        </li><!-- / l-sub-menu-list__item -->                      
 
                       <li class="l-sub-menu-list__item">
 
@@ -245,13 +271,18 @@
           <div class="l-main-content__inner">
             
             <!-- FEATURED -->
-            <div class="l-section l-featured">
-              
+            <div class="l-section-module l-featured">
+
               <header>
-                <h1 class="o-section-header">Featured</h1>
-                <a href="#">View All</a>
+                <a href="#" class="l-header c-header">
+
+                  <h1 class="o-header">Featured</h1>
+                  
+                  <p class="o-view-all">
+                    View All                     
+                  </p>
+                </a><!-- / l-header c-header -->
               </header>
-              
 
               <ul class="l-card-grid horizontal-scroll">
 
@@ -321,9 +352,18 @@
             <!-- / FEATURED -->
 
             <!-- VOUCHERS -->
-            <div class="l-section l-vouchers">
+            <div class="l-section-module l-vouchers">
 
-              <h1 class="o-section-header">My Vouchers</h1>
+              <header>
+                <a href="#" class="l-header c-header">
+
+                  <h1 class="o-header">My Vouchers</h1>
+                  
+                  <p class="o-view-all">
+                    View All                     
+                  </p>
+                </a><!-- / l-header c-header -->
+              </header>
 
               <ul class="l-card-grid l-card-grid--nowrap disable-scrollbars">
 
@@ -407,13 +447,22 @@
 
               </ul><!-- / l-card-grid -->
               
-            </div><!-- / l-section -->
+            </div><!-- / l-section-module -->
             <!-- / VOUCHERS -->
 
             <!-- TICKETS -->
-            <div class="l-section l-tickets">
+            <div class="l-section-module l-tickets">
 
-              <h1 class="o-section-header">Tickets</h1>
+              <header>
+                <a href="#" class="l-header c-header">
+
+                  <h1 class="o-header">My Tickets</h1>
+                  
+                  <p class="o-view-all">
+                    View All                     
+                  </p>
+                </a><!-- / l-header c-header -->
+              </header>
 
               <ul class="l-card-grid l-card-grid--nowrap disable-scrollbars">
 
@@ -445,13 +494,22 @@
 
               </ul><!-- / l-card-grid -->
               
-            </div><!-- / l-section -->
+            </div><!-- / l-section-module -->
             <!-- TICKETS -->
 
             <!-- ORDERS -->
-            <div class="l-section l-orders">
+            <div class="l-section-module l-orders">
 
-                <h1 class="o-section-header">My Orders</h1>
+                <header>
+                  <a href="#" class="l-header c-header">
+  
+                    <h1 class="o-header">My Orders</h1>
+                    
+                    <p class="o-view-all">
+                      View All                     
+                    </p>
+                  </a><!-- / l-header c-header -->
+                </header>
   
                 <ul class="l-card-grid l-card-grid-nowrap disable-scrollbars">
   
@@ -562,15 +620,24 @@
   
                   </ul><!-- / l-card-grid -->
                 
-              </div><!-- / l-section -->
+              </div><!-- / l-section-module -->
               <!-- / ORDERS -->
 
               <!-- BONUS REWARDS -->
-              <div class="l-section l-orders">
+              <div class="l-section-module l-orders">
                 
-                <h1 class="o-section-header">My Bonus Rewards</h1>
+                <header>
+                    <a href="#" class="l-header c-header">
+    
+                      <h1 class="o-header">My Bonus Rewards</h1>
+                      
+                      <p class="o-view-all">
+                        View All                     
+                      </p>
+                    </a><!-- / l-header c-header -->
+                  </header>
 
-                <ul class="l-card-grid l-card-grid--wrap" style="border: 1px solid red;">
+                <ul class="l-card-grid l-card-grid--wrap">
   
                     <li class="l-card-grid--wrap__item">
   
@@ -688,13 +755,11 @@
         </main><!-- / l-main -->
 
     </div><!-- / l-scaffold -->
-
+    <script src="js/vendors/jquery-3.4.1.js"></script>   
     <script src="js/vendors/svg4everybody.min.js"></script>
     <script src="js/vendors/fakescroll.min.js"></script>
-    <script src="js/main.js"></script>
-    <script> 
-      document.querySelector('.l-main-content').fakeScroll();
-    </script>
+    <script src="js/all.js"></script>
+
 
     <script>
       // (function() {

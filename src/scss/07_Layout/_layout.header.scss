@@ -1,0 +1,7 @@
+.l-header {
+  display: block;
+  @include display-flex;
+  @include justify-content(space-between);
+  @include align-items(center);
+  margin-bottom: rem(24px);
+}

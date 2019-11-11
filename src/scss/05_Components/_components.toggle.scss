@@ -18,9 +18,7 @@
     font-size: rem(9px);
   }
 
-    
-}
-
-.c-toggle__checkbox:checked + .c-toggle__icon-container > path {
-  fill: red;
+  &__icon {
+    transition: fill 0.25s;
+  }
 }

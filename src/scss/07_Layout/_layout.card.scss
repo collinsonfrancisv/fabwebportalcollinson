@@ -15,7 +15,7 @@
 
 .l-card-grid__item {
   flex: 0 0 auto;
-  margin-right: 1rem;
+  margin-right: rem(12px);
 }
 
 .l-card-grid--wrap__item {
@@ -23,7 +23,7 @@
   margin-bottom: rem(10px);
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     flex: 0 0 auto;
-    margin-right: 1rem;
+    margin-right: rem(12px);
   }
 }
 

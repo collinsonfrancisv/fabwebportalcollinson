@@ -11,6 +11,7 @@ var gulp = require ('gulp'),
       changed = require('gulp-changed'),
       uglify = require('gulp-uglify'),
       lineec = require('gulp-line-ending-corrector');
+      babel = require('gulp-babel');
 
 // svg config
 var svgConfig = {
@@ -53,9 +54,34 @@ function style() {
     // 7. where do I save the compiled css?
     .pipe(gulp.dest('./src/css/'))
 
-    // 4. stream changes to all browsers
+    // 8. stream changes to all browsers
     .pipe(browserSync.stream());
 
+}
+
+function jsToBabel() {
+  // 1. find and fetch js files 
+  return gulp.src('./src/js/raw/**/*.js')
+
+  // 2. then initialize sourcemaps creation. this has to come first before anything else
+    .pipe(sourcemaps.init({loadMaps: true}))
+
+  // 3. pass js  files through babel compiler 
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+  
+  // 4. Concatenate resulting babelized JS into single file
+    .pipe(concat('all.js'))
+
+  // 5. create sourcemaps
+    .pipe(sourcemaps.write())
+
+  // 6. where do I save the compiled js?  
+    .pipe(gulp.dest('./src/js/'))
+
+  // 7. stream changes to all browsers
+    .pipe(browserSync.stream());  
 }
 
 function imgmin() {
@@ -81,13 +107,14 @@ function watch() {
         }
     });
     gulp.watch('./src/scss/**/*.scss', style);
+    gulp.watch('./src/js/raw/**/*.js', jsToBabel);
     gulp.watch('./src/svg/svg-source/**/*.svg', spritePage);
     gulp.watch('./src/images/images-source/**/*.*', imgmin);
     gulp.watch('./src/**/*.html').on('change', browserSync.reload);
-    gulp.watch('./src/js/**/*.js').on('change', browserSync.reload);
 }
 
 exports.style = style;
+exports.jsToBabel = jsToBabel;
 exports.spritePage = spritePage;
 exports.imgmin = imgmin;
 exports.watch = watch;

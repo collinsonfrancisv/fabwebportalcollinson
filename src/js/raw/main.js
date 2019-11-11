@@ -11,10 +11,7 @@ var rem = function rem() {
   }
 }();
 
-// This function will convert pixel to rem
-function toRem(length) {
-  return (parseInt(length) / rem());
-}
+
 
 jQuery(document).ready(function($) {
   var fakeScrollClass = function() {
@@ -28,14 +25,10 @@ jQuery(document).ready(function($) {
   $(window).resize(function(){
     fakeScrollClass();
   });
-  //Fire it when the page first loads:
   fakeScrollClass();
 });
 
-
-// Card Switch Toggle
-$(document).ready(function(){
-  
+jQuery(document).ready(function($) {
   $(".c-toggle__checkbox").click(function(){
     var $toggleParent = $(this).parent();
 

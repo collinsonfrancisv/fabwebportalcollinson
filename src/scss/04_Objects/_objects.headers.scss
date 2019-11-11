@@ -1,4 +1,25 @@
-.o-section-header {
-    text-transform: capitalize;
-    text-rendering: optimizeLegibility;
+.o-header, .o-view-all {
+  color: $color-smalt;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  text-transform: capitalize;
+  text-rendering: optimizeLegibility;
+}
+
+.o-header {
+  font-size: rem(15px);
+  font-weight: 600;
+}
+
+.o-view-all {
+  font-size: rem(12px);
+  font-weight: 600;
+  display: block;
+  text-decoration: none;
+  padding-right: 24px;
+  background: url('../../svg/svg-source/c-blue__arrow-right.svg') no-repeat right/24px;
+  &:hover {
+    text-decoration: underline;
+  }
 }
