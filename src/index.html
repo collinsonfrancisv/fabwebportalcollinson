@@ -220,15 +220,15 @@
 
             <ul class="l-mobile-sub-menu-list l-container-padding disable-scrollbars">
   
-              <li class="l-mobile-sub-menu-list__item" style="border: 1px solid red; ">
+              <li class="l-mobile-sub-menu-list__item" >
                 <a href="#" class="o-button o-button--hollow o-button--text-small">Shop</a>
               </li><!-- / l-mobile-sub-menu-list__item -->
   
-              <li class="l-mobile-sub-menu-list__item" style="border: 1px solid red">
+              <li class="l-mobile-sub-menu-list__item">
                   <a href="#" class="o-button o-button--text-small">Travel</a>
               </li><!-- / l-mobile-sub-menu-list__item -->
   
-              <li class="l-mobile-sub-menu-list__item" style="border: 1px solid red">
+              <li class="l-mobile-sub-menu-list__item">
                   <a href="#" class="o-button o-button--text-small">Vouchers</a>
               </li><!-- / l-mobile-sub-menu-list__item -->
   
@@ -243,7 +243,8 @@
 
 
           <div class="l-main-content__inner">
-
+            
+            <!-- FEATURED -->
             <div class="l-section l-featured">
               
               <header>
@@ -317,8 +318,9 @@
               </ul><!-- / l-card-grid -->
 
             </div>
+            <!-- / FEATURED -->
 
-            <!-- Vouchers -->
+            <!-- VOUCHERS -->
             <div class="l-section l-vouchers">
 
               <h1 class="o-section-header">My Vouchers</h1>
@@ -343,7 +345,7 @@
                      
                     <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
                         <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                            <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
+                            <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
                         </svg>
                         
                    </div>
@@ -369,7 +371,7 @@
                        
                       <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
                           <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                              <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
+                              <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
                           </svg>
                           
                      </div>
@@ -395,7 +397,7 @@
                        
                       <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
                           <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                              <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
+                              <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
                           </svg>
                           
                      </div>
@@ -406,8 +408,9 @@
               </ul><!-- / l-card-grid -->
               
             </div><!-- / l-section -->
+            <!-- / VOUCHERS -->
 
-            <!-- Tickets -->
+            <!-- TICKETS -->
             <div class="l-section l-tickets">
 
               <h1 class="o-section-header">Tickets</h1>
@@ -432,7 +435,7 @@
                      
                     <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
                         <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                            <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
+                            <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
                         </svg>
                         
                    </div>
@@ -443,8 +446,9 @@
               </ul><!-- / l-card-grid -->
               
             </div><!-- / l-section -->
+            <!-- TICKETS -->
 
-            <!-- Orders -->
+            <!-- ORDERS -->
             <div class="l-section l-orders">
 
                 <h1 class="o-section-header">My Orders</h1>
@@ -478,7 +482,7 @@
                        
                       <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
                           <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                              <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
+                              <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
                           </svg>
                           
                      </div>
@@ -513,7 +517,7 @@
                          
                         <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
                             <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                                <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
+                                <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
                             </svg>
                             
                        </div>
@@ -548,7 +552,7 @@
                            
                           <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
                               <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                                  <use xlink:href="svg/sprite.svg#c-blue__arrow-right" />
+                                  <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
                               </svg>
                               
                          </div>
@@ -559,21 +563,36 @@
                   </ul><!-- / l-card-grid -->
                 
               </div><!-- / l-section -->
+              <!-- / ORDERS -->
 
-              <!-- My Bonus Rewards -->
+              <!-- BONUS REWARDS -->
               <div class="l-section l-orders">
                 
                 <h1 class="o-section-header">My Bonus Rewards</h1>
 
-                <ul class="l-card-grid l-card-grid-wrap">
+                <ul class="l-card-grid l-card-grid--wrap">
 
-                    <li class="l-card-grid__item">
+                    <li class="l-card-grid--wrap__item">
   
-                      <label class="c-toggle">
+                      <label class="c-toggle l-toggle c-card--style-1">
 
-                        <input class="c-toggle-checkbox o-toggle-checkbox" type="checkbox">
+                        <div class="c-toggle__icon-container l-toggle__icon-container" >
+                          <svg class="c-toggle__icon-container" viewBox="0 0 30 30"  width="33px" height="33px">
+                            <path fill="#B8B8B8" d="M14.999942,19.5162544 L11.3293656,21.4001155 C10.896196,21.6224325 10.3597064,21.4611896 10.1310826,21.0399695 C10.0399069,20.8719859 10.0083141,20.6794307 10.0412089,20.4921983 L10.7431225,16.4970174 L7.76658121,13.6645813 C7.41651114,13.3314594 7.41043287,12.7854514 7.75300503,12.4450384 C7.88888509,12.3100148 8.06660089,12.2221142 8.25884391,12.1948437 L12.3690829,11.6117894 L14.2040523,7.98212355 C14.4201397,7.55469151 14.951645,7.3785304 15.3912027,7.5886567 C15.5670826,7.67273436 15.7093689,7.81109552 15.7958317,7.98212355 L17.6308012,11.6117894 L21.7410402,12.1948437 C22.225711,12.2635963 22.5612983,12.7013959 22.4905953,13.1726965 C22.4625512,13.3596363 22.372157,13.5324496 22.2333029,13.6645813 L19.2567616,16.4970174 L19.9586751,20.4921983 C20.0411593,20.961685 19.7166348,21.4073012 19.2338293,21.4875099 C19.0412854,21.5194974 18.8432676,21.488776 18.6705185,21.4001155 L14.999942,19.5162544 Z"/>
+                          </svg>
+                        </div>
 
-                        <div class="c-toggle-switch o-toggle-switch"></div>
+                        <div class="c-toggle__content l-toggle__content ">
+                          
+                          <h2 class="c-toggle__title is-capitalize">2x REWARDS every time you buy your favorite brands online</h2>
+    
+                          <p class="c-toggle__detail">Valid until 28th August 2019</p>
+
+                        </div>
+
+                        <input class="c-toggle__checkbox l-toggle__checkbox o-toggle-checkbox" type="checkbox">
+
+                        <div class="c-toggle__switch l-toggle__switch o-toggle-switch"></div>
 
                       </label><!-- / c-toggle -->
       
@@ -584,7 +603,7 @@
                 </ul>
 
               </div>
-
+              <!-- / BONUS REWARDS -->
 
           </div><!-- / l-main-content__inner -->
 

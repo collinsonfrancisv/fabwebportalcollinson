@@ -1,0 +1,34 @@
+.l-toggle {
+  @include display-flex;
+  @include flex-flow(row, nowrap);
+  @include justify-content(space-between); 
+  @include align-items(center);
+  padding: 1.3em 1em;
+
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    width: 355px;
+    height: 70px;
+    padding-top: 0; padding-bottom: 0;
+  }
+
+  &__content {
+    flex: 1 1 70%;
+    margin: 0 4%;
+    height: 100%;
+    overflow: hidden;
+    @include display-flex;
+    @include flex-flow(column, nowrap);
+    @include justify-content(center);
+    
+  }
+  
+  &__icon-container {
+    @include display-flex;
+    @include flex-flow(row, nowrap);
+    @include justify-content(space-between); 
+    @include align-items(center);
+    flex: 0 0 33px;
+    width: 33px;
+    height: 33px;
+  }
+}

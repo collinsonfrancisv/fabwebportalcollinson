@@ -25,7 +25,11 @@
   &__label, 
   &__title, 
   &__detail {
-    line-height: 1.8;
+    line-height: 1.3;
+  }
+
+  &__label, &__title {
+    margin-bottom: .3em;
   }
 
   &__label {
@@ -49,27 +53,23 @@
     display: inline-block;
   }
 
+  &__title, &__detail {
+    white-space: nowrap;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      // white-space: nowrap;
+    }
+  }
+
   &__title {
     color: $color-blue-zodiac;
     font-size: rem(13px);
-    white-space: nowrap;
+    font-weight: 600;
   }
 
   &__detail {
     color: $color-gull-gray;
     font-size: rem(9px);
-    white-space: nowrap;
   }
-
-  &__value {
-    font-weight: 600;
-  }
-
-  // &__value::after {
-  //   content: ' - ';
-  //   padding-left: .2em;
-  //   padding-right: .2em;
-  // }
 
 }
 

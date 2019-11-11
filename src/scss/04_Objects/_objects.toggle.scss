@@ -2,8 +2,8 @@
   display: inline-block;
   background: $color-gull-gray;
   border-radius: 40px;
-  width: 51px;
-  height: 32px;
+  min-width: 51px;
+  min-height: 32px;
   position: relative;
   vertical-align: middle;
   transition: background 0.25s;
