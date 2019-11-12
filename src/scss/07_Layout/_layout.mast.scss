@@ -1,4 +1,5 @@
 .l-mast {
+  position: relative;
   z-index: 50;
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     height: rem(63px);

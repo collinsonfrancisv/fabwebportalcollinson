@@ -1,0 +1,15 @@
+.l-section-module__content-wrapper {
+  position: relative;
+}
+
+.l-slider-buttons {
+  position: absolute;
+  left: -1%;
+  right: -1%;
+  top: 35%;
+  transform: translateY(-35%);
+  @include display-flex;
+  @include flex-flow(row, nowrap);  
+  @include justify-content(space-between);
+  @include align-items(center);
+}

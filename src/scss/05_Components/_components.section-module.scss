@@ -1,0 +1,27 @@
+.c-section {
+  padding: 2em 0;
+
+  // &--full-width {
+
+  // }
+
+  // &--padded {
+
+  // }
+
+  &--bottom-bordered {
+    border-bottom: 1px solid $color-alto;
+  }
+
+  &--rounded {
+    border-radius: 21px;
+  }
+
+  &--white-bg {
+    background: #fff;
+  }
+
+  &--transparent-bg {
+    background: transparent;
+  }
+}
