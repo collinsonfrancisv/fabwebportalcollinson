@@ -1,6 +1,7 @@
 var gulp = require ('gulp'),
       sass = require ('gulp-sass'),
       autoprefixer = require('gulp-autoprefixer'),
+      postcss = require('gulp-postcss'),
       browserSync = require('browser-sync').create(),
       reload = browserSync.reload,
       cleanCss = require('gulp-clean-css'),
@@ -29,7 +30,7 @@ var svgConfig = {
 };
 
 // compile scss into css
-function style() {
+function compileCss() {
 
     // 1. find and fetch scss files 
     return gulp.src('./src/scss/**/*.scss')
@@ -42,8 +43,8 @@ function style() {
         outputStyle: 'expanded'
     }).on('error', sass.logError))
 
-    // 4. pass the resulting css files into autoprefixer 
-    .pipe(autoprefixer('last 5 versions'))
+    // 4. pass the resulting css files into postcss + autoprefixer 
+    .pipe(postcss([ autoprefixer() ]))
 
     // 5. create sourcemaps
     .pipe(sourcemaps.write())
@@ -106,14 +107,14 @@ function watch() {
             baseDir: 'src/'
         }
     });
-    gulp.watch('./src/scss/**/*.scss', style);
+    gulp.watch('./src/scss/**/*.scss', compileCss);
     gulp.watch('./src/js/raw/**/*.js', jsToBabel);
     gulp.watch('./src/svg/svg-source/**/*.svg', spritePage);
     gulp.watch('./src/images/images-source/**/*.*', imgmin);
     gulp.watch('./src/**/*.html').on('change', browserSync.reload);
 }
 
-exports.style = style;
+exports.compileCss = compileCss;
 exports.jsToBabel = jsToBabel;
 exports.spritePage = spritePage;
 exports.imgmin = imgmin;

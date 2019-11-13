@@ -13,6 +13,7 @@
     @include display-flex;
     @include flex-flow(row, nowrap);  
     @include justify-content(center);
+    align-self: center;
   }
 
   &__nav {    

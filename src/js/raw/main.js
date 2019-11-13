@@ -1,36 +1,18 @@
-svg4everybody();
-document.querySelector('.l-main-content').fakeScroll();
+var callback = function(){
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+  svg4everybody();
+  
+  var rem = function rem() {
+    var html = document.getElementsByTagName('html')[0];
+  
+    return function () {
+        return parseInt(window.getComputedStyle(html)['fontSize']);
+    }
+  }();
+  
 
 
-// This Function will always return the initial font-size of the html element 
-var rem = function rem() {
-  var html = document.getElementsByTagName('html')[0];
-
-  return function () {
-      return parseInt(window.getComputedStyle(html)['fontSize']);
-  }
-}();
-
-
-
-jQuery(document).ready(function($) {
-  var fakeScrollClass = function() {
-    var ww = document.body.clientWidth;
-    if (ww < 400 ) {
-      $('.is-fake-scroll').fakeScroll();
-    } else if (ww >= 401) {
-      $('.is-fake-scroll').removeClass('is-fake-scroll');
-    };
-  };
-  $(window).resize(function(){
-    fakeScrollClass();
-  });
-  fakeScrollClass();
-});
-
-
-
-jQuery(document).ready(function($) {
   // iOS switch button toggle
   $(".c-toggle__checkbox").click(function(){
     var $toggleParent = $(this).parent();
@@ -54,11 +36,6 @@ jQuery(document).ready(function($) {
     }
   });
 
-  
-});
-
-jQuery(document).ready(function ($) {
-
   $(".o-btn-prev").click(function () {
     var closestXGrid = $(this).parent().next(".horizontal-scroll");
     var gridItemWidth = $(this).parent().next(".horizontal-scroll").children(".l-card-grid__item").outerWidth(true);
@@ -76,7 +53,13 @@ jQuery(document).ready(function ($) {
       scrollLeft: leftPos + gridItemWidth
     }, 100);
   });
-  
-});
+};
 
-
+if (
+    document.readyState === "complete" ||
+    (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  callback();
+} else {
+  document.addEventListener("DOMContentLoaded", callback);
+}    

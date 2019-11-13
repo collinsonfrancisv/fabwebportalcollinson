@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,7 @@
     <title>FAB</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel='icon' href='favicon.ico' />         
-    <style>
-      .overflow-test {
-        display: none ;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-      }
-
-      .overflow-test li {
-        max-width: 200px;
-        min-width: 200px;
-        flex: 0 0 200px;
-        height: 100px;
-        background: orange;
-        border: 1px solid green;
-      }
-    </style>
+    <script src="js/vendors/jquery-3.4.1.js"></script>   
     
 </head>
 <body>
@@ -261,7 +246,7 @@
             <ul class="l-mobile-sub-menu-list l-container-padding disable-scrollbars">
   
               <li class="l-mobile-sub-menu-list__item" >
-                <a href="#" class="o-button o-button--hollow o-button--text-small">Shop</a>
+                <a href="#" class="o-button o-button--hollow o-button--text-small" aria-selected="true">Shop</a>
               </li><!-- / l-mobile-sub-menu-list__item -->
   
               <li class="l-mobile-sub-menu-list__item">
@@ -921,35 +906,11 @@
 
         </main><!-- / l-main -->
 
-    </div><!-- / l-scaffold -->
-    <script src="js/vendors/jquery-3.4.1.js"></script>   
+    </div><!-- / l-scaffold -->    
     <script src="js/vendors/svg4everybody.min.js"></script>
-    <script src="js/vendors/fakescroll.min.js"></script>
+    <!-- <script src="js/vendors/fakescroll.min.js"></script> -->
     <script src="js/vendors/jquery.lbslider.js"></script>
-    <script src="js/all.js"></script>
-
-
-    <script>
-      // (function() {
-      //     function scrollHorizontally(e) {
-      //         e = window.event || e;
-      //         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-      //         document.getElementById('horizontal-scroll').scrollLeft -= (delta*40); // Multiplied by 40
-      //         e.preventDefault();
-      //     }
-
-      //     if (document.getElementById('horizontal-scroll').addEventListener) {
-      //         // IE9, Chrome, Safari, Opera
-      //         document.getElementById('horizontal-scroll').addEventListener("mousewheel", scrollHorizontally, false);
-      //         // Firefox
-      //         document.getElementById('horizontal-scroll').addEventListener("DOMMouseScroll", scrollHorizontally, false);
-      //     } else {
-      //         // IE 6/7/8
-      //         document.getElementById('horizontal-scroll').attachEvent("onmousewheel", scrollHorizontally);
-      //     }
-
-      // })();
-    </script>
+    <script src="js/raw/main.js"></script>
 
 </body>
 </html>

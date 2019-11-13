@@ -3,6 +3,26 @@
   "version": "0.0.1",
   "description": "Front-end interface for FAB Rewards Web Portal application",
   "main": "index.js",
+  "browserslist": [
+    "last 5 versions",
+    ">1%",
+    "Safari >= 8",
+    "ie >= 10"
+  ],
+  "postcss": {
+    "plugins": {
+      "postcss-normalize": {},
+      "postcss-preset-env": {},
+      "autoprefixer": {}
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  },
   "scripts": {
     "start": "gulp"
   },
@@ -11,7 +31,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/collinsonfrancisv/fabwebportalcollinson.git"
-  },
+  },  
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
@@ -37,6 +57,7 @@
     "svg-sprite": "^1.5.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.7.0",
     "@drewbot/sass-flexbox-grid": "^2.0.7",
     "jquery": "^3.4.1",
     "mq-scss": "^2.1.5",
