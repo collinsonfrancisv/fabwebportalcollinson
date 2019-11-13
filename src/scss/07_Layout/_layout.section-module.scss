@@ -2,14 +2,17 @@
   position: relative;
 }
 
-.l-slider-buttons {
-  position: absolute;
-  left: -1%;
-  right: -1%;
-  top: 35%;
-  transform: translateY(-35%);
-  @include display-flex;
-  @include flex-flow(row, nowrap);  
-  @include justify-content(space-between);
-  @include align-items(center);
+.l-slider-buttons {  
+  display: none;
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    transform: translateY(-35%);
+    @include display-flex;
+    @include flex-flow(row, nowrap);  
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
 }

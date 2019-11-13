@@ -17,6 +17,13 @@
     border-radius: 21px;
   }
 
+  &--rounded-mobile {
+    border-radius: 21px 21px 0 0;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      border-radius: 0;
+    }
+  }
+
   &--white-bg {
     background: #fff;
   }

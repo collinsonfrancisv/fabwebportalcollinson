@@ -37,12 +37,12 @@
   
   
   .is-uppercase {
-    text-transform: uppercase;
-    letter-spacing: 1px;    
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;    
   }
 
   .is-capitalize {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
   }
 
   .disable-scrollbars {

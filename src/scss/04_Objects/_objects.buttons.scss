@@ -30,7 +30,7 @@
 
 .o-btn-prev,
 .o-btn-next {
-  border: 1px solid red;
+  border: none;
   display: inline-block;
   background: none;
 	color: inherit;
@@ -38,5 +38,22 @@
 	font: inherit;
 	cursor: pointer;
   outline: inherit; 
-  
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  height: 150px;
+  width: 30px;
+}
+.o-btn-prev:focus,
+.o-btn-next:focus {
+  outline: 0;
+}
+
+.o-btn-prev {
+  background: url('../../svg/svg-source/c-blue__slide-arrow-left.svg') no-repeat center/30px;
+}
+
+.o-btn-next {
+  background: url('../../svg/svg-source/c-blue__slide-arrow-right.svg') no-repeat center/30px;
 }

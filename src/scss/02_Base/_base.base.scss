@@ -3,6 +3,10 @@
    */
   html {
     box-sizing: border-box;
+    overflow-y: scroll;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      overflow-y: hidden;
+    }
   }
 
   *,
@@ -16,11 +20,24 @@
     @include rem-baseline;
   }
  
-  body {
-    background: $color-alabaster;
+  html, body {
+    height: auto;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      height: 100%;
+    }
+    touch-action: pan-y;
   }
 
-  html, body {
-    height: 100%;
-    touch-action: pan-y;
+  body {
+    background: $color-alabaster;
+    overflow-y: scroll;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      overflow-y: hidden;
+    }
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
   }

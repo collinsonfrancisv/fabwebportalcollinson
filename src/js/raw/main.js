@@ -28,7 +28,10 @@ jQuery(document).ready(function($) {
   fakeScrollClass();
 });
 
+
+
 jQuery(document).ready(function($) {
+  // iOS switch button toggle
   $(".c-toggle__checkbox").click(function(){
     var $toggleParent = $(this).parent();
 
@@ -50,4 +53,30 @@ jQuery(document).ready(function($) {
       }
     }
   });
+
+  
 });
+
+jQuery(document).ready(function ($) {
+
+  $(".o-btn-prev").click(function () {
+    var closestXGrid = $(this).parent().next(".horizontal-scroll");
+    var gridItemWidth = $(this).parent().next(".horizontal-scroll").children(".l-card-grid__item").outerWidth(true);
+    var leftPos = closestXGrid.scrollLeft();
+    closestXGrid.animate({
+      scrollLeft: leftPos - gridItemWidth
+    }, 100);
+  });
+  
+  $(".o-btn-next").click(function () {
+    var closestXGrid = $(this).parent().next(".horizontal-scroll");
+    var gridItemWidth = $(this).parent().next(".horizontal-scroll").children(".l-card-grid__item").outerWidth(true);
+    var leftPos = closestXGrid.scrollLeft();
+    closestXGrid.animate({
+      scrollLeft: leftPos + gridItemWidth
+    }, 100);
+  });
+  
+});
+
+
