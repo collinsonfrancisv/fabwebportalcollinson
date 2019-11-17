@@ -135,3 +135,56 @@
     height: 0;
   }
 }
+
+
+/// Card Styles
+@mixin card-style($card-style) {
+
+  @if $card-style == 1 {
+
+    background: #fff;
+    box-shadow: map-get($shadow-orientations, 'shadow-orientation-1') map-get($shadow-colors, 'shadow-color-1');
+    border-radius: map-get($border-radii, 'border-radius-1');
+    border: map-get($border-widths, 'border-width-1');
+
+  } @else if $card-style == 2 {
+
+    background: #fff;
+    box-shadow: map-get($shadow-orientations, 'shadow-orientation-2') map-get($shadow-colors, 'shadow-color-1');
+    border-radius: map-get($border-radii, 'border-radius-1');
+    border: none;
+
+  } @else if $card-style == 3 {
+
+    background: #fff;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+
+  }
+}
+
+/// Section Modules Styles
+@mixin section-border-bottom {
+  border-bottom: 1px solid $color-alto;
+}
+
+@mixin section-corner-edged {
+  border-radius: 0;
+}
+
+@mixin section-corner-rounded {
+  border-radius: 21px;
+}
+
+@mixin section-corner-rounded-mobile {
+  border-radius: 21px 21px 0 0;
+}
+
+@mixin section-white-bg {
+  background: #fff;
+}
+
+@mixin section-transparent-bg {
+  background: transparent;
+}

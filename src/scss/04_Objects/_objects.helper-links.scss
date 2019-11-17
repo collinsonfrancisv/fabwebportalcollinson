@@ -1,11 +1,11 @@
-.o-header {
-  font-size: rem(15px);
+.o-helper-links {
+  font-size: rem(12px);
   font-weight: 600;
-  color: $color-smalt;
   display: block;
+  text-decoration: none;
+  color: $color-smalt;
   margin: 0;
   padding: 0;
-  text-decoration: none;
   text-transform: capitalize;
   text-rendering: optimizeLegibility;
   &:hover {
@@ -13,15 +13,12 @@
   }
 }
 
-
-.o-view-all {
-  font-size: rem(12px);
-  font-weight: 600;
-  display: block;
-  text-decoration: none;
+.o-helper-links--arrow-right {
   padding-right: 24px;
   background: url('../../svg/svg-source/c-blue__arrow-right.svg') no-repeat right/24px;
-  &:hover {
-    text-decoration: underline;
-  }
+}
+
+.o-helper-links--arrow-left {
+  padding-left: 24px;
+  background: url('../../svg/svg-source/c-blue__arrow-left.svg') no-repeat left/24px;
 }

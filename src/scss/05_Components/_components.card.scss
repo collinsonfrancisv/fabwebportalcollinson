@@ -2,7 +2,7 @@
   color: $color-blue-zodiac;
   overflow: hidden;
   border: 1px solid transparent;
-
+  @include card-style(2);
   &:hover {
     border: 1px solid $color-smalt;
   }
@@ -71,6 +71,10 @@
     font-size: rem(9px);
   }
 
+  &--normal {
+    @include card-style(1);
+
+  }
 }
 
 .c-card--large {
