@@ -34,7 +34,7 @@
 
   &__label {
     color: $color-gull-gray;
-    font-size: rem(9px);
+    font-size: rem(map-get($type-scale, 's'));
   }
 
   &__label--new::after {
@@ -62,13 +62,13 @@
 
   &__title {
     color: $color-blue-zodiac;
-    font-size: rem(13px);
+    font-size: rem(map-get($type-scale, 'mm'));
     font-weight: 600;
   }
 
   &__detail {
     color: $color-gull-gray;
-    font-size: rem(9px);
+    font-size: rem(map-get($type-scale, 's'));
   }
 
   &--normal {
@@ -90,7 +90,7 @@
   }
 
   &__title {
-    font-size: rem(16px);
+    font-size: rem(map-get($type-scale, 'll'));
   }
 }
 

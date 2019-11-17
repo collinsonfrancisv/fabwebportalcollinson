@@ -1,5 +1,5 @@
 .o-helper-links {
-  font-size: rem(12px);
+  font-size: rem(map-get($type-scale, 'm'));
   font-weight: 600;
   display: block;
   text-decoration: none;

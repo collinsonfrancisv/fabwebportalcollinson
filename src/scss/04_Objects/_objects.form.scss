@@ -1,0 +1,8 @@
+.o-dropdown {
+  background: #fff;
+  border: 1px solid $color-alto;
+  width: 100%;
+  padding: 1em .75em;
+  font-size: rem(map-get($type-scale, 's'));
+  text-transform: uppercase;
+}

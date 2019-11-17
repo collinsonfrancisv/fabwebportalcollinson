@@ -1,0 +1,22 @@
+.c-voucher {
+  &__image-container {
+    border: 1px solid green;
+    border-radius: 0 0 21px 21px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__label {
+    color: $color-gull-gray;
+    font-size: rem(map-get($type-scale, 's'));
+  }
+
+  &__title {
+    font-size: rem(map-get($type-scale, 'xl'));
+    font-weight: 600;
+  }
+
+}

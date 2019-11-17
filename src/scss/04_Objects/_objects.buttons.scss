@@ -3,7 +3,7 @@
   background-clip: padding-box;
   overflow: hidden;
   color: #fff;
-  font-size: rem(12px);
+  font-size: rem(map-get($type-scale, 'm'));
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -14,10 +14,10 @@
 }
 
 .o-button--text-small {
-  font-size: rem(10px);
+  font-size: rem(map-get($type-scale, 'ss'));
   padding: 1.6em 2.2em;
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-    font-size: rem(12px);
+    font-size: rem(map-get($type-scale, 'm'));
     
   }
 }

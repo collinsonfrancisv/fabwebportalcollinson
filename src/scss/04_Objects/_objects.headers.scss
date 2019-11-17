@@ -1,5 +1,5 @@
 .o-header {
-  font-size: rem(15px);
+  font-size: rem(map-get($type-scale, 'l'));
   font-weight: 600;
   color: $color-smalt;
   display: block;
@@ -15,7 +15,7 @@
 
 
 .o-view-all {
-  font-size: rem(12px);
+  font-size: rem(map-get($type-scale, 'm'));
   font-weight: 600;
   display: block;
   text-decoration: none;

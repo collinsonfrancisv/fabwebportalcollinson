@@ -10,8 +10,7 @@
     <script src="js/vendors/jquery-3.4.1.js"></script>   
     
 </head>
-<body>
-
+<body class="no-mobile-sub-menu">
     <div class="l-device-width">
 
       <div class="p-mast l-mast l-padding-left">
@@ -241,25 +240,6 @@
 
           </div><!-- / p-main-bar l-main-bar -->
 
-          <div class="p-mobile-sub-menu l-mobile-sub-menu c-menu" >
-
-            <ul class="l-mobile-sub-menu-list l-container-padding disable-scrollbars">
-  
-              <li class="l-mobile-sub-menu-list__item" >
-                <a href="#" class="o-button o-button--hollow o-button--text-small" aria-selected="true">Shop</a>
-              </li><!-- / l-mobile-sub-menu-list__item -->
-  
-              <li class="l-mobile-sub-menu-list__item">
-                  <a href="#" class="o-button o-button--text-small">Travel</a>
-              </li><!-- / l-mobile-sub-menu-list__item -->
-  
-              <li class="l-mobile-sub-menu-list__item">
-                  <a href="#" class="o-button o-button--text-small">Vouchers</a>
-              </li><!-- / l-mobile-sub-menu-list__item -->
-  
-            </ul><!-- / l-mobile-sub-menu-list__item -->
-    
-          </div><!-- / p-mobile-sub-menu l-mobile-sub-menu -->
 
         </div>
         
@@ -269,7 +249,7 @@
 
           <div class="l-main-content__inner">
             
-            <div class="c-section c-section--transparent-bg l-section-module l-featured">
+            <div class="c-section c-section--transparent-bg l-section-module l-voucher-details">
               
               <header class="l-container-padding">
             
@@ -282,132 +262,49 @@
   
               </header>
               
-              <div class="l-section-module__content-wrapper">
-                
-                <ul class="l-card-grid horizontal-scroll l-padding-left disable-scrollbars">
+              <div class="l-section-module__content-wrapper l-voucher">   
+                  
+                  <div class="c-voucher__image-container">
+                    <img src="images/images-source/vouchers/virgin-megastore-large.png" alt="" class="c-voucher__image">              
+                  </div>
 
-                    <li class="l-card-grid__item">
+                  <div class="c-voucher__content">
 
-                      <a href="#" class="l-link-block c-card c-card--style-2 l-card c-card--large l-card--large">
-                        
-                        <img src="images/images-source/featured/apple.png" alt="" class="c-card--large__image l-card--large__image">
-    
-                        <div class="l-card--large__content">
-    
-                            <p class="c-card__label c-card--large__label is-uppercase">Retail</p>
-    
-                            <h2 class="c-card__title c-card--large__title is-capitalize l-card__title">Apple</h2>
-        
-                            <p class="c-card__detail c-card--large__detail l-card__detail is-uppercase">Valid until 28th August 2019</p>
-    
-                        </div><!-- / l-card__content -->
-                          
-                      </a><!-- / l-link-block c-card -->
-    
-                    </li><!-- / l-card-grid__item -->
+                    <header class="c-voucher__header">
+                      <p class="c-voucher__label is-uppercase">Retail</p>
 
-                    <li class="l-card-grid__item">
+                      <h2 class="c-voucher__title is-capitalize">H&amp; M</h2>
+                    </header>
 
-                      <a href="#" class="l-link-block c-card c-card--style-2 l-card c-card--large l-card--large">
-                        
-                        <img src="images/images-source/featured/apple.png" alt="" class="c-card--large__image l-card--large__image">
-    
-                        <div class="l-card--large__content">
-    
-                            <p class="c-card__label c-card--large__label is-uppercase">Retail</p>
-    
-                            <h2 class="c-card__title c-card--large__title is-capitalize l-card__title">Apple</h2>
-        
-                            <p class="c-card__detail c-card--large__detail l-card__detail is-uppercase">Valid until 28th August 2019</p>
-    
-                        </div><!-- / l-card__content -->
-                          
-                      </a><!-- / l-link-block c-card -->
-    
-                    </li><!-- / l-card-grid__item -->
-                    
-                    <li class="l-card-grid__item">
+                    <form class="c-form" action="#">
 
-                        <a href="#" class="l-link-block c-card c-card--style-2 l-card c-card--large l-card--large">
-                          
-                          <img src="images/images-source/featured/apple.png" alt="" class="c-card--large__image l-card--large__image">
-      
-                          <div class="l-card--large__content">
-      
-                              <p class="c-card__label c-card--large__label is-uppercase">Retail</p>
-      
-                              <h2 class="c-card__title c-card--large__title is-capitalize l-card__title">Apple</h2>
-          
-                              <p class="c-card__detail c-card--large__detail l-card__detail is-uppercase">Valid until 28th August 2019</p>
-      
-                          </div><!-- / l-card__content -->
-                            
-                        </a><!-- / l-link-block c-card -->
-      
-                    </li><!-- / l-card-grid__item -->
+                      <div class="l-field">
+                        <label class="c-form__label" for="voucher-amount">Voucher Amount</label>
+                        <select class="c-form__dropdown o-dropdown" name="voucher-amount">
+                          <option value="1" selected>Select Amount in AED</option>
+                          <option value="2">20</option>
+                          <option value="3">30</option>
+                          <option value="4">40</option>
+                          <option value="5">50</option>
+                        </select>
+                      </div>
 
-                    <li class="l-card-grid__item">
+                      <span>
 
-                        <a href="#" class="l-link-block c-card c-card--style-2 l-card c-card--large l-card--large">
-                          
-                          <img src="images/images-source/featured/apple.png" alt="" class="c-card--large__image l-card--large__image">
-      
-                          <div class="l-card--large__content">
-      
-                              <p class="c-card__label c-card--large__label is-uppercase">Retail</p>
-      
-                              <h2 class="c-card__title c-card--large__title is-capitalize l-card__title">Apple</h2>
-          
-                              <p class="c-card__detail c-card--large__detail l-card__detail is-uppercase">Valid until 28th August 2019</p>
-      
-                          </div><!-- / l-card__content -->
-                            
-                        </a><!-- / l-link-block c-card -->
-      
-                    </li><!-- / l-card-grid__item -->
+                      </span>
 
-                    <li class="l-card-grid__item">
+                      <div class="l-field">
+                        <label class="c-form__label" for="rewards-amount">Amount in Rewards</label>
+                        <output class="c-form__output" name="rewards-amount">4000</output>
+                      </div>
 
-                        <a href="#" class="l-link-block c-card c-card--style-2 l-card c-card--large l-card--large">
-                          
-                          <img src="images/images-source/featured/apple.png" alt="" class="c-card--large__image l-card--large__image">
-      
-                          <div class="l-card--large__content">
-      
-                              <p class="c-card__label c-card--large__label is-uppercase">Retail</p>
-      
-                              <h2 class="c-card__title c-card--large__title is-capitalize l-card__title">Apple</h2>
-          
-                              <p class="c-card__detail c-card--large__detail l-card__detail is-uppercase">Valid until 28th August 2019</p>
-      
-                          </div><!-- / l-card__content -->
-                            
-                        </a><!-- / l-link-block c-card -->
-      
-                    </li><!-- / l-card-grid__item -->
+                      <button class="c-form__button o-button">Continue</button>
 
-                    <li class="l-card-grid__item">
+                    </form>
 
-                        <a href="#" class="l-link-block c-card c-card--style-2 l-card c-card--large l-card--large">
-                          
-                          <img src="images/images-source/featured/apple.png" alt="" class="c-card--large__image l-card--large__image">
-      
-                          <div class="l-card--large__content">
-      
-                              <p class="c-card__label c-card--large__label is-uppercase">Retail</p>
-      
-                              <h2 class="c-card__title c-card--large__title is-capitalize l-card__title">Apple</h2>
-          
-                              <p class="c-card__detail c-card--large__detail l-card__detail is-uppercase">Valid until 28th August 2019</p>
-      
-                          </div><!-- / l-card__content -->
-                            
-                        </a><!-- / l-link-block c-card -->
-      
-                    </li><!-- / l-card-grid__item -->
+                  </div><!-- / l-card__content -->
 
-                </ul><!-- / l-card-grid -->
-              </div>
+              </div><!-- / l-voucher-wrapper -->
               
             </div><!-- / l-section-module -->
 

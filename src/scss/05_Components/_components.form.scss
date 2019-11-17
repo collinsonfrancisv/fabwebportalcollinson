@@ -1,0 +1,6 @@
+.c-form {
+  &__label {
+    font-size: rem(map-get($type-scale, 'sss'));
+    font-weight: 500;
+  }
+}

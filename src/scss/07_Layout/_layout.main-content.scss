@@ -1,6 +1,10 @@
 .l-main-content {
   z-index: 0;
   margin-top: rem(240px);
+  .no-mobile-sub-menu & {
+    margin-top: rem(153px);
+  }
+
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     margin-top: 0;
     max-height: calc(100vh - 63px);

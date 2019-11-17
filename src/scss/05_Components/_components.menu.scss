@@ -1,8 +1,8 @@
 .c-menu {
   color: #fff;
-  font-size: rem(10px);
+  font-size: rem(map-get($type-scale, 'ss'));
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-    font-size: rem(12px);
+    font-size: rem(map-get($type-scale, 'm'));
   }
 
   &__header {
@@ -19,7 +19,7 @@
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       text-transform: uppercase;
       opacity: 1;
-      font-size: rem(11px);
+      font-size: rem(map-get($type-scale, 'sss'));
       letter-spacing: rem(1px);
     }
   }

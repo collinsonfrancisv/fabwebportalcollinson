@@ -8,14 +8,14 @@
 
   &__title {
     color: $color-blue-zodiac;
-    font-size: rem(11px);
+    font-size: rem(map-get($type-scale, 'sss'));
     font-weight: 600;
     margin-bottom: .5em;
   }
 
   &__detail {
     color: $color-gull-gray;
-    font-size: rem(9px);
+    font-size: rem(map-get($type-scale, 's'));
   }
 
   &__icon {
