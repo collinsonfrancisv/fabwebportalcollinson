@@ -1,6 +1,6 @@
 var gulp = require ('gulp'),
       sass = require ('gulp-sass'),
-      autoprefixer = require('gulp-autoprefixer'),
+      autoprefixer = require('autoprefixer'),
       postcss = require('gulp-postcss'),
       browserSync = require('browser-sync').create(),
       reload = browserSync.reload,

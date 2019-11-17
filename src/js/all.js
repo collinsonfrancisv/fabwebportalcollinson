@@ -1,3 +1,4 @@
+"use strict";
 
 var callback = function callback() {
   document.documentElement.classList.remove("no-js");

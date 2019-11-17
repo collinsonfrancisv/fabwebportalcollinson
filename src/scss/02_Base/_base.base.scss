@@ -23,8 +23,7 @@
   html, body {
     height: auto;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-      height: 100%;
-      min-height: 100vh;
+      height: 100vh;
       min-height: -webkit-fill-available;
     }
     touch-action: pan-y;
