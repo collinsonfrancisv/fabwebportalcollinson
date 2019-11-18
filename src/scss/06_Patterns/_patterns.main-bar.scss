@@ -1,4 +1,5 @@
 .p-main-bar {
+  position: relative;
   a {
     color: #fff;
     text-decoration: none;
@@ -24,7 +25,7 @@
   }
 }
 
-.p-rewards-points {
+.p-rewards-points {  
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     background: rgba($color-blue-zodiac, .15);
     border-bottom: 1px solid rgba($color-dodger-blue, .4);
