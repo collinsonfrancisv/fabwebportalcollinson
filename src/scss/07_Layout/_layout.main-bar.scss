@@ -18,20 +18,16 @@
 
 
 .l-loyalty-nav-mobile-wrapper {
-  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-    display: none;
-  }
   position: relative;
-  border: 1px solid yellow;
 }
 
 .l-rewards-points {
-  background: red;
+  // background: red;
   position: relative;
   top: 0;
   z-index: 999999;
   width: 100%;
-  height: 100%;
+  height: rem(105px);
   @include display-flex;
   @include justify-content(center);
   @include align-items(center);
@@ -75,9 +71,13 @@
 }
 
 .l-loyalty-nav-mobile {
-  position: relative;
-  z-index: -9999;
-  top: 0;
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    display: none;
+  }
+  display: none;
+  position: absolute;
+  z-index: 0;
+  top: rem(105px);
   width: 100%;
 }
 

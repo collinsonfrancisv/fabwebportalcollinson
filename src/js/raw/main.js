@@ -11,7 +11,28 @@ var callback = function(){
     }
   }();
   
+  // $('.p-rewards-points__drop-down').click(function() {
+  //   $('.p-loyalty-nav-mobile').slideToggle( 'slow', function() {
 
+  //   });
+  // });
+
+  $('.p-rewards-points__drop-down').click(function() {
+
+    $(this).toggleClass('active');
+    
+    $('.p-loyalty-nav-mobile').slideToggle({
+      duration:400
+      ,easing:"swing"
+      ,specialEasing:{top:'swing',left:'linear'}
+      ,complete:function(){ }
+      ,start:function(a){ }
+      ,done:function(a){  }
+      ,fail:function(error){  }
+      ,always:function(a){  }
+     });
+  
+  });
 
   // iOS switch button toggle
   $(".c-toggle__checkbox").click(function(){

@@ -26,6 +26,7 @@
 }
 
 .p-rewards-points {  
+  background: $color-fab-linear-gradient-horizontal;
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     background: rgba($color-blue-zodiac, .15);
     border-bottom: 1px solid rgba($color-dodger-blue, .4);
@@ -48,9 +49,28 @@
     font-size: rem(20px);
   }
   
-  
+  &__drop-down {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+  &__drop-down:focus {
+    outline: 0;
+  }
+
+  &__drop-down.active > .p-rewards-points__arrow {
+    transform: rotateZ(180deg);
+
+  }
 }
 
+.p-rewards-points__arrow {
+  fill: #fff !important;
+}
 
 .p-main-bar__return {
   background: rgba($color-blue-zodiac, .30);
