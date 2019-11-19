@@ -1,5 +1,5 @@
 .l-mobile-sub-menu {
-  z-index: 50;
+  z-index: 0;
   width: 100%;
   padding-top: 1em; 
   padding-bottom: 1em; 
@@ -15,7 +15,7 @@
 .l-mobile-sub-menu-list {
   @include display-flex;
   @include flex-flow(row, nowrap);
-  @include justify-content(space-between);
+  @include justify-content(flex-start);
   @include scroll-x;
   &__item {
     margin-right: 1em;

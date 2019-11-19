@@ -13,7 +13,7 @@
 <body class="no-mobile-sub-menu">
     <div class="l-device-width">
 
-      <div class="p-mast l-mast l-padding-left">
+      <div class="p-mast l-mast p-loyalty-nav l-padding-left">
 
         <a class="p-mast__logo l-mast__logo o-logo" href="#"><img src="svg/fab-logo.svg" width="66" alt="FAB logo" class="o-logo__image"></a>
 
@@ -40,6 +40,7 @@
 
 
       </div><!-- / p-mast -->
+
 
     </div><!-- / l-device-width -->
 
@@ -268,7 +269,7 @@
                     <img src="images/images-source/vouchers/virgin-megastore-large.png" alt="" class="c-voucher__image">              
                   </div>
 
-                  <div class="c-voucher__content">
+                  <div class="c-voucher__content l-container-padding">
 
                     <header class="c-voucher__header">
                       <p class="c-voucher__label is-uppercase">Retail</p>
@@ -277,26 +278,30 @@
                     </header>
 
                     <form class="c-form" action="#">
+                      
+                      <div class="l-form">
 
-                      <div class="l-field">
-                        <label class="c-form__label" for="voucher-amount">Voucher Amount</label>
-                        <select class="c-form__dropdown o-dropdown" name="voucher-amount">
-                          <option value="1" selected>Select Amount in AED</option>
-                          <option value="2">20</option>
-                          <option value="3">30</option>
-                          <option value="4">40</option>
-                          <option value="5">50</option>
-                        </select>
-                      </div>
+                        <div class="l-field">
+                          <label class="c-form__label" for="voucher-amount">Voucher Amount</label>
+                          <select class="c-form__dropdown o-dropdown" name="voucher-amount">
+                            <option value="1" selected>Select Amount in AED</option>
+                            <option value="2">20</option>
+                            <option value="3">30</option>
+                            <option value="4">40</option>
+                            <option value="5">50</option>
+                          </select>
+                        </div>
 
-                      <span>
+                        <div class="l-convert-icon">
+                            <span class="c-form__convert-icon"></span>
+                        </div>
 
-                      </span>
-
-                      <div class="l-field">
-                        <label class="c-form__label" for="rewards-amount">Amount in Rewards</label>
-                        <output class="c-form__output" name="rewards-amount">4000</output>
-                      </div>
+                        <div class="l-field">
+                          <label class="c-form__label" for="rewards-amount">Amount in Rewards</label>
+                          <output class="c-form__output o-output" name="rewards-amount">4000</output>
+                        </div>
+                        
+                      </div>  
 
                       <button class="c-form__button o-button">Continue</button>
 

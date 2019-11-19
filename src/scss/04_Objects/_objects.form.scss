@@ -1,8 +1,23 @@
+.o-input,
+.o-output,
 .o-dropdown {
-  background: #fff;
-  border: 1px solid $color-alto;
   width: 100%;
-  padding: 1em .75em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+  border: 1px solid $color-botticelli;
+  border-radius: 5px;
+  padding: 1.6em 1em;
   font-size: rem(map-get($type-scale, 's'));
+}
+
+.o-dropdown {
   text-transform: uppercase;
+  background-image: url('../../svg/svg-source/c-blue__arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 30px;
+}
+.o-dropdown:focus {
+  outline: 0;
 }

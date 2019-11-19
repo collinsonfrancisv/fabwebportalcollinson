@@ -2,5 +2,17 @@
   &__label {
     font-size: rem(map-get($type-scale, 'sss'));
     font-weight: 500;
+    margin-bottom: rem(5px);
+  }
+
+  &__convert-icon {
+    width: 30px; 
+    height: 30px;
+    flex: 0 0 30px;
+    background-image: url(../../svg/svg-source/c-blue__convert.svg);
+  }
+
+  &__dropdown {
+    
   }
 }

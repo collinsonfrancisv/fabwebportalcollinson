@@ -3,36 +3,38 @@ var callback = function(){
   document.documentElement.classList.add("js");
   svg4everybody();
   
-  var rem = function rem() {
+  var rem = function rem()  {
     var html = document.getElementsByTagName('html')[0];
   
     return function () {
         return parseInt(window.getComputedStyle(html)['fontSize']);
     }
   }();
+
+  // var toggleOverlay = function toggleOverlay()  {
+  //  $('#backdrop')
+  // }();
   
-  // $('.p-rewards-points__drop-down').click(function() {
-  //   $('.p-loyalty-nav-mobile').slideToggle( 'slow', function() {
-
-  //   });
-  // });
-
   $('.p-rewards-points__drop-down').click(function() {
 
     $(this).toggleClass('active');
-    
+
     $('.p-loyalty-nav-mobile').slideToggle({
       duration:400
       ,easing:"swing"
       ,specialEasing:{top:'swing',left:'linear'}
       ,complete:function(){ }
-      ,start:function(a){ }
+      ,start:function(a){ 
+
+      }
       ,done:function(a){  }
       ,fail:function(error){  }
       ,always:function(a){  }
      });
   
   });
+
+
 
   // iOS switch button toggle
   $(".c-toggle__checkbox").click(function(){

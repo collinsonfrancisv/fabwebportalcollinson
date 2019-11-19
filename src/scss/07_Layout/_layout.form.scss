@@ -1,7 +1,18 @@
+.l-form {
+  @include display-flex;
+  @include flex-flow(column, nowrap);  
+  @include justify-content(space-between);
+}
 .l-field {
-  border: 1px solid red;
   @include display-flex;
   @include flex-flow(column, wrap);
   @include justify-content(flex-start);
   @include align-items(flex-start);
+}
+.l-convert-icon {
+  margin: 1rem 0;
+  @include display-flex;
+  @include flex-flow(row, nowrap);
+  @include justify-content(center);
+  @include align-items(center);
 }

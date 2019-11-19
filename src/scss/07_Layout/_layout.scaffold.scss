@@ -9,16 +9,27 @@
 }
 
 .l-container-padding {
-  padding-left: rem(30px);
-  padding-right: rem(30px);
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    padding-left: rem(30px);
+    padding-right: rem(30px);
+  }
+
 }
 
 .l-padding-left {
-  padding-left: rem(30px);
+  padding-left: rem(20px);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    padding-left: rem(30px);
+  }
 }
 
 .l-padding-right {
-  padding-right: rem(30px);
+  padding-right: rem(20px);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    padding-right: rem(30px);
+  }
 }
 
 

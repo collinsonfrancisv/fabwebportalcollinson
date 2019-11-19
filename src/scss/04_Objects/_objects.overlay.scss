@@ -1,0 +1,16 @@
+#backdrop {
+  position: fixed;
+  display: block;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background: #000;
+  background: rgba($color-blue-zodiac,.75);
+  cursor: default;
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    display: none;
+  }
+}
