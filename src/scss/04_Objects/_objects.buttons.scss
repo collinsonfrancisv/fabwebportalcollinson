@@ -13,6 +13,16 @@
   padding: 1.4em 2em;
 }
 
+.o-button:focus {
+  outline: 0;
+}
+
+.o-button:hover {
+  background: #fff !important;
+  color: $color-smalt !important;
+  box-shadow: inset 0 0 0 2px $color-smalt !important;
+}
+
 .o-button--text-small {
   font-size: rem(map-get($type-scale, 'ss'));
   padding: 1.6em 2.2em;

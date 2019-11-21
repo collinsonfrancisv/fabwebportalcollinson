@@ -3,7 +3,7 @@
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     display: none;
   }
-  top: 4rem;
+  // top: 4rem;
   width: 100%;
   font-size: rem(12px);
   &__item {
@@ -14,7 +14,7 @@
     border-top: 1px solid rgba($color-blue-zodiac, .5);
   }
 
-  &__item:hover {
+  &__item--is-active, &__item:hover {
     background: rgba($color-blue-zodiac, .15);
   }
 }

@@ -4,11 +4,20 @@
   width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: #fff;
   border: 1px solid $color-botticelli;
   border-radius: 5px;
   padding: 1.6em 1em;
   font-size: rem(map-get($type-scale, 's'));
+  color: $color-smalt;
+}
+
+.o-input,
+.o-dropdown {
+  background: #fff;
+}
+
+.o-output {
+  background: $color-athens-gray;
 }
 
 .o-dropdown {

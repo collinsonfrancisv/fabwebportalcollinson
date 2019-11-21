@@ -72,8 +72,10 @@
   }
 
   &--normal {
-    @include card-style(1);
-
+    @include card-style(2);
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      @include card-style(1);
+    }
   }
 }
 
@@ -97,9 +99,16 @@
 
 .c-card--style-1 {
   background: #fff;
-  box-shadow: map-get($shadow-orientations, 'shadow-orientation-1') map-get($shadow-colors, 'shadow-color-1');
+  box-shadow: map-get($shadow-orientations, 'shadow-orientation-2') map-get($shadow-colors, 'shadow-color-1');
   border-radius: map-get($border-radii, 'border-radius-1');
-  border: map-get($border-widths, 'border-width-1');  
+  border: 0;
+  border: none;
+
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    box-shadow: map-get($shadow-orientations, 'shadow-orientation-1') map-get($shadow-colors, 'shadow-color-1');
+    border-radius: map-get($border-radii, 'border-radius-1');
+    border: map-get($border-widths, 'border-width-1');  
+  }
 }
 
 .c-card--style-2 {

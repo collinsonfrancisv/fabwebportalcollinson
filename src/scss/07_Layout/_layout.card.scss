@@ -18,13 +18,15 @@
   flex-shrink: 0;
   flex-basis: auto;
   margin-right: rem(12px);
+  margin-bottom: rem(12px);
 }
 
-.l-card-grid--wrap__item {
+
+.l-card-grid__item--wrap {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 100%;  
-  margin-bottom: rem(10px);
+  margin-bottom: rem(12px);
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     flex-grow: 0;
     flex-shrink: 0;

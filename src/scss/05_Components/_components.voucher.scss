@@ -1,10 +1,16 @@
 .c-voucher {
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    background-color: #fff !important;
+  }
   &__header {
     margin-bottom: 2em;
   }
   &__image-container {
     border-radius: 0 0 30px 30px;
     overflow: hidden;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      border-radius: 0;
+    }
   }
 
   &__image {
@@ -25,5 +31,6 @@
     font-size: rem(map-get($type-scale, 'xl'));
     font-weight: 600;
   }
+
 
 }

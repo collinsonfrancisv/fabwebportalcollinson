@@ -18,7 +18,7 @@
     font-weight: 600;
   }
 
-  &__nav-link:hover {
+  &__nav-link:hover, &__nav-link--is-active {
     box-shadow: inset 0 -3px 0 rgba($color-smalt, 1);
   }
 }

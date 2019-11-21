@@ -62,7 +62,7 @@
     outline: 0;
   }
 
-  &__drop-down.active > .p-rewards-points__arrow {
+  &__drop-down.overlay-active > .p-rewards-points__arrow {
     transform: rotateZ(180deg);
 
   }

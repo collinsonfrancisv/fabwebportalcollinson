@@ -11,27 +11,34 @@ var callback = function(){
     }
   }();
 
-  // var toggleOverlay = function toggleOverlay()  {
-  //  $('#backdrop')
-  // }();
   
+  var $overlay = $('#loyalty-overlay');
+  var toggleOverlay = function toggleOverlay() {    
+    $overlay.fadeToggle(); 
+  }
+
   $('.p-rewards-points__drop-down').click(function() {
 
-    $(this).toggleClass('active');
+    $(this).toggleClass('overlay-active');
+    
 
-    $('.p-loyalty-nav-mobile').slideToggle({
-      duration:400
-      ,easing:"swing"
-      ,specialEasing:{top:'swing',left:'linear'}
-      ,complete:function(){ }
-      ,start:function(a){ 
+    
 
-      }
-      ,done:function(a){  }
-      ,fail:function(error){  }
-      ,always:function(a){  }
-     });
-  
+    var loyaltyMenuToggle = function loyaltyMenuToggle()  {
+      $('.p-loyalty-nav-mobile').slideToggle({
+        duration:400
+        ,easing:"swing"
+        ,specialEasing:{top:'swing',left:'linear'}
+        ,complete:function(){ }
+        ,start:function(a){ 
+          toggleOverlay();
+        }
+        ,done:function(a){  }
+        ,fail:function(error){  }
+        ,always:function(a){}
+       });
+    }();
+    
   });
 
 

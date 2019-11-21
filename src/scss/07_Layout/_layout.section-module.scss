@@ -3,6 +3,7 @@
 }
 
 .l-slider-buttons {
+  pointer-events: none;
   .js & {
     display: none;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
@@ -20,4 +21,8 @@
   .no-js & {
     display: none;
   }  
+
+  * {
+    pointer-events: auto !important;
+  }
 }
