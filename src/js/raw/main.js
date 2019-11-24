@@ -1,36 +1,40 @@
-var callback = function(){
+
+
+document.addEventListener("DOMContentLoaded", function(e) {
+
   document.documentElement.classList.remove("no-js");
   document.documentElement.classList.add("js");
+
   svg4everybody();
   
+  
+
   var rem = function rem()  {
     var html = document.getElementsByTagName('html')[0];
   
     return function () {
         return parseInt(window.getComputedStyle(html)['fontSize']);
     }
-  }();
-
+  }();    
   
+
   var $overlay = $('#loyalty-overlay');
   var toggleOverlay = function toggleOverlay() {    
     $overlay.fadeToggle(); 
   }
 
-  $('.p-rewards-points__drop-down').click(function() {
+  $('.p-rewards-points__drop-down, #loyalty-overlay').click(function() {
 
     $(this).toggleClass('overlay-active');
-    
 
     
-
     var loyaltyMenuToggle = function loyaltyMenuToggle()  {
       $('.p-loyalty-nav-mobile').slideToggle({
         duration:400
         ,easing:"swing"
         ,specialEasing:{top:'swing',left:'linear'}
         ,complete:function(){ }
-        ,start:function(a){ 
+        ,start:function(a){           
           toggleOverlay();
         }
         ,done:function(a){  }
@@ -83,13 +87,47 @@ var callback = function(){
       scrollLeft: leftPos + gridItemWidth
     }, 100);
   });
-};
 
-if (
-    document.readyState === "complete" ||
-    (document.readyState !== "loading" && !document.documentElement.doScroll)
-) {
-  callback();
-} else {
-  document.addEventListener("DOMContentLoaded", callback);
-}    
+  // Terms Pop Up
+  $('#terms-and-condition').popup({
+    escape: false,
+    absolute: true,
+    background: true,
+    transition: 'all 0.3s',
+    pagecontainer: '.p-main-content', 
+    scrolllock: true,
+    color: 'rgba(12, 35, 64, 0.75)'
+  });
+
+  var mqls = [
+    window.matchMedia("(min-width: 43.1875rem)")
+  ]
+
+  removeTermsPopup();
+  
+  for (var i=0; i<mqls.length; i++){
+    mqls[i].addListener(removeTermsPopup)
+  }
+  
+  function removeTermsPopup(){
+    if (mqls[0].matches) {
+     
+    } else  {
+      $('.c-popup-terms').attr("id", "terms-and-condition");
+      document.body.style.backgroundColor = 'blue';
+      $('#terms-and-condition').popup({
+        escape: false,
+        absolute: true,
+        background: true,
+        transition: 'all 0.3s',
+        pagecontainer: '.p-main-content', 
+        scrolllock: true,
+        color: 'rgba(12, 35, 64, 0.75)'
+      });
+    } 
+  }
+
+  
+      
+  
+});

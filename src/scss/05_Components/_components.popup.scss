@@ -1,0 +1,9 @@
+.c-popup {
+  background: #fff;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  max-width: 90%;
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    max-width: 40%;
+  }
+}

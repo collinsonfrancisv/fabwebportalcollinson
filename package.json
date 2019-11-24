@@ -9,7 +9,6 @@
     "Safari >= 8",
     "ie >= 10"
   ],
-  
   "babel": {
     "presets": [
       [
@@ -54,6 +53,7 @@
     "@babel/polyfill": "^7.7.0",
     "@drewbot/sass-flexbox-grid": "^2.0.7",
     "jquery": "^3.4.1",
+    "jquery-popup-overlay": "^2.1.4",
     "mq-scss": "^2.1.5",
     "phantomjs-prebuilt": "^2.1.16",
     "sass-flexbox": "^2.0.0",

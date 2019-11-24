@@ -28,6 +28,13 @@
     background: #fff;
   }
 
+  &--transparent-mobile-white-desktop-bg {
+    background: transparent;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      background: #fff;
+    }
+  }
+
   &--transparent-bg {
     background: transparent;
   }
