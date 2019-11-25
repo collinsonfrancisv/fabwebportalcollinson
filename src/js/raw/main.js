@@ -88,6 +88,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
     }, 100);
   });
 
+  var mqHandswide = window.matchMedia("(min-width: 43.1875rem)");
+
   // Terms Pop Up
   $('#terms-and-condition').popup({
     escape: false,
@@ -99,35 +101,18 @@ document.addEventListener("DOMContentLoaded", function(e) {
     color: 'rgba(12, 35, 64, 0.75)'
   });
 
-  var mqls = [
-    window.matchMedia("(min-width: 43.1875rem)")
-  ]
-
   removeTermsPopup();
   
-  for (var i=0; i<mqls.length; i++){
-    mqls[i].addListener(removeTermsPopup)
-  }
-  
+  mqHandswide.addListener(removeTermsPopup)
+
+
   function removeTermsPopup(){
-    if (mqls[0].matches) {
-     
+    if (mqHandswide.matches) {
+      $('#terms-and-condition').popup('hide');
+      $('.c-terms--wide').html($('.c-terms').html());
     } else  {
-      $('.c-popup-terms').attr("id", "terms-and-condition");
-      document.body.style.backgroundColor = 'blue';
-      $('#terms-and-condition').popup({
-        escape: false,
-        absolute: true,
-        background: true,
-        transition: 'all 0.3s',
-        pagecontainer: '.p-main-content', 
-        scrolllock: true,
-        color: 'rgba(12, 35, 64, 0.75)'
-      });
+      $('.c-terms--wide').empty();
     } 
   }
-
-  
-      
   
 });

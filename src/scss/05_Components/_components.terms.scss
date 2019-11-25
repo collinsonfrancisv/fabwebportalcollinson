@@ -1,0 +1,8 @@
+.c-terms {
+  &--wide {
+    display: none;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      display: block;
+    }
+  }
+}
