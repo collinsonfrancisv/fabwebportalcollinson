@@ -8,6 +8,14 @@
   }
 }
 
+.l-form-voucher {
+  @include flex-flow(column, nowrap); 
+  @include justify-content(flex-start);
+  @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+    @include flex-flow(row, nowrap); 
+  }
+}
+
 .l-field {
   @include display-flex;
   @include flex-flow(column, wrap);
@@ -30,5 +38,8 @@
 
 .l-form__button {
   margin-top: 2rem;
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    max-width: rem(195px);
+  }
 }
 

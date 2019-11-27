@@ -13,9 +13,23 @@
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     max-width: 40%;
   }
-  &__open {
-    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-      display: none;
-    }
+  
+}
+
+.c-popup-terms {
+  margin-top: 1.3em;
+  text-align: center;
+  font-size: rem(map-get($type-scale, 'm'));
+  @include display-flex;
+  @include justify-content(center);
+  @include align-items(center);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    display: none;
+  }
+
+  span {    
+    padding: 1em 3em 1em 2em;
+    background: url('../../svg/svg-source/c-blue__arrow-right.svg') no-repeat right/24px;
   }
 }
+
