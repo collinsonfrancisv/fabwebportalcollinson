@@ -90,6 +90,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
   var mqHandswide = window.matchMedia("(min-width: 43.1875rem)");
 
+  // Voucher Pop Up
+  $('#popup-voucher').popup({
+    escape: false,
+    absolute: true,
+    background: true,
+    transition: 'all 0.3s',
+    pagecontainer: '.p-main-content', 
+    scrolllock: true,
+    color: 'rgba(12, 35, 64, 0.75)'
+  });
+
   // Terms Pop Up
   $('#terms-and-condition').popup({
     escape: false,

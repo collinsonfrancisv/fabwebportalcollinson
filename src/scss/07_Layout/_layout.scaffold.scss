@@ -18,6 +18,16 @@
 
 }
 
+.l-container-margin {
+  margin-left: rem(20px);
+  margin-right: rem(20px);
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    margin-left: rem(30px);
+    margin-right: rem(30px);
+  }
+
+}
+
 .l-padding-left {
   padding-left: rem(20px);
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {

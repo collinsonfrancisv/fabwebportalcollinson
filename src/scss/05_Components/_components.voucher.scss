@@ -3,7 +3,7 @@
     background-color: #fff !important;
   }
   &__header {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
   &__image-container {
     border-radius: 0 0 30px 30px;
@@ -20,7 +20,7 @@
   }
 
   &__content {
-    padding-top: 2em;
+    padding-top: 1em;
   }
   &__label {
     color: $color-gull-gray;
@@ -31,6 +31,8 @@
     font-size: rem(map-get($type-scale, 'xl'));
     font-weight: 600;
   }
+}
 
-
+.c-voucher-details {
+  max-width: 1200px;
 }

@@ -26,12 +26,3 @@
     pointer-events: auto !important;
   }
 }
-
-
-
-.l-voucher-details {
-  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-    padding-left: rem(30px);
-    padding-right: rem(30px);
-  }
-}

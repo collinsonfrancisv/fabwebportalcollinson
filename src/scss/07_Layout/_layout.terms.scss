@@ -4,5 +4,11 @@
   }
   &--wide {
     margin-top: rem(60px);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: none;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) { 
+      display: block;
+    }
   }
 }
