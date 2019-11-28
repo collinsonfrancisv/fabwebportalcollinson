@@ -17,4 +17,13 @@
   &__item--is-active, &__item:hover {
     background: rgba($color-blue-zodiac, .15);
   }
+
+  &__item--is-active::before {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url();
+    
+  }
 }
