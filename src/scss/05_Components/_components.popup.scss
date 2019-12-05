@@ -1,22 +1,21 @@
 .c-popup {
   background: #fff;
   padding: 3rem 2rem;
-  .js & {
-    border-radius: 15px;
-    max-width: 90%;
+  border-radius: 15px;
+  
+  width: 100%;
+  max-width: 90%;
+  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+    max-width: rem(400px) !important;
   }
+
+}
+
+.c-popup-terms {
   .no-js & {
     border-radius: 0;
     max-width: 100%;
   }
-  max-width: 90%;
-  @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-    max-width: 40%;
-  }
-  
-}
-
-.c-popup-terms {
   margin-top: 1.3em;
   text-align: center;
   font-size: rem(map-get($type-scale, 'm'));
@@ -33,3 +32,53 @@
   }
 }
 
+.c-popup--checked {
+  $circle-size: 75px;
+  $border-size: 5px; 
+  position: relative;  
+  padding-top: 0;
+  background: radial-gradient(circle at top, transparent ($circle-size/2 + $border-size), white ($circle-size/2 + $border-size)+1);
+  background-size: 100% 100%;  
+
+  &__checkmark {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: -38px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;  
+    position: relative;
+    
+    background-color: #88CF45;
+    text-align: center;
+    vertical-align: middle;
+    line-height: $circle-size;
+    color: white;
+    font-size: 60px;
+  }
+}
+
+.c-popup-voucher {
+  &__share {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.c-popup-table {
+  width: 100%;
+  &__label {
+    text-align: left;
+  }
+
+  &__value {
+    text-align: right;
+  }
+}
+// .c-popup--checkmark__check {
+
+// }

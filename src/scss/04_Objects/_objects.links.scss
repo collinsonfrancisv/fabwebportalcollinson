@@ -1,3 +1,13 @@
+.o-link {
+  text-transform: capitalize;
+  color: $color-smalt;
+  font-size: rem(map-get($type-scale, 'm'));
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .o-helper-links {
   font-size: rem(map-get($type-scale, 'm'));
   font-weight: 600;
