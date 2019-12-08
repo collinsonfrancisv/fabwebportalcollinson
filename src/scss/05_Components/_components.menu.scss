@@ -23,6 +23,26 @@
       letter-spacing: rem(1px);
     }
   }
+
+  &__title--first-item {
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      padding: 1em 0 1em 4em;
+    }
+  }
+
+  &__title--my-rewards {
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      background: url(../../svg/svg-source/c-white__travel.svg) 0 0 ;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title--my-miles {
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      background: url(../../svg/svg-source/c-white__fab-icon.svg) 0 0;
+      background-repeat: no-repeat;
+    }
+  }
   
   &__title:hover,
   &__title:active {

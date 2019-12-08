@@ -21,9 +21,23 @@
   &__item--is-active::before {
     display: block;
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background: url();
+    width: 36px;
+    height: 36px;
+    background: url('../../svg/svg-source/c-green-checknav.svg');
     
   }
 }
+
+.p-loyalty-nav-mobile__item--is-active::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: url('../../svg/svg-source/c-green-checknav.svg');
+    background-repeat: no-repeat;
+    content: "";
+}
+
