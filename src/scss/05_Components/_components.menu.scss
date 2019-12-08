@@ -25,9 +25,14 @@
   }
 
   &__title--first-item {
+    opacity: .75;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       padding: 1em 0 1em 4em;
     }
+  }
+
+  &__title--first-item--is-active, &__title--first-item:hover {
+    opacity: 1;
   }
 
   &__title--my-rewards {
@@ -58,7 +63,7 @@
     }
   }
 
-  &__item:hover {
+  &__item--is-active, &__item:hover {
     opacity: 1;
   }
 

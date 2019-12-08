@@ -1,4 +1,9 @@
 .l-mobile-sub-menu {
+  
+  .no-mobile-sub-menu & {
+    display: none;
+  }
+
   z-index: 5;
   width: 100%;
   padding-top: 1em; 
@@ -19,9 +24,9 @@
   @include scroll-x;
   &__item {
     margin-right: 1em;
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: 105px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: rem(110px);
   }
   &__item:last-child {
     margin-right: 0;

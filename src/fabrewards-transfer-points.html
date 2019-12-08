@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FAB Rewards - Vouchers</title>
+    <title>FAB Rewards - Transfer Points</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel='icon' href='favicon.ico' />         
     <script src="js/vendors/jquery-3.4.1.js"></script>   
@@ -165,7 +165,7 @@
 
                           <li class="l-sub-menu-list__item">
 
-                          <a href="#" class="c-menu__item c-menu__item--is-active l-menu__item">
+                          <a href="#" class="c-menu__item l-menu__item">
 
                                 <svg class="c-menu__icon o-inline-icon l-menu__icon" role="presentation">
                                   <use xlink:href="svg/sprite.svg#c-white__vouchers" />
@@ -286,16 +286,13 @@
             <ul class="l-mobile-sub-menu-list l-container-padding disable-scrollbars">
   
               <li class="l-mobile-sub-menu-list__item" >
-                <a href="#" class="o-button o-button--hollow o-button--text-small">Shop</a>
+                <a href="#" class="o-button o-button--hollow o-button--text-small">Convert to Miles</a>
               </li><!-- / l-mobile-sub-menu-list__item -->
   
               <li class="l-mobile-sub-menu-list__item">
-                  <a href="#" class="o-button o-button--text-small">Travel</a>
+                  <a href="#" class="o-button o-button--text-small">Cashback</a>
               </li><!-- / l-mobile-sub-menu-list__item -->
   
-              <li class="l-mobile-sub-menu-list__item">
-                  <a href="#" class="o-button o-button--text-small">Vouchers</a>
-              </li><!-- / l-mobile-sub-menu-list__item -->
   
             </ul><!-- / l-mobile-sub-menu-list__item -->
     
@@ -310,210 +307,120 @@
 
           <div class="l-main-content__inner">            
 
-            <!-- VOUCHERS LISTING -->
-            <div class="c-section c-section--transparent-mobile-white-desktop-bg  l-section-module l-vouchers-listing">
-              
-             <header class="l-container-padding">
-              
-                <div class="l-header c-header">
+              <div class="c-section c-section--transparent-bg l-section-module l-transfer-points">
+            
+                  <div class="l-section-module__content-wrapper l-container-margin">   
 
-                  <a href="#" class="o-header">My Vouchers</a>
+                      <div class="c-voucher__content l-container-padding l-voucher__content">
+      
+                        <form class="c-form" action="#">
+                          
+                          <div class="l-form">
+
+                            <div class="l-field">
+                                <label class="c-form__label" for="voucher-amount">Membership Number</label>
+                                <input class="c-form__input o-input" type="number" >
+                            </div>
+
+                            <fieldset class="l-fieldset l-fieldset--horizontal">
+                              <div class="l-field">
+                                <label class="c-form__label" for="voucher-amount">FAB Rewards</label>
+                                <input class="c-form__input o-input" type="number" >
+                              </div>
+        
+                              <div class="l-convert-icon">
+                                  <span class="c-form__convert-icon"></span>
+                              </div>
+        
+                              <div class="l-field">
+                                <label class="c-form__label" for="rewards-amount">Etihad Guest Miles</label>
+                                <input class="c-form__input o-input" type="number" >
+                              </div>
+                            </fieldset>
+
+                          </div>  
+      
+                          <button class="popup-voucher_open l-form__button c-form__button o-button">Confirm</button>
+      
+                        </form>
+      
+                        <!-- <div id="popup-voucher" class="c-popup c-popup--checked">
+      
+                          <div class="c-popup--checked__checkmark"><svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 70 70">
+                            <path fill="#FFF" fill-rule="evenodd" d="M56.0303429,23.9644148 L29.865366,51.4821081 C29.5383293,51.8156936 29.2112927,51.9855942 28.7146058,51.9855942 C28.2281387,51.9855942 27.7416717,51.8156936 27.5740654,51.4821081 L14.8237236,37.5626846 L14.4946429,37.2290991 C14.1676063,36.8975856 14,36.3961714 14,36.0729458 C14,35.7414323 14.1676063,35.2400181 14.4946429,34.9064326 L16.7798116,32.5837661 C17.4338849,31.9290269 18.4149949,31.9290269 19.0711122,32.5837661 L19.2387185,32.7536667 L28.2281387,42.5312433 C28.5551754,42.8627568 29.0436864,42.8627568 29.3707231,42.5312433 L51.2862673,19.4972703 L51.4477416,19.4972703 C52.101815,18.8342432 53.0829249,18.8342432 53.7390422,19.4972703 L56.0303429,21.811649 C56.6762403,22.3130631 56.6762403,23.3096756 56.0303429,23.9644148 Z"/>
+                          </svg></div>
+      
+                          <div class="c-popup-voucher l-popup-voucher">
+      
+                            <a class="l-popup-voucher__share c-popup-voucher__share">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                  <g fill="#B8B8B8" transform="translate(7 5)">
+                                    <path d="M15.201245,7.90593103 L11.8828818,7.90593103 C11.4517579,7.90593103 11.0990202,8.25765517 11.0990202,8.68754023 C11.0990202,9.11742529 11.4517579,9.46914943 11.8828818,9.46914943 L14.4042882,9.46914943 L14.4042882,18.7182069 L1.60124496,18.7182069 L1.60124496,9.46914943 L4.38395389,9.46914943 C4.81507781,9.46914943 5.16781556,9.11742529 5.16781556,8.68754023 C5.16781556,8.25765517 4.81507781,7.90593103 4.38395389,7.90593103 L0.804334294,7.90593103 C0.373210375,7.90593103 0.0335216138,8.29673563 0.0335216138,8.72662069 L0.0335216138,19.5649195 C0.0335216138,19.9948046 0.373210375,20.2813793 0.804334294,20.2813793 L15.201245,20.2813793 C15.6323689,20.2813793 15.9720576,19.9948046 15.9720576,19.5649195 L15.9720576,8.72662069 C15.9720576,8.29673563 15.6323689,7.90593103 15.201245,7.90593103 Z"/>
+                                    <path d="M7.87213833,13.768 C8.30326225,13.768 8.656,13.4162759 8.656,12.9863908 L8.656,2.39558621 L12.0004611,5.36570115 C12.1441844,5.49595402 12.3401499,5.56110345 12.5230202,5.56110345 C12.7451297,5.56110345 12.9541441,5.46993103 13.1109164,5.30055172 C13.398317,4.97489655 13.372219,4.47986207 13.0455793,4.19328736 L8.53837464,0.194068966 C8.25097406,-0.0534252874 7.83289914,-0.0664827586 7.53240346,0.168 C7.38868012,0.233149425 7.27110086,0.350390805 7.1927147,0.480643678 L3.28645533,4.21935632 C2.97291066,4.51898851 2.95986167,5.01397701 3.26031124,5.32662069 C3.56080692,5.63926437 4.0572219,5.65227586 4.37076657,5.35268966 L7.1927147,2.39558621 L7.08813833,12.9863908 C7.08827666,13.4162759 7.44101441,13.768 7.87213833,13.768 Z"/>
+                                  </g>
+                                </svg>                          
+                              </a>
+      
+                            <h4 class="l-popup-header c-popup-voucher__header c-popup__header">Transfer Rewards Complete</h4>
+      
+                            <table class="l-popup-voucher__content c-popup-table c-table" border="0" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                  <td class="c-table__label">
+                                    Voucher Amount 
+                                  </td>
+      
+                                  <td class="c-table__value">
+                                    AED 200.00
+                                  </td>
+                                </tr>
+      
+                                <tr>
+                                  <td colspan="2">
+                                    <hr class="l-popup-voucher__divider o-divider">
+                                  </td>
+                                </tr>
+      
+                                <tr>
+                                  <td class="c-table__label">
+                                    Amount in Rewards
+                                  </td>
+      
+                                  <td class="c-table__value">
+                                    4000
+                                  </td>
+                                </tr>
+      
+                                
+                                <tr>
+                                  <td colspan="2">
+                                    <hr class="l-popup-voucher__divider o-divider">
+                                  </td>
+                                </tr>
+      
+                              
+                                </tbody>
+                            </table>
+      
+                            
+      
+                            <button class="o-button l-popup-voucher__button l-popup__button">Continue</button>
+      
+      
+                            <a href="#" class="o-link c-popup__button  l-popup-voucher__return">Back to Home</a>
+      
+                          </div>
+      
+                        </div> -->
+      
+                        
+                      </div>
+      
+                  </div>
+      
                   
-                  <a href="#" class="o-helper-links o-helper-links--filter">
-                    Filter by Category                  
-                  </a>
-                </div><!-- / l-header c-header -->
-
-              </header>
-
-              <ul class="l-card-grid l-card-grid--wrap l-container-padding">
-
-                <li class="l-card-grid__item l-card-grid__item--wrap">
-
-                  <a href="#" class="l-link-block c-card c-card--normal l-card">
-                    
-                    <img src="images/images-source/vouchers/virgin-megastore.png" alt="" class="c-card__image l-card__image">
-
-                    <div class="l-card__content">
-
-                        <p class="c-card__label c-card__label--new is-uppercase">Retail</p>
-
-                        <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150 2x Rewards - Online Shopping</h2>
-  
-                        <p class="c-card__detail c-card__detail--large l-card__detail">Valid until 28th August 2019</p>
-
-                    </div><!-- / l-card__content -->
-                    
-                    <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
-                        <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                            <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
-                        </svg>
-                        
-                  </div>
-                  </a><!-- / l-link-block c-card -->
-
-                </li><!-- / l-card-grid__item --> 
-                
-                <li class="l-card-grid__item l-card-grid__item--wrap">
-
-                  <a href="#" class="l-link-block c-card c-card--normal l-card">
-                    
-                    <img src="images/images-source/vouchers/virgin-megastore.png" alt="" class="c-card__image l-card__image">
-
-                    <div class="l-card__content">
-
-                        <p class="c-card__label c-card__label--new is-uppercase">Retail</p>
-
-                        <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150 2x Rewards - Online Shopping</h2>
-  
-                        <p class="c-card__detail c-card__detail--large l-card__detail">Valid until 28th August 2019</p>
-
-                    </div><!-- / l-card__content -->
-                    
-                    <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
-                        <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                            <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
-                        </svg>
-                        
-                  </div>
-                  </a><!-- / l-link-block c-card -->
-
-                </li><!-- / l-card-grid__item -->
-
-                <li class="l-card-grid__item l-card-grid__item--wrap">
-
-                  <a href="#" class="l-link-block c-card c-card--normal l-card">
-                    
-                    <img src="images/images-source/vouchers/virgin-megastore.png" alt="" class="c-card__image l-card__image">
-
-                    <div class="l-card__content">
-
-                        <p class="c-card__label c-card__label--new is-uppercase">Retail</p>
-
-                        <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150 2x Rewards - Online Shopping</h2>
-  
-                        <p class="c-card__detail c-card__detail--large l-card__detail">Valid until 28th August 2019</p>
-
-                    </div><!-- / l-card__content -->
-                    
-                    <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
-                        <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                            <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
-                        </svg>
-                        
-                  </div>
-                  </a><!-- / l-link-block c-card -->
-
-                </li><!-- / l-card-grid__item -->
-
-                <li class="l-card-grid__item l-card-grid__item--wrap">
-
-                  <a href="#" class="l-link-block c-card c-card--normal l-card">
-                    
-                    <img src="images/images-source/vouchers/virgin-megastore.png" alt="" class="c-card__image l-card__image">
-
-                    <div class="l-card__content">
-
-                        <p class="c-card__label c-card__label--new is-uppercase">Retail</p>
-
-                        <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150 2x Rewards - Online Shopping</h2>
-  
-                        <p class="c-card__detail c-card__detail--large l-card__detail">Valid until 28th August 2019</p>
-
-                    </div><!-- / l-card__content -->
-                    
-                    <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
-                        <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                            <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
-                        </svg>
-                        
-                  </div>
-                  </a><!-- / l-link-block c-card -->
-
-                </li><!-- / l-card-grid__item -->
-
-                <li class="l-card-grid__item l-card-grid__item--wrap">
-
-                  <a href="#" class="l-link-block c-card c-card--normal l-card">
-                    
-                    <img src="images/images-source/vouchers/virgin-megastore.png" alt="" class="c-card__image l-card__image">
-
-                    <div class="l-card__content">
-
-                        <p class="c-card__label c-card__label--new is-uppercase">Retail</p>
-
-                        <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150 2x Rewards - Online Shopping</h2>
-  
-                        <p class="c-card__detail c-card__detail--large l-card__detail">Valid until 28th August 2019</p>
-
-                    </div><!-- / l-card__content -->
-                    
-                    <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
-                        <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                            <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
-                        </svg>
-                        
-                  </div>
-                  </a><!-- / l-link-block c-card -->
-
-                </li><!-- / l-card-grid__item -->
-
-                <li class="l-card-grid__item l-card-grid__item--wrap">
-
-                  <a href="#" class="l-link-block c-card c-card--normal l-card">
-                    
-                    <img src="images/images-source/vouchers/virgin-megastore.png" alt="" class="c-card__image l-card__image">
-
-                    <div class="l-card__content">
-
-                        <p class="c-card__label c-card__label--new is-uppercase">Retail</p>
-
-                        <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150 2x Rewards - Online Shopping</h2>
-  
-                        <p class="c-card__detail c-card__detail--large l-card__detail">Valid until 28th August 2019</p>
-
-                    </div><!-- / l-card__content -->
-                    
-                    <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
-                        <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                            <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
-                        </svg>
-                        
-                  </div>
-                  </a><!-- / l-link-block c-card -->
-
-                </li><!-- / l-card-grid__item -->
-
-                <li class="l-card-grid__item l-card-grid__item--wrap">
-
-                  <a href="#" class="l-link-block c-card c-card--normal l-card">
-                    
-                    <img src="images/images-source/vouchers/virgin-megastore.png" alt="" class="c-card__image l-card__image">
-
-                    <div class="l-card__content">
-
-                        <p class="c-card__label c-card__label--new is-uppercase">Retail</p>
-
-                        <h2 class="c-card__title is-capitalize l-card__title"><span class="c-card__value">AED 150 2x Rewards - Online Shopping</h2>
-  
-                        <p class="c-card__detail c-card__detail--large l-card__detail">Valid until 28th August 2019</p>
-
-                    </div><!-- / l-card__content -->
-                    
-                    <div class="c-card__arrow l-card__arrow o-icon-arrow-right-blue" >
-                        <svg class="o-inline-icon" role="presentation" viewBox="0 0 30 30">
-                            <use xlink:href="svg/sprite.svg#c-gray__arrow-right" />
-                        </svg>
-                        
-                  </div>
-                  </a><!-- / l-link-block c-card -->
-
-                </li><!-- / l-card-grid__item -->
-
-              </ul><!-- / l-card-grid l-card-grid--wrap -->
-
-            </div><!-- / l-section-module -->
-            <!-- / BONUS REWARDS -->
+                 
+                </div><!-- / l-section-module -->
 
           </div><!-- / l-main-content__inner -->
 
