@@ -1,3 +1,11 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
 .l-form {
   @include display-flex;
   @include flex-flow(column, nowrap);  
@@ -19,17 +27,28 @@
 }
 
 .l-fieldset {
+  margin-top: 2em;
   &--horizontal {
     @include display-flex;
     @include flex-flow(row, nowrap); 
   }
+
   &--vertical {
     @include display-flex;
-    @include flex-flow(column, nowrap); 
+    @include flex-flow(column, wrap); 
+  }
+}
+
+.l-fieldset--horizontal {
+  &\@hands-wide {
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      @include flex-flow(column, wrap); 
+    }
   }
 }
 
 .l-field {
+  flex: 1 1 40%;
   @include display-flex;
   @include flex-flow(column, wrap);
   @include justify-content(flex-start);
@@ -37,9 +56,17 @@
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     flex: 1 1 40%;
   }
+
+  &--horizontal {
+    flex: 1 1 35%;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      flex: 1 1 100%;
+    }
+  }
 }
+
 .l-convert-icon {
-  margin: .5rem 0;
+  margin: 1em 0 0 0;
   @include display-flex;
   @include flex-flow(row, nowrap);
   @include justify-content(center);
@@ -52,7 +79,7 @@
 .l-form__button {
   margin-top: 2rem;
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-    max-width: rem(195px);
+    max-width: rem(255px);
   }
 }
 

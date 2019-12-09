@@ -35,7 +35,15 @@
     width: 1px;
   }
   
-  
+
+  .is-float-left {
+    float: left;
+  }
+
+  .is-float-right {
+    float: right;
+  }
+
   .is-uppercase {
     text-transform: uppercase !important;
     letter-spacing: 1px !important;    

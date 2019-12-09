@@ -35,7 +35,42 @@
     }
   }
 
+  &--transparent-desktop-white-mobile-bg {
+    background: #fff;
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      background: transparent;
+    }
+  }
+
   &--transparent-bg {
     background: transparent;
+  }
+}
+
+.c-bonus-rewards {
+  box-shadow: map-get($shadow-orientations, 'shadow-orientation-3') rgba($color-gull-gray,0.13);
+  &\@hands-wide {
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      box-shadow: none;
+      box-shadow: 0;
+    }
+  }
+}
+
+.c-voucher-details {
+  box-shadow: 0;
+  &\@hands-wide { 
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      box-shadow: map-get($shadow-orientations, 'shadow-orientation-3') rgba($color-gull-gray,0.13);
+    }
+  }
+}
+
+.c-transfer-points {
+  box-shadow: 0;
+  &\@hands-wide { 
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      box-shadow: map-get($shadow-orientations, 'shadow-orientation-3') rgba($color-gull-gray,0.13);
+    }
   }
 }

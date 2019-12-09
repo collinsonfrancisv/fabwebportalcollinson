@@ -26,6 +26,15 @@
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 30px;
+
+  &--double-arrow {
+    background-image: url('../../svg/svg-source/dropdown-double-arrows.svg');
+    background-size: 24px;
+  }
+
+  &--tabbed {
+    border-left: 4px solid $color-smalt;
+  }
 }
 .o-dropdown:focus {
   outline: 0;

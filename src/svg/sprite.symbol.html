@@ -130,6 +130,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-c-white__term-deposit-dims { width: 30px; height: 30px; }
 	.svg-c-white__travel-dims { width: 30px; height: 30px; }
 	.svg-c-white__vouchers-dims { width: 30px; height: 30px; }
+	.svg-dropdown-double-arrows-dims { width: 32px; height: 32px; }
 </style>
 <!--
 ====================================================================================================
@@ -263,6 +264,7 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 30 30" id="c-white__term-deposit" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M9.355 7.696a.59.59 0 01.096 1.17l-.096.007h-2.35a.82.82 0 00-.815.714l-.007.102v2.904h17.633V9.689a.82.82 0 00-.717-.81l-.103-.006h-1.987a.59.59 0 01-.096-1.17l.096-.007h1.987c1.056 0 1.922.814 1.998 1.845l.006.148v13.318c0 1.05-.818 1.911-1.855 1.988l-.15.005H7.006a2 2 0 01-2-1.844L5 23.006V9.69c0-1.05.818-1.911 1.855-1.988l.15-.005h2.35zm14.461 6.075H6.183v9.236c0 .416.313.759.718.81l.103.006h15.992a.82.82 0 00.814-.714l.007-.102-.001-9.236zM11.035 6a.59.59 0 01.584.493l.007.096v3.219c.285.19.472.511.472.877 0 .583-.475 1.055-1.06 1.055-.586 0-1.06-.472-1.06-1.055 0-.363.184-.683.465-.873V6.589A.59.59 0 0111.035 6zm8.046 0a.59.59 0 01.584.493l.007.096v3.234c.432.301.58.883.325 1.358a1.063 1.063 0 01-1.433.436 1.052 1.052 0 01-.075-1.819v-3.21A.59.59 0 0119.081 6zm-1.868 1.696a.59.59 0 01.096 1.17l-.096.007h-4.277a.59.59 0 01-.096-1.17l.096-.007h4.277z"/></symbol>
 		<symbol viewBox="0 0 30 30" id="c-white__travel" xmlns="http://www.w3.org/2000/svg"><defs><path id="efa" d="M0 0h13v13H0z"/></defs><g fill="none" fill-rule="evenodd" transform="translate(8.5 9)"><mask id="efb" fill="#fff"><use xlink:href="#efa"/></mask><path fill="#FFF" fill-rule="nonzero" d="M12.633.367a1.254 1.254 0 00-1.792.019L8.178 3.16 1.68 1.01.315 2.373 5.732 5.71 2.991 8.566l-1.758-.289L0 9.511l2.584.905L3.49 13l1.234-1.233-.29-1.758L7.29 7.268l3.336 5.417 1.364-1.364-2.15-6.5 2.774-2.662a1.254 1.254 0 00.019-1.792" mask="url(#efb)"/></g></symbol>
 		<symbol viewBox="0 0 30 30" id="c-white__vouchers" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M23.832 10c.81 0 1.468.64 1.468 1.428v7.633c0 .714-.658 1.38-1.468 1.38H6.468C5.658 20.44 5 19.8 5 19.011v-1.01c0-.393.304-.738.734-.787 1.038-.124 1.823-.985 1.823-1.995 0-1.01-.785-1.871-1.823-1.994-.405-.05-.734-.394-.734-.788v-1.01C5 10.64 5.658 10 6.468 10h17.364zm-11.057.837H6.468a.528.528 0 00-.531.517v.911c1.468.222 2.556 1.453 2.556 2.906s-1.088 2.684-2.556 2.905v.911c0 .271.227.518.531.518h6.327a.229.229 0 01-.02-.094v-.665c0-.148.126-.246.314-.246s.313.098.313.246v.665a.229.229 0 01-.02.094h10.45a.528.528 0 00.532-.518v-7.633a.527.527 0 00-.532-.517h-10.43v.37c0 .147-.125.246-.313.246s-.313-.099-.313-.246l-.001-.37zm6.374 1.428a.38.38 0 01.38.271l.506 1.478 1.595.024a.41.41 0 01.38.271c.05.148 0 .345-.152.443l-1.291.936.48 1.477c.051.173 0 .345-.151.444a.428.428 0 01-.481 0l-1.316-.911-1.316.91c.025.05-.051.074-.152.074-.076 0-.178-.024-.228-.073-.152-.099-.203-.271-.152-.444l.48-1.477-1.29-.936c-.152-.098-.202-.27-.152-.443a.38.38 0 01.38-.27l1.594-.025.507-1.478a.38.38 0 01.38-.27zM13.087 15.5c.19 0 .315.099.315.247v1.506c0 .124-.126.247-.315.247s-.315-.099-.315-.247v-1.506c0-.148.126-.247.315-.247zm0-3c.19 0 .315.099.315.247v1.506c0 .148-.126.247-.315.247s-.315-.099-.315-.247v-1.506c0-.148.126-.247.315-.247z"/></symbol>
+		<symbol viewBox="0 0 32 32" id="dropdown-double-arrows" xmlns="http://www.w3.org/2000/svg"><g fill-opacity=".4" fill-rule="evenodd"><path d="M15.965 27.692L11 18h9.93zM15.965 4l4.965 9.692H11z"/></g></symbol>
 </svg>
 
 <!--
@@ -1513,6 +1515,17 @@ embedded above. They may be styled via CSS.
 					</div>
 					<h2>c-white__vouchers</h2>
 				</li>
+				<li title="dropdown-double-arrows">
+					<div class="icon-box">
+						
+						<!-- dropdown-double-arrows -->
+						<svg class="svg-dropdown-double-arrows-dims">
+							<use xlink:href="#dropdown-double-arrows"></use>
+						</svg>
+						
+					</div>
+					<h2>dropdown-double-arrows</h2>
+				</li>
 			</ul>
 
 <!--
@@ -2755,6 +2768,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>c-white__vouchers</h2>
 				</li>
+				<li title="dropdown-double-arrows">
+					<div class="icon-box">
+						
+						<!-- dropdown-double-arrows -->
+						<svg class="svg-dropdown-double-arrows-dims">
+							<use xlink:href="sprite.svg#dropdown-double-arrows"></use>
+						</svg>
+						
+					</div>
+					<h2>dropdown-double-arrows</h2>
+				</li>
 			</ul>
 
 <!--
@@ -2763,7 +2787,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Sun, 08 Dec 2019 06:05:26 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Mon, 09 Dec 2019 05:35:21 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>
