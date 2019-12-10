@@ -358,7 +358,7 @@
                       </div>
 
                       <div class="l-convert-icon">
-                          <span class="c-form__convert-icon"></span>
+                          <span class="o-convert-icon"></span>
                       </div>
 
                       <div class="l-field">
@@ -483,6 +483,17 @@
     <script src="js/vendors/jquery.lbslider.js"></script>
     
     <script src="js/all.js"></script>
-
+    <script>
+      // Voucher Pop Up
+      $('#popup-voucher').popup({
+        escape: false,
+        absolute: true,
+        background: true,
+        transition: 'all 0.3s',
+        pagecontainer: '.p-main-content', 
+        scrolllock: true,
+        color: 'rgba(12, 35, 64, 0.75)'
+      });
+    </script>
 </body>
 </html>

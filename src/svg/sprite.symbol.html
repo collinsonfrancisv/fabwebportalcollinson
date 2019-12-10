@@ -131,6 +131,8 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-c-white__travel-dims { width: 30px; height: 30px; }
 	.svg-c-white__vouchers-dims { width: 30px; height: 30px; }
 	.svg-dropdown-double-arrows-dims { width: 32px; height: 32px; }
+	.svg-error-dims { width: 30px; height: 30px; }
+	.svg-warning-dims { width: 30px; height: 30px; }
 </style>
 <!--
 ====================================================================================================
@@ -265,6 +267,8 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 30 30" id="c-white__travel" xmlns="http://www.w3.org/2000/svg"><defs><path id="efa" d="M0 0h13v13H0z"/></defs><g fill="none" fill-rule="evenodd" transform="translate(8.5 9)"><mask id="efb" fill="#fff"><use xlink:href="#efa"/></mask><path fill="#FFF" fill-rule="nonzero" d="M12.633.367a1.254 1.254 0 00-1.792.019L8.178 3.16 1.68 1.01.315 2.373 5.732 5.71 2.991 8.566l-1.758-.289L0 9.511l2.584.905L3.49 13l1.234-1.233-.29-1.758L7.29 7.268l3.336 5.417 1.364-1.364-2.15-6.5 2.774-2.662a1.254 1.254 0 00.019-1.792" mask="url(#efb)"/></g></symbol>
 		<symbol viewBox="0 0 30 30" id="c-white__vouchers" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M23.832 10c.81 0 1.468.64 1.468 1.428v7.633c0 .714-.658 1.38-1.468 1.38H6.468C5.658 20.44 5 19.8 5 19.011v-1.01c0-.393.304-.738.734-.787 1.038-.124 1.823-.985 1.823-1.995 0-1.01-.785-1.871-1.823-1.994-.405-.05-.734-.394-.734-.788v-1.01C5 10.64 5.658 10 6.468 10h17.364zm-11.057.837H6.468a.528.528 0 00-.531.517v.911c1.468.222 2.556 1.453 2.556 2.906s-1.088 2.684-2.556 2.905v.911c0 .271.227.518.531.518h6.327a.229.229 0 01-.02-.094v-.665c0-.148.126-.246.314-.246s.313.098.313.246v.665a.229.229 0 01-.02.094h10.45a.528.528 0 00.532-.518v-7.633a.527.527 0 00-.532-.517h-10.43v.37c0 .147-.125.246-.313.246s-.313-.099-.313-.246l-.001-.37zm6.374 1.428a.38.38 0 01.38.271l.506 1.478 1.595.024a.41.41 0 01.38.271c.05.148 0 .345-.152.443l-1.291.936.48 1.477c.051.173 0 .345-.151.444a.428.428 0 01-.481 0l-1.316-.911-1.316.91c.025.05-.051.074-.152.074-.076 0-.178-.024-.228-.073-.152-.099-.203-.271-.152-.444l.48-1.477-1.29-.936c-.152-.098-.202-.27-.152-.443a.38.38 0 01.38-.27l1.594-.025.507-1.478a.38.38 0 01.38-.27zM13.087 15.5c.19 0 .315.099.315.247v1.506c0 .124-.126.247-.315.247s-.315-.099-.315-.247v-1.506c0-.148.126-.247.315-.247zm0-3c.19 0 .315.099.315.247v1.506c0 .148-.126.247-.315.247s-.315-.099-.315-.247v-1.506c0-.148.126-.247.315-.247z"/></symbol>
 		<symbol viewBox="0 0 32 32" id="dropdown-double-arrows" xmlns="http://www.w3.org/2000/svg"><g fill-opacity=".4" fill-rule="evenodd"><path d="M15.965 27.692L11 18h9.93zM15.965 4l4.965 9.692H11z"/></g></symbol>
+		<symbol viewBox="0 0 30 30" id="error" xmlns="http://www.w3.org/2000/svg"><g fill="#FF2567" fill-rule="evenodd"><path d="M15.5 24.95a9.45 9.45 0 100-18.9 9.45 9.45 0 000 18.9zm0-2.7a6.75 6.75 0 110-13.5 6.75 6.75 0 010 13.5z" opacity=".3"/><path d="M15.5 23.15a7.65 7.65 0 100-15.3 7.65 7.65 0 000 15.3zm0-.9a6.75 6.75 0 110-13.5 6.75 6.75 0 010 13.5z"/><path d="M15.494 20a.892.892 0 01-.894-.894c0-.511.402-.906.894-.906.504 0 .906.395.906.906 0 .5-.402.894-.906.894zm-.654-2.7L14.6 11h1.8l-.253 6.3H14.84z"/></g></symbol>
+		<symbol viewBox="0 0 30 30" id="warning" xmlns="http://www.w3.org/2000/svg"><g fill="#FF2567" fill-rule="evenodd"><path d="M15.5 24.95a9.45 9.45 0 100-18.9 9.45 9.45 0 000 18.9zm0-2.7a6.75 6.75 0 110-13.5 6.75 6.75 0 010 13.5z" opacity=".3"/><path d="M15.5 23.15a7.65 7.65 0 100-15.3 7.65 7.65 0 000 15.3zm0-.9a6.75 6.75 0 110-13.5 6.75 6.75 0 010 13.5z"/><path d="M15.494 20a.892.892 0 01-.894-.894c0-.511.402-.906.894-.906.504 0 .906.395.906.906 0 .5-.402.894-.906.894zm-.654-2.7L14.6 11h1.8l-.253 6.3H14.84z"/></g></symbol>
 </svg>
 
 <!--
@@ -1526,6 +1530,28 @@ embedded above. They may be styled via CSS.
 					</div>
 					<h2>dropdown-double-arrows</h2>
 				</li>
+				<li title="error">
+					<div class="icon-box">
+						
+						<!-- error -->
+						<svg class="svg-error-dims">
+							<use xlink:href="#error"></use>
+						</svg>
+						
+					</div>
+					<h2>error</h2>
+				</li>
+				<li title="warning">
+					<div class="icon-box">
+						
+						<!-- warning -->
+						<svg class="svg-warning-dims">
+							<use xlink:href="#warning"></use>
+						</svg>
+						
+					</div>
+					<h2>warning</h2>
+				</li>
 			</ul>
 
 <!--
@@ -2779,6 +2805,28 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>dropdown-double-arrows</h2>
 				</li>
+				<li title="error">
+					<div class="icon-box">
+						
+						<!-- error -->
+						<svg class="svg-error-dims">
+							<use xlink:href="sprite.svg#error"></use>
+						</svg>
+						
+					</div>
+					<h2>error</h2>
+				</li>
+				<li title="warning">
+					<div class="icon-box">
+						
+						<!-- warning -->
+						<svg class="svg-warning-dims">
+							<use xlink:href="sprite.svg#warning"></use>
+						</svg>
+						
+					</div>
+					<h2>warning</h2>
+				</li>
 			</ul>
 
 <!--
@@ -2787,7 +2835,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Mon, 09 Dec 2019 05:35:21 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Tue, 10 Dec 2019 05:22:29 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

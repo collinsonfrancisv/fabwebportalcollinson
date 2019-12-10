@@ -16,6 +16,14 @@
   background: #fff;
 }
 
+.o-input {
+  &--with-error {
+    border: 1px solid $color-radical-red;
+    background-color: rgba($color-gull-gray, 0.11); 
+    background: rgba($color-gull-gray, 0.11) url('../../svg/svg-source/error.svg') no-repeat center right 10px;   
+  }
+}
+
 .o-output {
   background: $color-athens-gray;
 }
@@ -38,4 +46,19 @@
 }
 .o-dropdown:focus {
   outline: 0;
+}
+
+.o-error-message {
+  text-transform: uppercase;
+  color: $color-radical-red;
+  margin: .75em 0;
+  font-size: 65%;
+}
+
+.o-convert-icon {
+  width: 30px; 
+  height: 30px;
+  flex: 0 0 30px;
+  align-self:flex-start;
+  background-image: url(../../svg/svg-source/c-blue__convert.svg);
 }

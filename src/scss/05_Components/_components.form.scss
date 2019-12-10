@@ -3,6 +3,27 @@
     font-size: rem(map-get($type-scale, 'sss'));
     font-weight: 500;
     margin-bottom: rem(5px);
+    width: 100%;
+  }
+
+  &__label--with-note {
+    overflow: hidden;
+  }
+
+  &__label--with-note::after {
+    color: #9F9F9F; 
+    text-transform: uppercase;
+    float: right; 
+    font-size: 90%;
+    letter-spacing: 1px;
+  }
+
+  &__label--amount-multiples-10::after {
+    content: "Enter amount in multiples of 10";
+  }
+
+  &__label--amount-multiples-50::after {
+    content: "Enter amount in multiples of 50";
   }
 
   &__convert-icon {
@@ -12,7 +33,7 @@
     background-image: url(../../svg/svg-source/c-blue__convert.svg);
   }
 
-  &__dropdown {
+  // &__dropdown {
     
-  }
+  // }
 }
