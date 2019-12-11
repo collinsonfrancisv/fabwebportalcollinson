@@ -325,6 +325,16 @@ input[type="month"] {
   -webkit-appearance: listbox;
 }
 
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 /**
  * 1. Remove the default vertical scrollbar in IE.
  * 2. Textareas should really only resize vertically so they don't break their
