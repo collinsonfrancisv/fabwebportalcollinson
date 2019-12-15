@@ -80,9 +80,9 @@
 }
 
 .c-card--large {
-  &:hover {
-    border-color: transparent;
-    outline: 0;
+  border: 0;
+  &:hover, &:active {
+    border: 0;
   }
   
   &__label, 

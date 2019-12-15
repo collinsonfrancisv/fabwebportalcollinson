@@ -103,16 +103,26 @@
   padding: 0; 
   display: block;
   width: 277px;
+  max-width: 277px;
   height: inherit; 
-
+  overflow: hidden;
+  
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     width: 445px;
+    max-width: 445px;
   }
 
   &__image {
     display: block;
     width: 100%;
     height: auto;   
+    overflow: hidden;
+    margin-bottom: .75rem;
+    
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      width: 445px;
+      max-width: 445px;
+    }
   }
 
   &__content {

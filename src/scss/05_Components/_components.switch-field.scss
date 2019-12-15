@@ -1,0 +1,44 @@
+.c-switch-field {
+  display: flex;
+  overflow: hidden;
+
+  &__button {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+	  width: 1px;
+	  border: 0;
+	  overflow: hidden;
+  }
+
+  &__label {
+    background-color: #FAFAFA;
+    color: rgba($color-tundora, .7);
+    font-size: rem(map-get($type-scale, 'ss'));
+    line-height: 1;
+    text-align: center;
+    padding: rem(15px) rem(30px);
+    margin-right: -1px;
+    border: 1px solid #E2E2E2;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  &__label:first-of-type {
+    border-radius: 6px 0 0 6px;
+  }
+
+  &__label:last-of-type {
+    border-radius: 0 6px 6px 0;
+  }
+
+  &__label:hover {
+    cursor: pointer;
+  }
+
+  &__button:checked + &__label {
+    background-color: #fff;
+    color: rgba($color-tundora, 1);
+	  box-shadow: none;
+  }
+
+}
