@@ -1,0 +1,61 @@
+.c-search {
+  @include display-flex;
+  @include flex-flow(row, nowrap); 
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.c-search__field:hover,
+.c-search__field:focus {
+  padding: 5% 3%; 
+  width: 100%;
+  color: $color-blue-zodiac;
+  cursor: auto;
+  background-color: #fff;
+  outline: none;  
+  border: 0;
+  box-shadow: none;
+}
+
+.c-search__field::-moz-placeholder {
+color: transparent;
+}
+
+.c-search__field::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.c-search__field:hover::-moz-placeholder,
+.c-search__field:focus::-moz-placeholder { 
+  color: #ddd;
+}
+.c-search__field:hover::-webkit-input-placeholder,
+.c-search__field:focus::-webkit-input-placeholder { 
+  color: #ddd;
+}
+
+.c-search__field:focus {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+border-color: #e6e6e6;
+}
+
+.c-search__field {
+position: absolute;
+right: 0;
+background: url('../../svg/svg-source/c-blue__search.svg') no-repeat right center;
+color: transparent;
+font-size: rem(map-get($type-scale, 'm'));
+border: 0;
+box-shadow: 0;
+outline: 0;
+outline: none;
+width: 40px;
+height: 40px;
+margin: 0;
+padding: 0;
+outline: 0 none;
+position: absolute;
+z-index: 5;
+cursor: pointer;
+transition: width 0.25s;
+}
