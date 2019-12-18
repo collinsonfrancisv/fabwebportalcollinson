@@ -1,0 +1,17 @@
+.c-notification {
+  font-size: rem(map-get($type-scale, 'm'));
+  text-align: center;
+  border-radius: 6px;
+  padding: 1.5em 5%;
+
+  &--caution {
+    background-color: #FFFCF4;
+    background-position: left 5% center;
+    background-repeat: no-repeat;
+    border: 1px solid #F4CA64;
+  }
+
+  &--error-icon {
+    background-image: url('../../svg/svg-source/c-blue__error.svg');
+  }
+}

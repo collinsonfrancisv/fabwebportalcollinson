@@ -11,6 +11,10 @@
   &:hover {
     text-decoration: underline;
   }
+  
+  &--larger {
+    font-size: rem(map-get($type-scale, 'lll'));
+  }
 }
 
 

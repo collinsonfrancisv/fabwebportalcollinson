@@ -1,13 +1,15 @@
-  .c-table {
-    width: 100%;
-    &__label {
-      text-align: left;
-    }
-    &__value {
-      text-align: right;
-    }
-    
-    td {
-      padding-bottom: .4em;
-    }
+.c-table {
+  width: 100%;
+  &__label {
+    text-align: left;
   }
+  &__value {
+    text-align: right;
+  }
+  
+  td {
+    padding-bottom: .4em;
+  }
+}
+
+

@@ -1,0 +1,43 @@
+.l-col-2-1 {
+  @include display-flex;
+  @include flex-flow(column, wrap); 
+  
+  // @include align-items(flex-start);
+  
+  @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+    @include justify-content(flex-end); 
+    @include flex-flow(row-reverse, nowrap); 
+  }
+
+  &__col-a {
+    margin-left: rem(20px);
+    margin-right: rem(20px);
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      margin-left: rem(30px);
+      margin-right: rem(30px);
+
+    }
+
+    @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+      flex: 0 0 20%;
+      min-width: rem(370px);
+      max-width: rem(500px);
+      margin-left: 0;
+    }
+  }
+
+  &__col-b {
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      margin-left: rem(30px);
+      margin-right: rem(30px);
+    }
+
+    @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+      
+      flex: 1 1 60%;
+      min-width: rem(450px);
+      max-width: rem(900px);
+
+    }
+  }
+}

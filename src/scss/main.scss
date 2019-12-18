@@ -59,6 +59,9 @@
 @import '05_Components/components.table';
 @import '05_Components/components.switch-field';
 @import '05_Components/components.search';
+@import '05_Components/components.filter';
+@import '05_Components/components.notification';
+
 
 
 
@@ -84,6 +87,7 @@
 
 /// 06 LAYOUT PARTIALS
 @import '07_Layout/layout.scaffold';
+@import '07_Layout/layout.multi-column';
 @import '07_Layout/layout.main-bar';
 @import '07_Layout/layout.main-content';
 @import '07_Layout/layout.mast';
@@ -97,6 +101,10 @@
 @import '07_Layout/layout.form';
 @import '07_Layout/layout.terms';
 @import '07_Layout/layout.popup';
+@import '07_Layout/layout.switch-field';
+@import '07_Layout/layout.filter';
+
+
 
 
 
