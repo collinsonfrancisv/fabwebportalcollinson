@@ -1,5 +1,5 @@
 .c-section {
-  padding: 25px 0;
+  padding: rem(15px) 0;
 
 
   
@@ -75,4 +75,19 @@
       box-shadow: map-get($shadow-orientations, 'shadow-orientation-3') rgba($color-gull-gray,0.13);
     }
   }
+}
+
+.c-activity {
+  &__header {
+    padding-left: rem(25px);
+    padding-right: rem(25px);
+    @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
+      padding-left: rem(30px);
+      padding-right: rem(30px);
+    }
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid $color-alto;
+  }
+
+  
 }

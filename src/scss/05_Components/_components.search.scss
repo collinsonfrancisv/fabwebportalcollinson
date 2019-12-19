@@ -1,4 +1,5 @@
 .c-search {
+  
   @include display-flex;
   @include flex-flow(row, nowrap); 
   @include justify-content(center);
@@ -7,7 +8,7 @@
 
 .c-search__field:hover,
 .c-search__field:focus {
-  padding: 5% 3%; 
+  // padding: 5% 3%; 
   width: 100%;
   color: $color-blue-zodiac;
   cursor: auto;
@@ -40,20 +41,23 @@ border-color: #e6e6e6;
 }
 
 .c-search__field {
-position: absolute;
+position: relative;
+top: 50%;
 right: 0;
+transform: translateY(-50%);
 background: url('../../svg/svg-source/c-blue__search.svg') no-repeat right center;
 color: transparent;
 font-size: rem(map-get($type-scale, 'm'));
 border: 0;
+border-left: 1px solid $color-alto;
+box-shadow: none;
 box-shadow: 0;
 outline: 0;
 outline: none;
-width: 40px;
-height: 40px;
+width: 50px;
+height: 50px;
 margin: 0;
 padding: 0;
-outline: 0 none;
 position: absolute;
 z-index: 5;
 cursor: pointer;
