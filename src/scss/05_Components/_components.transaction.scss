@@ -1,0 +1,51 @@
+.c-transaction-list {
+  width: 100%;
+  // border-bottom: 1px solid red; 
+  &__item {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #E3E3E3; 
+  }
+
+  &__item:last-child {
+    border-bottom: 0;
+  }
+}
+
+.c-transaction {
+  padding: rem(22px) 5%;
+
+  &__date, 
+  &__label,
+  &__amount {
+    color: #9F9F9F;
+    text-transform: uppercase;
+    font-size: rem(map-get($type-scale, 's'));
+    letter-spacing: 2px;
+  }
+  
+  // &__date {
+
+  // }
+
+  // &__label {
+    
+  // }
+
+  &__name {
+    color: $color-blue-zodiac;
+    font-size: rem(map-get($type-scale, 'm'));
+    font-weight: 600;
+  }
+
+  &__points {
+    color: $color-smalt;
+    text-align: right;
+    font-size: rem(map-get($type-scale, 'lll'));
+    font-weight: 600;
+  }
+
+  &__amount {
+    text-align: right;
+  }
+}

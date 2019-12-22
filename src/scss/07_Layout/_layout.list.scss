@@ -1,0 +1,28 @@
+.l-list-item {
+  @include display-flex;
+  @include flex-flow(row, nowrap); 
+  @include justify-content(space-between);
+
+  &__time {
+    flex-basis: 10%;
+    @include display-flex;
+    @include flex-flow(row, nowrap); 
+    @include justify-content(flex-end);
+    @include align-items(center);
+  }
+
+  &__description {
+    flex-basis: 67%;
+    @include display-flex;
+    @include flex-flow(column, nowrap); 
+    @include justify-content(flex-start);
+  }
+
+  &__value {
+    flex-basis: 15%;
+    @include display-flex;
+    @include flex-flow(column, nowrap); 
+    // @include justify-content(flex-start);
+    @include flex-flow(column, nowrap); 
+  }
+}
