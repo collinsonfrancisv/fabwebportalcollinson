@@ -316,22 +316,21 @@
                         </div><!-- / l-header c-header -->
     
                       </header>
+                      
+                      <div class="c-chart">
+                        <div id="chart1" class="c-chart__visual"></div>
 
-                      <div id="chartdiv" style="width:100%; height: 300px;"></div>
+                        <div class="c-chart__text">
+                          <p>Last 6 Months</p>
+                          <p>+ 14,000</p>
+                          <p>Rewards Earned</p>
+                        </div>
+                        
 
-                      <!-- <div class="c-circle-chart">
-                        <p class="c-circle-chart__label">
-                          Last 6 months
-                        </p>
+                      </div>
+                      
 
-                        <p class="c-circle-chart__points">
-                          + 14,000
-                        </p>
-
-                        <p class="c-circle-chart__label">
-                          Rewards Earned
-                        </p>
-                      </div> -->
+                      
 
                     </div>
 
@@ -721,17 +720,10 @@
         am4core.useTheme(am4themes_myTheme);
         // Themes end
 
-        var chart = am4core.create("chartdiv", am4charts.PieChart);
+        var chart = am4core.create("chart1", am4charts.PieChart);
         chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-        chart.colors.list = [
-  am4core.color("#000000"),
-  am4core.color("#000000"),
-  am4core.color("#000000"),
-  am4core.color("#000000"),
-  am4core.color("#000000"),
-  am4core.color("#000000"),
-];
+       
 
         chart.data = [
           {
@@ -752,7 +744,7 @@
           }
         ];
         chart.radius = am4core.percent(70);
-        chart.innerRadius = am4core.percent(74);
+        chart.innerRadius = am4core.percent(64);
         chart.startAngle = 180;
         chart.endAngle = 360;  
 
@@ -763,13 +755,19 @@
         series.dataFields.value = "value";
         series.dataFields.category = "country";
 
+        series.colors.list = [
+          am4core.color("#247CFF"),
+          am4core.color("#07ECD7"),
+          am4core.color("#FF2567"),
+          am4core.color("#003C95"),
+        ];
+
+        series.labels.template.disabled = true;
 
         series.slices.template.cornerRadius = 0;
         series.slices.template.innerCornerRadius = 0;
         series.slices.template.draggable = false;
         series.slices.template.inert = true;
-        // series.ticks.template.adapter.add("hidden");
-        // series.labels.template.adapter.add("hidden");
         series.alignLabels = false;
 
         series.hiddenState.properties.startAngle = 90;
