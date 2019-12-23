@@ -1,0 +1,15 @@
+.c-circle-chart {
+  position: relative;
+  width: 236px;
+  height: 135px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: inherit;
+    height: inherit;
+    border-bottom: none;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }  
+}
