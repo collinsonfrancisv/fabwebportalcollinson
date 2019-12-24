@@ -292,21 +292,21 @@
 
              <div class="l-col-2-1">
 
-                <div class="l-col-2-1__col-a" >
+                <div class="l-col-2-1__col-a " >
 
                   <div class="c-switch-field l-switch-field" >
 
                     <input type="radio" id="rewards-earned" class="c-switch-field__button" name="rewards" value="rewards-earned" checked/>
-                    <label for="rewards-earned" class="c-switch-field__label" >Rewards Earned</label>
+                    <label for="rewards-earned" class="c-switch-field__label chart-toggle">Rewards Earned</label>
       
                     <input type="radio" id="rewards-redeemed" class="c-switch-field__button" name="rewards" value="rewards-redeemed" />
-                    <label for="rewards-redeemed" class="c-switch-field__label">Rewards Redeeemed</label>
+                    <label for="rewards-redeemed" class="c-switch-field__label chart-toggle">Rewards Redeeemed</label>
                     
                   </div><!-- / c-switch-field -->
 
                   <div class="l-graph-wrapper">
 
-                    <div class="c-graph-container c-section">
+                    <div class="c-graph-container c-graph-container-1 c-graph-container@lap c-section c-section--rounded c-section--transparent-mobile-white-desktop-bg">
                       <header class="c-activity__header c-section__header">
                 
                         <div class="l-header c-header">
@@ -320,7 +320,7 @@
                       <div class="c-chart">
                         <div id="chart1" class="c-chart__visual"></div>
 
-                        <div class="c-chart__text">
+                        <div class="c-chart__text-block">
                           <p>Last 6 Months</p>
                           <p>+ 14,000</p>
                           <p>Rewards Earned</p>
@@ -332,6 +332,31 @@
 
                       
 
+                    </div>
+
+                    <div class="c-graph-container c-graph-container-2 c-graph-container@lap c-section c-section--rounded c-section--transparent-mobile-white-desktop-bg">
+                      <header class="c-activity__header c-section__header">
+                
+                        <div class="l-header c-header">
+    
+                          <a href="#" class="o-header o-header--larger">Rewards Redeemed</a>
+    
+                        </div><!-- / l-header c-header -->
+    
+                      </header>
+                      
+                      <div class="c-chart">
+                        <div id="chart2" class="c-chart__visual"></div>
+
+                        <div class="c-chart__text-block">
+                          <p>Last 6 Months</p>
+                          <p>- 23,000</p>
+                          <p>Rewards Redeemed</p>
+                        </div>
+                        
+
+                      </div>
+                      
                     </div>
 
                   </div>
@@ -709,23 +734,23 @@
           color: 'rgba(12, 35, 64, 0.75)'
         });
 
+
+
         // Semi-circle Chart
-        function am4themes_myTheme(target) {
+        function am4themes_myTheme1(target) {
           if (target instanceof am4charts.Axis) {
             target.background.fill = am4core.color("#000000");
           }
         }
 
         // Themes begin
-        am4core.useTheme(am4themes_myTheme);
+        am4core.useTheme(am4themes_myTheme1);
         // Themes end
 
-        var chart = am4core.create("chart1", am4charts.PieChart);
-        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-
-       
-
-        chart.data = [
+        // Rewards Earned Chart
+        var chart1 = am4core.create("chart1", am4charts.PieChart);
+        chart1.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        chart1.data = [
           {
             country: "Credit Card",
             value: 1
@@ -743,50 +768,119 @@
             value: 1
           }
         ];
-        chart.radius = am4core.percent(70);
-        chart.innerRadius = am4core.percent(64);
-        chart.startAngle = 180;
-        chart.endAngle = 360;  
+        chart1.radius = am4core.percent(70);
+        chart1.innerRadius = am4core.percent(64);
+        chart1.startAngle = 160;
+        chart1.endAngle = 380;  
+        chart1.legend = new am4charts.Legend();
+        chart1.legend.useDefaultMarker = false;
+        let marker1 = chart1.legend.markers.template.children.getIndex(0);
+        marker1.cornerRadius(12, 12, 12, 12);
+        marker1.width = 16;
+        marker1.height = 10;
+        chart1.legend.itemContainers.template.paddingBottom = 15;
+        chart1.legend.valueLabels.template.disabled = true;
 
-         
 
+        var series1 = chart1.series.push(new am4charts.PieSeries());
+        series1.dataFields.value = "value";
+        series1.dataFields.category = "country";
 
-        var series = chart.series.push(new am4charts.PieSeries());
-        series.dataFields.value = "value";
-        series.dataFields.category = "country";
-
-        series.colors.list = [
+        series1.colors.list = [
           am4core.color("#247CFF"),
           am4core.color("#07ECD7"),
           am4core.color("#FF2567"),
           am4core.color("#003C95"),
         ];
 
-        series.labels.template.disabled = true;
+        series1.labels.template.disabled = true;
+        series1.slices.template.cornerRadius = 0;
+        series1.slices.template.innerCornerRadius = 0;
+        series1.slices.template.draggable = false;
+        series1.slices.template.inert = true;
+        series1.alignLabels = false;
+        series1.hiddenState.properties.startAngle = 90;
+        series1.hiddenState.properties.endAngle = 90;
+    </script>
 
-        series.slices.template.cornerRadius = 0;
-        series.slices.template.innerCornerRadius = 0;
-        series.slices.template.draggable = false;
-        series.slices.template.inert = true;
-        series.alignLabels = false;
+    <script>
+        // Semi-circle Chart
+        function am4themes_myTheme2(target) {
+          if (target instanceof am4charts.Axis) {
+            target.background.fill = am4core.color("#000000");
+          }
+        }
 
-        series.hiddenState.properties.startAngle = 90;
-        series.hiddenState.properties.endAngle = 90;
+        // Themes begin
+        am4core.useTheme(am4themes_myTheme2);
+        // Themes end
 
-       
-          
-        chart.legend = new am4charts.Legend();
-        chart.legend.useDefaultMarker = false;
-        let marker = chart.legend.markers.template.children.getIndex(0);
-        marker.cornerRadius(12, 12, 12, 12);
-        marker.width = 16;
-        marker.height = 10;
+        // Rewards Redeemed Chart
+        var chart2 = am4core.create("chart2", am4charts.PieChart);
+        chart2.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        chart2.data = [
+          {
+            country: "Voucher",
+            value: 1
+          },
+          {
+            country: "Travel",
+            value: 1
+          },
+          {
+            country: "Store",
+            value: 1
+          },
+          {
+            country: "Cashback",
+            value: 1
+          }
+        ];
+        chart2.radius = am4core.percent(70);
+        chart2.innerRadius = am4core.percent(64);
+        chart2.startAngle = 160;
+        chart2.endAngle = 380;  
+        chart2.legend = new am4charts.Legend();
+        chart2.legend.useDefaultMarker = false;
+        let marker2 = chart2.legend.markers.template.children.getIndex(0);
+        marker2.cornerRadius(12, 12, 12, 12);
+        marker2.width = 16;
+        marker2.height = 10;
+        chart2.legend.itemContainers.template.paddingBottom = 15;
+        chart2.legend.valueLabels.template.disabled = true;
 
-        chart.legend.itemContainers.template.paddingBottom = 15;
-        chart.legend.valueLabels.template.disabled = true;
 
- 
+        var series2 = chart2.series.push(new am4charts.PieSeries());
+        series2.dataFields.value = "value";
+        series2.dataFields.category = "country";
 
+        series2.colors.list = [
+          am4core.color("#247CFF"),
+          am4core.color("#07ECD7"),
+          am4core.color("#FF2567"),
+          am4core.color("#003C95"),
+        ];
+        
+        series2.labels.template.disabled = true;
+        series2.slices.template.cornerRadius = 0;
+        series2.slices.template.innerCornerRadius = 0;
+        series2.slices.template.draggable = false;
+        series2.slices.template.inert = true;
+        series2.alignLabels = false;
+        series2.hiddenState.properties.startAngle = 90;
+        series2.hiddenState.properties.endAngle = 90;
+    </script>
+
+    <script>
+    // Chart toggle 
+    $(document).ready(function(){
+      $('.chart-toggle').click(function(){
+          var inputValue = $(this).attr("value");
+          var targetBox = $("." + inputValue);
+          $(".box").not(targetBox).hide();
+          $(targetBox).show();
+      });
+    });
     </script>
 </body>
 </html>

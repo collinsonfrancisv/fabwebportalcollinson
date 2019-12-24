@@ -1,7 +1,12 @@
+.c-graph-container {
+  margin-bottom: rem(30px);
+  display: none;
+}
+
 .c-circle-chart {
   position: relative;
   width: 236px;
-  height: 135px;
+  height: 145px;
 
   &::before {
     position: absolute;
@@ -15,19 +20,38 @@
 }
 
 .c-chart {
-  border: 1px solid red;
   position: relative;
   &__visual {
     width: 100%;
-    height: 300px;
+    height: 350px;
   }
 
-  &__text {
+  &__text-block {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__text-block p {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: .75em;
   }
   
+  &__text-block p:nth-child(1), &__text-block p:nth-child(3) {
+    color: #9F9F9F;
+    font-size: rem(map-get($type-scale, 's'));
+    letter-spacing: 1px;
+  }
+  
+  &__text-block p:nth-child(2) {
+    font-size: rem(map-get($type-scale, 'xl'));
+    font-weight: 600;
+  }
+  
+  &__text-block p:nth-child(3) {
+    color: $color-blue-zodiac;
+  }
 }
 
