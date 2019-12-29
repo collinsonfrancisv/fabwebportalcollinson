@@ -296,17 +296,17 @@
 
                   <div class="c-switch-field l-switch-field" >
 
-                    <input type="radio" id="rewards-earned" class="c-switch-field__button" name="rewards" value="rewards-earned" checked/>
+                    <input type="radio" id="rewards-earned" class="c-switch-field__button" name="rewards-toggle" value="rewards-earned" data-id="chart__rewards-earned" checked/>
                     <label for="rewards-earned" class="c-switch-field__label chart-toggle">Rewards Earned</label>
       
-                    <input type="radio" id="rewards-redeemed" class="c-switch-field__button" name="rewards" value="rewards-redeemed" />
+                    <input type="radio" id="rewards-redeemed" class="c-switch-field__button" name="rewards-toggle" value="rewards-redeemed" data-id="chart__rewards-redeemed" />
                     <label for="rewards-redeemed" class="c-switch-field__label chart-toggle">Rewards Redeeemed</label>
                     
                   </div><!-- / c-switch-field -->
 
                   <div class="l-graph-wrapper">
 
-                    <div class="c-graph-container c-graph-container-1 c-graph-container@lap c-section c-section--rounded c-section--transparent-mobile-white-desktop-bg">
+                    <div id="chart__rewards-earned" class="c-graph-container c-graph-container-1 c-graph-container@lap c-section c-section--rounded c-section--transparent-mobile-white-desktop-bg">
                       <header class="c-activity__header c-section__header">
                 
                         <div class="l-header c-header">
@@ -334,7 +334,7 @@
 
                     </div>
 
-                    <div class="c-graph-container c-graph-container-2 c-graph-container@lap c-section c-section--rounded c-section--transparent-mobile-white-desktop-bg">
+                    <div id="chart__rewards-redeemed" class="c-graph-container c-graph-container-2 c-graph-container@lap c-section c-section--rounded c-section--transparent-mobile-white-desktop-bg is-hidden">
                       <header class="c-activity__header c-section__header">
                 
                         <div class="l-header c-header">
@@ -873,14 +873,25 @@
 
     <script>
     // Chart toggle 
+    // $(document).ready(function(){
+    //   $('.chart-toggle').click(function(){
+    //       var inputValue = $(this).attr("value");
+    //       var targetBox = $("." + inputValue);
+          
+    //       $(".box").not(targetBox).hide();
+    //       $(targetBox).show();
+    //   });
+    // });
+    
+
     $(document).ready(function(){
-      $('.chart-toggle').click(function(){
-          var inputValue = $(this).attr("value");
-          var targetBox = $("." + inputValue);
-          $(".box").not(targetBox).hide();
-          $(targetBox).show();
+      $("input[name$='rewards-toggle']").change(function (event) {
+          var id = $(this).data('id');
+          $('#' + id).addClass('is-hidden').siblings().removeClass('is-hidden');
       });
     });
+
+
     </script>
 </body>
 </html>

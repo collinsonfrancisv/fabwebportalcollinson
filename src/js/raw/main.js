@@ -114,5 +114,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
       $('.c-terms--wide').empty();
     } 
   }
+
+  
   
 });

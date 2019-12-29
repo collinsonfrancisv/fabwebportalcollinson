@@ -1,6 +1,8 @@
 .c-graph-container {
   margin-bottom: rem(30px);
-  display: none;
+  @include mq(min, rem(map-get($breakpoints, 'lap'))) { 
+    display: block !important;
+  }
 }
 
 .c-circle-chart {
