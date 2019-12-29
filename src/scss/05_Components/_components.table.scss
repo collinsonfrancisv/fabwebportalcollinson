@@ -1,5 +1,9 @@
 .c-table {
   width: 100%;
+  &__preposition {
+    text-align: left;
+    color: $color-gull-gray;
+  }
   &__label {
     text-align: left;
   }

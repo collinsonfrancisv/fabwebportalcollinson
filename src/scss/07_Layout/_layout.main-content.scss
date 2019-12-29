@@ -1,16 +1,16 @@
 .l-main-content {
   z-index: 0;
   .with-mobile-sub-menu & {
-    padding-top: rem(199px);
+    padding-top: rem(250px);
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       padding-top: rem(50px);
     }
   }
   
   .no-mobile-sub-menu & {
-    margin-top: rem(149px);
+    margin-top: rem(200px);
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-      margin-top: 0;
+      margin-top: rem(50px);
     }
   }
 
