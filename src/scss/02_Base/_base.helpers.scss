@@ -39,6 +39,16 @@
     display: none !important;
   }
   
+  .is-hidden-in-desktop {
+    @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+      display: none !important;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+    }
+  }
 
   .is-float-left {
     float: left;

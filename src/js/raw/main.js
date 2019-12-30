@@ -88,6 +88,43 @@ document.addEventListener("DOMContentLoaded", function(e) {
     }, 100);
   });
 
+  $(".l-section-module--2col__btn-prev").click(function () {
+    var closestXGrid = $(this).parent().parent().next(".l-section-module--2col__content").children(".horizontal-scroll");
+    var gridItemWidth = $(this).parent().parent().next(".l-section-module--2col__content").children(".horizontal-scroll").children(".l-section-module--2col__grid-item").outerWidth(true);
+    var leftPos = closestXGrid.scrollLeft();
+    closestXGrid.animate({
+      scrollLeft: leftPos - gridItemWidth
+    }, 100);
+  });
+  
+  $(".l-section-module--2col__btn-next").click(function () {
+    var closestXGrid = $(this).parent().parent().next(".l-section-module--2col__content").children(".horizontal-scroll");
+    var gridItemWidth = $(this).parent().parent().next(".l-section-module--2col__content").children(".horizontal-scroll").children(".l-section-module--2col__grid-item").outerWidth(true);
+    var leftPos = closestXGrid.scrollLeft();
+    closestXGrid.animate({
+      scrollLeft: leftPos + gridItemWidth
+    }, 100);
+  });
+
+
+  // $(".l-section-module--2col__btn-prev").click(function () {
+  //   var closestXGrid2 = $(".l-section-module--2col__horizontal-scroll");
+  //   var gridItemWidth2 = $(".l-section-module--2col__horizontal-scroll").children(".l-section-module--2col__grid-item").outerWidth(true);
+  //   var leftPos2 = closestXGrid2.scrollLeft();
+  //   closestXGrid2.animate({
+  //     scrollLeft: leftPos2 - gridItemWidth2
+  //   }, 100);
+  // });
+
+  // $(".l-section-module--2col__btn-next").click(function () {
+  //   var closestXGrid2 = $(".l-section-module--2col__horizontal-scroll");
+  //   var gridItemWidth2 = $(".l-section-module--2col__horizontal-scroll").children(".l-section-module--2col__grid-item").outerWidth(true);
+  //   var leftPos2 = closestXGrid2.scrollLeft();
+  //   closestXGrid2.animate({
+  //     scrollLeft: leftPos2 + gridItemWidth2
+  //   }, 100);
+  // });
+
   var mqHandswide = window.matchMedia("(min-width: 43.1875rem)");
 
   // Terms Pop Up

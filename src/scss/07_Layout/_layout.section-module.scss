@@ -53,3 +53,49 @@
     }
   }
 }
+
+.l-section-module--2col {
+  @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+    padding: 0;
+    @include display-flex;
+    @include flex-flow(row, nowrap);
+    @include justify-content(flex-start);  
+  }
+
+  .l-section-module--2col__header {
+    @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+      position: relative;
+      min-width: rem(200px);
+      padding-top: rem(30px);
+      padding-bottom: rem(30px);
+      border-right: 1px solid rgba($color-gull-gray, .20);
+    }
+  }
+
+  .l-section-module--2col__content {
+    @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+      padding-top: rem(30px);
+      padding-bottom: rem(30px);
+    }
+  }
+
+  .l-section-module--2col__header-inner {
+    @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+      @include justify-content(flex-start);  
+    }
+  }
+
+  .l-section-module--2col__slider-buttons {
+    @include mq(min, rem(map-get($breakpoints, 'lap'))) {
+      padding: 0;
+      margin-top: rem(25px);
+      position: static;
+      @include justify-content(flex-start);  
+    }
+  }
+
+  .l-section-module--2col__content, .l-section-module--2col__horizontal-scroll {
+    overflow-x: scroll;
+    overflow-y: auto;
+  }
+}
