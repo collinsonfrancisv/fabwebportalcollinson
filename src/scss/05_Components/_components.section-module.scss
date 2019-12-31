@@ -81,7 +81,6 @@
   &__header {
     padding-left: rem(25px);
     padding-right: rem(25px);
-    display: none;
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
       display: block;
     }

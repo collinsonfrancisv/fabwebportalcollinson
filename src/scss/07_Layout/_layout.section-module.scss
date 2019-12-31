@@ -65,7 +65,7 @@
   .l-section-module--2col__header {
     @include mq(min, rem(map-get($breakpoints, 'lap'))) {
       position: relative;
-      min-width: rem(200px);
+      min-width: rem(260px);
       padding-top: rem(30px);
       padding-bottom: rem(30px);
       border-right: 1px solid rgba($color-gull-gray, .20);

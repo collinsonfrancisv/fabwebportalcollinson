@@ -8,14 +8,14 @@
   }
   
   .no-mobile-sub-menu & {
-    margin-top: rem(200px);
+    padding-top: rem(200px);
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-      margin-top: rem(50px);
+      padding-top: rem(50px);
     }
   }
 
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-    margin-top: 0;
+    padding-top: 0;
     max-height: calc(100vh - 63px);
     overflow-x: hidden;
     overflow-y: auto;

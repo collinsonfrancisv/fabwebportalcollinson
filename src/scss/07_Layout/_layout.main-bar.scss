@@ -113,7 +113,7 @@
   -ms-overflow-style: none;  /* IE 10+ */
   @include display-flex;
   @include flex-flow(row, nowrap);
-  @include justify-content(space-between);
+  @include justify-content(flex-start);
   @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
     @include flex-flow(column, nowrap);
     overflow-x: hidden;

@@ -37,14 +37,14 @@
 
   &__title--my-rewards {
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-      background: url(../../svg/svg-source/c-white__travel.svg) 0 0 ;
+      background: url(../../svg/svg-source/c-white__fab-icon.svg) 0 0 ;
       background-repeat: no-repeat;
     }
   }
 
   &__title--my-miles {
     @include mq(min, rem(map-get($breakpoints, 'hands-wide'))) {
-      background: url(../../svg/svg-source/c-white__fab-icon.svg) 0 0;
+      background: url(../../svg/svg-source/c-white__travel.svg) 0 0;
       background-repeat: no-repeat;
     }
   }

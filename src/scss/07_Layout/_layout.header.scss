@@ -5,5 +5,9 @@
   @include align-items(center);
   margin-bottom: rem(16px);
   position: relative;
+
+  &--with-icon {
+    @include justify-content(flex-start);
+  }
 }
 
